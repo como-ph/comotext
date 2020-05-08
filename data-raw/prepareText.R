@@ -420,6 +420,23 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-18.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
+y <- y[c(1:44, 51:91, 97:137)]
+y <- y[y != ""]
+
+y[1] <- "REPUBLIC OF THE PHILIPPINES"
+y[2] <- "INTER-AGENCY TASK FORCE"
+y[3] <- "FOR THE MANAGEMENT OF EMERGING INFECTIOUS DISEASE"
+y[4] <- ""
+
+y <- y[y != ""]
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution18 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution18, overwrite = TRUE, compress = "xz")
+
 ################################# Resolution 19 ################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF Resolution No. 19.pdf")
