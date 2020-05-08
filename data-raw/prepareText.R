@@ -288,10 +288,71 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-14.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
+y <- y[y != ""]
 
+y <- y[c(5:34, 36:69, 71:107, 109:146, 148:186, 188:length(y))]
 
+y[182] <- stringr::str_replace(string = y[182], pattern = "so p", replacement = "Club House, Camp")
+y[183] <- "EDUARDO M. AÑO"
+y[184] <- "Secretary, Department of the Interior and Local Government"
+y[185] <- "BERNADETTE ROMULO-PUYAT"
+y[186] <- "Secretary, Department of Tourism"
+y[187] <- "SILVESTRE H. BELLO III"
+y[188] <- "Secretary, Department of Labor and Employment"
+y[189] <- "GREGORIO B. HONASAN II"
+y[190] <- "Secretary, Department of Information and Communications Technology"
+y[191] <- y[194]
+y[192] <- y[195]
+y[193] <- "DEO L. MARCO"
+y[194] <- "Undersecretary, Department of Justice"
+y[195] <- "BRIGIDO D. DULAY"
+y[196] <- "Undersecretary, Department of Foreign Affairs"
+y[197:198] <- y[200:201]
+y[199] <- y[203]
+y[200] <- "KARLO ALEXEI B. NOGRALES"
+y[201] <- y[205]
+y[202:203] <- y[206:207]
+y[204] <- "RAMON M. LOPEZ"
+y[205] <- y[209]
+y[206] <- "ROLANDO D. BAUTISTA"
+y[207] <- y[211]
+y[208:209] <- y[215:216]
+y[210] <- "ROY A. CIMATU"
+y[211] <- y[219]
+y[212:213] <- y[220:221]
+y[214] <- "RICARDO B. JALAD"
+y[215] <- y[224]
+y[216] <- stringr::str_remove(string = y[228], pattern = " \\|")
+y[217] <- stringr::str_remove(string = y[229], pattern = " \\|")
 
+y <- y[c(1:217, 230:243)]
 
+y[218] <- stringr::str_remove(string = y[218], pattern = " :")
+y[219] <- stringr::str_remove(string = y[219], pattern = " \\|")
+y[220] <- stringr::str_remove(string = y[220], pattern = " \\|")
+y[221] <- stringr::str_remove(string = y[221], pattern = " \\|")
+y[222] <- stringr::str_remove(string = y[222], pattern = " :")
+y[223] <- stringr::str_remove(string = y[223], pattern = " oe")
+y[224] <- stringr::str_remove(string = y[224], pattern = " \\|")
+y[225] <- stringr::str_remove(string = y[225], pattern = " :")
+y[226] <- stringr::str_remove(string = y[226], pattern = " ,")
+y[227] <- stringr::str_remove(string = y[227], pattern = " \\|")
+y[228] <- stringr::str_remove(string = y[228], pattern = " \\|")
+y[229] <- stringr::str_remove(string = y[229], pattern = " 2")
+y[230] <- stringr::str_remove(string = y[230], pattern = " !")
+y[231] <- stringr::str_remove(string = y[231], pattern = " 4")
+
+y[144] <- stringr::str_remove(string = y[144], pattern = "\\| ")
+y[68] <- stringr::str_remove(string = y[68], pattern = ". ")
+y[73] <- stringr::str_remove(string = y[73], pattern = ". ")
+y[124] <- stringr::str_replace(string = y[124], pattern = "ui.", replacement = "iii.")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution14 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution14, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 15 ################################
 
