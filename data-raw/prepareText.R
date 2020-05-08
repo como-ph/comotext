@@ -379,14 +379,25 @@ usethis::use_data(iatfResolution15, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 16 ################################
 
-x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-16.pdf")
+x <- pdf_text(pdf = "data-raw/IATF/IATF-RESO-16.pdf")
 
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
+y <- y[y != ""]
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution16 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution16, overwrite = TRUE, compress = "xz")
+
 ################################# Resolution 17 ################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF Resolution No. 17.pdf")
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 17.pdf")
 
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
