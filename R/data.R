@@ -111,3 +111,26 @@
 #
 ################################################################################
 "iatfResolution13"
+
+
+################################################################################
+#
+#'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 14
+#'
+#' @format A tibble with 231 rows and 2 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#' }
+#'
+#' @examples
+#' iatfResolution14
+#'
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-14.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution14"
