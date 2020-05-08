@@ -439,7 +439,22 @@ usethis::use_data(iatfResolution18, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 19 ################################
 
-x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF Resolution No. 19.pdf")
+x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 19.pdf")
 
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(1:35, 41:70, 76:108, 114:129, 135:149, 155:169, 175:188)]
+
+y[140] <- "RYAN ALVIN R. ACOSTA"
+
+y[141] <- ""
+y <- y[y != ""]
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution19 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution19, overwrite = TRUE, compress = "xz")
+
