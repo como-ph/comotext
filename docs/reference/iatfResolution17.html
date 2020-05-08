@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>R Tools to Extract COVID-19-Related Resolutions and Policies in the
-Philippines — comotext • comotext</title>
+<title>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 17 — iatfResolution17 • comotext</title>
 
 
 <!-- jquery -->
@@ -40,14 +40,10 @@ Philippines — comotext • comotext</title>
 
 
 
-<meta property="og:title" content="R Tools to Extract COVID-19-Related Resolutions and Policies in the
-Philippines — comotext" />
-<meta property="og:description" content="To assess possible impact of various COVID-19 prediction models on
-Philippine government response, text from various resolutions, press
-releases and legislation has been collected using data mining approaches
-implemented in R. This package includes functions used for this data
-mining process and datasets of text that have been collected and processed
-for use in text analysis." />
+<meta property="og:title" content="COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 17 — iatfResolution17" />
+<meta property="og:description" content="COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 17" />
 
 
 
@@ -115,32 +111,48 @@ for use in text analysis." />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>R Tools to Extract COVID-19-Related Resolutions and Policies in the
-Philippines</h1>
-    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/comotext.R'><code>R/comotext.R</code></a></small>
-    <div class="hidden name"><code>comotext.Rd</code></div>
+    <h1>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 17</h1>
+    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>iatfResolution17.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>To assess possible impact of various COVID-19 prediction models on
-Philippine government response, text from various resolutions, press
-releases and legislation has been collected using data mining approaches
-implemented in R. This package includes functions used for this data
-mining process and datasets of text that have been collected and processed
-for use in text analysis.</p>
+    <p>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 17</p>
     </div>
 
+    <pre class="usage"><span class='no'>iatfResolution17</span></pre>
 
 
-    <h2 class="hasAnchor" id="see-also"><a class="anchor" href="#see-also"></a>See also</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <div class='dont-index'><p>Useful links:</p><ul>
-<li><p><a href='https://github.com/como-ph/comotext'>https://github.com/como-ph/comotext</a></p></li>
-<li><p>Report bugs at <a href='https://github.com/como-ph/comotext/issues'>https://github.com/como-ph/comotext/issues</a></p></li>
-</ul>
+    <p>A tibble with 151 rows and 2 columns:</p><dl'>
+  <dt><code>linenumber</code></dt><dd><p>Linenumber</p></dd>
+  <dt><code>text</code></dt><dd><p>Character string of text about 70 characters</p></dd>
 
-</div>
+</dl>
 
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 17.pdf'>https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 17.pdf</a></p>
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='no'>iatfResolution17</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 151 x 2</span><span>
+#&gt;    linenumber text                                                              
+#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>                                                             
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 </span><span style='color: #555555;'>"</span><span>                                     ​REPUBLIC   OF THE PHILIPPI… 
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 </span><span style='color: #555555;'>"</span><span>                                ​INTER-AGENCY TASK FORCE</span><span style='color: #555555;'>"</span><span>         
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 </span><span style='color: #555555;'>"</span><span>                     FOR THE MANAGEMENT OF EMERGING INFECTIOUS D…
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 </span><span style='color: #555555;'>"</span><span>                                          ​RESOLUTION NO. 17</span><span style='color: #555555;'>"</span><span>     
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 </span><span style='color: #555555;'>"</span><span>                                              Series of 2020</span><span style='color: #555555;'>"</span><span>    
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 </span><span style='color: #555555;'>"</span><span>                                              March 30, 2020</span><span style='color: #555555;'>"</span><span>    
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 </span><span style='color: #555555;'>"</span><span>           RECOMMENDATIONS RELATIVE TO THE MANAGEMENT</span><span style='color: #555555;'>"</span><span>           
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 </span><span style='color: #555555;'>"</span><span>         OF THE CORONAVIRUS DISEASE 2019 (COVID-19) SITUATION</span><span style='color: #555555;'>"</span><span>   
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 </span><span style='color: #555555;'>"</span><span>       WHEREAS, on 8 March 2020, President Rodrigo Roa Duterte i…
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 </span><span style='color: #555555;'>"</span><span>922, declaring a State of Public Health Emergency throughout the…
+#&gt; </span><span style='color: #555555;'># … with 141 more rows</span><span></div><div class='input'>
+</div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
