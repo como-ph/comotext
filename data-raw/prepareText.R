@@ -361,6 +361,22 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-15.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
+y <- stringr::str_remove_all(string = y, pattern = "\\| |\\||= |\\/ |\\|!|\\)")
+y <- y[y != ""]
+
+y <- y[c(6:34, 43:69, 76:104, 113:123, 125:133, 135:142, 151:181, 191:208, 211:214)]
+
+y[97] <- stringr::str_replace(string = y[97], pattern = "].", replacement = "1.")
+y[132] <- stringr::str_remove(string = y[150], pattern = "1 ")
+y[150] <- stringr::str_remove(string = y[150], pattern = "! ")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution15 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution15, overwrite = TRUE, compress = "xz")
+
 ################################# Resolution 16 ################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-16.pdf")
