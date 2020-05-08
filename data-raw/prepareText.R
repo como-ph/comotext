@@ -395,12 +395,23 @@ usethis::use_data(iatfResolution16, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 17 ################################
 
-x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF Resolution No. 17.pdf")
-
 x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 17.pdf")
 
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(1:70, 74:75, 77:101, 104:119, 121, 124:139, 142:157, 160:165)]
+
+y <- y[y != ""]
+
+y[112] <- "SALVADOR C. MEDIALDEA"
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution17 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution17, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 18 ################################
 
