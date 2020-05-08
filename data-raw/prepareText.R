@@ -187,6 +187,99 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-13.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
+y <- y[c(7:38, 46:59, 61:63, 65:81, 91:134, 143:175, 184:length(y))]
+
+y[166] <- "FRANCISCO T DUQUE III"
+y[167] <- "Secretary, Department of Health"
+y[168] <- "EDUARDO M. AÑO"
+y[169] <- "Secretary, Department of Interior and Local Government"
+y[170] <- "BERNADETTE ROMULO-PUYAT"
+y[171] <- "Secretary, Department of Tourism"
+y[172] <- "SILVESTRE H. BELLO III"
+y[173] <- "Secretary, Department of Labor and Employment"
+y[174] <- "MENARDO I. GUEVARRA"
+y[175] <- "Secretary, Department of Justice"
+y[176] <- "BRIGIDO J. DULAY"
+y[177] <- "Undersecretary, Department of Foreign Affairs"
+y[178] <- "ARTEMIO U. TUAZON, JR."
+y[179] <- "ALAN A. SILOR"
+y[180] <- "Assistant Secretary, Department of Information and Communications Technology"
+y[181] <- "With the concurrence of:"
+y[182] <- "KARLO B. NOGRALES"
+y[183] <- "Cabinet Secretary, Cabinet Secretariat of the Philippines"
+y[184] <- "RAMON M. LOPEZ"
+y[185] <- y[210]
+y[186] <- "ROLANDO JOSELITO D. BAUTISTA"
+y[187] <- y[213]
+y[188] <- y[214]
+y[189] <- y[215]
+y[190:193] <- y[216:219]
+y[194] <- "MARTIN M. ANDANAR"
+y[195] <- "Secretary, Presidential Communications Operations Office"
+y[196:197] <- y[222:223]
+y[198] <- "RICARDO B. JALAD"
+y[199] <- "Administrator, Office of the Civil Defense"
+y[200:203] <- y[234:237]
+y[204] <- "RONNIE GIL L. GAVAN"
+y[205] <- "Acting Deputy Chief of Staff for Operations, Philippine Coast Guard"
+y[206] <- "VICENTE M. AGDAMAG"
+y[207] <- y[242]
+y[208] <- "JESUS L. R. MATEO"
+y[209] <- "Undersecretary, Department of Education"
+y[210] <- "BAYANI H. AGABIN"
+y[211] <- y[247]
+y[212] <- y[249]
+y[213] <- "Undersecretary, National Economic and Development Authority"
+y[214] <- y[251]
+y[215] <- "Assistant Secretary, Office of the Chief Presidential Legal Counsel"
+
+y <- y[1:215]
+y <- y[y != ""]
+y[14] <- stringr::str_remove(string = y[14], pattern = ": ")
+y[14] <- stringr::str_remove(string = y[14], pattern = ":")
+y[15] <- stringr::str_remove(string = y[15], pattern = "z ")
+y[16] <- stringr::str_remove(string = y[16], pattern = "3 ")
+y[45] <- stringr::str_remove(string = y[45], pattern = ": ")
+y[46] <- stringr::str_remove(string = y[46], pattern = "4 ")
+y[46] <- stringr::str_remove(string = y[46], pattern = ":")
+y[47] <- stringr::str_remove(string = y[47], pattern = "; ")
+y[52] <- stringr::str_remove(string = y[52], pattern = "\\? ")
+y[53] <- stringr::str_remove(string = y[53], pattern = "\\| ")
+y[54] <- stringr::str_remove(string = y[54], pattern = "\\| ")
+y[55] <- stringr::str_remove(string = y[55], pattern = "\\| ")
+y[56] <- stringr::str_remove(string = y[56], pattern = "\\| ")
+y[57] <- stringr::str_remove(string = y[57], pattern = "\\| ")
+y[75] <- stringr::str_replace(string = y[75], pattern = "OF Ws", replacement = "OFWs")
+y[83] <- stringr::str_remove(string = y[83], pattern = "Z ")
+y[84] <- stringr::str_remove(string = y[84], pattern = "j ")
+y[86] <- stringr::str_remove(string = y[86], pattern = "f ")
+y[87] <- stringr::str_remove(string = y[87], pattern = "5 ")
+y[88] <- stringr::str_remove(string = y[88], pattern = "4")
+y[89] <- stringr::str_remove(string = y[89], pattern = "2 ")
+y[90] <- stringr::str_remove(string = y[90], pattern = "5 ")
+y[91] <- stringr::str_remove(string = y[91], pattern = "& ")
+y[92] <- stringr::str_remove(string = y[92], pattern = "é ")
+y[115] <- stringr::str_remove(string = y[115], pattern = ": ")
+y[119] <- stringr::str_remove(string = y[119], pattern = "- ")
+y[121] <- stringr::str_remove(string = y[121], pattern = "z ")
+y[122] <- stringr::str_remove(string = y[122], pattern = "\\% ")
+y[145] <- stringr::str_remove(string = y[145], pattern = "2 ")
+y[146] <- stringr::str_remove(string = y[146], pattern = "é ")
+y[147] <- stringr::str_remove(string = y[147], pattern = "5 ")
+y[148] <- stringr::str_remove(string = y[148], pattern = "2 ")
+y[149] <- stringr::str_remove(string = y[149], pattern = "\\| ")
+y[152] <- stringr::str_remove(string = y[152], pattern = "2 ")
+y[120] <- stringr::str_remove(string = y[120], pattern = "= ")
+
+y <- y[y != ""]
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y)
+
+iatfResolution13 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution13, overwrite = TRUE, compress = "xz")
+
 
 ################################# Resolution 14 ################################
 
@@ -194,6 +287,10 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-14.pdf")
 
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+
+
+
 
 
 ################################# Resolution 15 ################################
