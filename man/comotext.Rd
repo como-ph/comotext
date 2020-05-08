@@ -14,6 +14,14 @@ implemented in R. This package includes functions used for this data
 mining process and datasets of text that have been collected and processed
 for use in text analysis.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/como-ph/comotext}
+  \item Report bugs at \url{https://github.com/como-ph/comotext/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Ernest Guevarra \email{ernest@guevarra.io} (\href{https://orcid.org/0000-0002-4887-4415}{ORCID})
 
