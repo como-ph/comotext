@@ -3,21 +3,21 @@
 #' Combine specific documents available in the comotext package into a single
 #' dataset
 #'
-#' @param doc A vector of terms to search for in the document names
+#' @param docs A vector of terms to search for in the document names
 #'
 #' @return A tibble of all document types called for.
 #'
 #' @examples
-#' combine_docs(doc = "resolution")
+#' combine_docs(docs = "resolution")
 #'
 #' @export
 #'
 #
 ################################################################################
 
-combine_docs <- function(doc = c("resolution")) {
+combine_docs <- function(docs = c("resolution")) {
   ## Get multiple variations of search term
-  x <- c(doc, stringr::str_to_title(string = doc))
+  x <- c(docs, stringr::str_to_title(string = docs))
 
   ## Check whether dataset names in comotext matches search term
   y <- stringr::str_detect(string = utils::data(package = "comotext")$results[ , "Item"],
@@ -34,6 +34,8 @@ combine_docs <- function(doc = c("resolution")) {
     allDocs <- rbind(allDocs, eval(parse(text = z)))
   }
 
+  allDocs <- tibble::tibble(allDocs)
+
   ## Return allDocs
   return(allDocs)
 }
@@ -44,7 +46,7 @@ combine_docs <- function(doc = c("resolution")) {
 #' Combine all Inter-Agency Task Force for the management of emerging
 #' infectious diseases (IATF) resolutions datasets into a single dataset
 #'
-#' @param doc A vector of terms to search for in the document names
+#' @param docs A vector of terms to search for in the document names
 #' @param res A vector of document identifiers to concatenate. Default is 9:19.
 #'
 #' @return A tibble of all the IATF resolutions
@@ -57,13 +59,13 @@ combine_docs <- function(doc = c("resolution")) {
 #
 ################################################################################
 
-combine_iatf <- function(doc = "iatfResolution",
+combine_iatf <- function(docs = "iatfResolution",
                          res = 9:19) {
   ##
   x <- ifelse(res < 10, paste("0", res, sep = ""), res)
 
   ## Extract required docs
-  allRes <- combine_docs(doc = paste(doc, x, sep = ""))
+  allRes <- combine_docs(docs = paste(docs, x, sep = ""))
 
   ## Return allRes
   return(allRes)
