@@ -4,11 +4,12 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 9
 #'
-#' @format A tibble with 69 rows and 4 columns:
+#' @format A tibble with 69 rows and 5 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -33,7 +34,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -58,7 +60,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -83,7 +86,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -108,7 +112,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -133,7 +138,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -158,7 +164,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -183,7 +190,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -208,7 +216,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -233,7 +242,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
@@ -258,7 +268,8 @@
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
-#'   \item{\code{resolution}}{Resolution number}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
