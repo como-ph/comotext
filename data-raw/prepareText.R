@@ -45,7 +45,8 @@ y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 9,
+                type = "resolution",
+                id = 9,
                 date = as.Date("03/03/2020", format = "%d/%m/%y"))
 
 iatfResolution09 <- tibble::tibble(y)
@@ -109,7 +110,8 @@ y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 10,
+                type = "resolution",
+                id = 10,
                 date = as.Date("09/03/2020", format = "%d/%m/%y"))
 
 iatfResolution10 <- tibble::tibble(y)
@@ -127,7 +129,8 @@ y <- y[c(1:32, 41:66, 75:101, 110:138, 147:161, 170:177)]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 11,
+                type = "resolution",
+                id = 11,
                 date = as.Date("12/03/2020", format = "%d/%m/%y"))
 
 iatfResolution11 <- tibble::tibble(y)
@@ -169,7 +172,8 @@ y[119] <- stringr::str_remove(string = y[119], pattern = " \\|")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 12,
+                type = "resolution",
+                id = 12,
                 date = as.Date("13/03/2020", format = "%d/%m/%y"))
 
 iatfResolution12 <- tibble::tibble(y)
@@ -271,7 +275,8 @@ y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 13,
+                type = "resolution",
+                id = 13,
                 date = as.Date("17/03/2020", format = "%d/%m/%y"))
 
 iatfResolution13 <- tibble::tibble(y)
@@ -346,7 +351,8 @@ y[124] <- stringr::str_replace(string = y[124], pattern = "ui.", replacement = "
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 14,
+                type = "resolution",
+                id = 14,
                 date = as.Date("20/03/2020", format = "%d/%m/%y"))
 
 iatfResolution14 <- tibble::tibble(y)
@@ -371,7 +377,8 @@ y[150] <- stringr::str_remove(string = y[150], pattern = "! ")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 15,
+                type = "resolution",
+                id = 15,
                 date = as.Date("25/03/2020", format = "%d/%m/%y"))
 
 iatfResolution15 <- tibble::tibble(y)
@@ -389,7 +396,8 @@ y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 16,
+                type = "resolution",
+                id = 16,
                 date = as.Date("30/03/2020", format = "%d/%m/%y"))
 
 iatfResolution16 <- tibble::tibble(y)
@@ -411,7 +419,8 @@ y[112] <- "SALVADOR C. MEDIALDEA"
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 17,
+                type = "resolution",
+                id = 17,
                 date = as.Date("30/03/2020", format = "%d/%m/%y"))
 
 iatfResolution17 <- tibble::tibble(y)
@@ -437,7 +446,8 @@ y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 18,
+                type = "resolution",
+                id = 18,
                 date = as.Date("01/04/2020", format = "%d/%m/%y"))
 
 iatfResolution18 <- tibble::tibble(y)
@@ -460,7 +470,8 @@ y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
-                resolution = 19,
+                type = "resolution",
+                id = 19,
                 date = as.Date("03/04/2020", format = "%d/%m/%y"))
 
 iatfResolution19 <- tibble::tibble(y)
