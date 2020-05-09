@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# comotext: R Tools to Extract COVID-19-Related Resolutions and Policies in the Philippines
+# comotext: R Tools to Extract COVID-19-Related Resolutions and Policies in the Philippines <img src="man/figures/comotext.png" width = "200px" align="right" />
 
 <!-- badges: start -->
 
