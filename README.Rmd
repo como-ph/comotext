@@ -25,7 +25,7 @@ To assess possible impact of various COVID-19 prediction models on Philippine go
 
 ## Installation
 
-`comotext` is in still in active development. You can install the development version of `comotext` from [GitHub](https://github.com/como-ph/comotext) with:
+`comotext` is still in active development. You can install the development version of `comotext` from [GitHub](https://github.com/como-ph/comotext) with:
 
 ```{r install, echo = TRUE, eval = FALSE}
 if(!require(remotes)) install.packages("remotes")

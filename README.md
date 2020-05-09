@@ -22,7 +22,7 @@ processed for use in text analysis.
 
 ## Installation
 
-`comotext` is in still in active development. You can install the
+`comotext` is still in active development. You can install the
 development version of `comotext` from
 [GitHub](https://github.com/como-ph/comotext) with:
 
