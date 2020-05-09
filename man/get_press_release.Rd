@@ -5,10 +5,12 @@
 \title{Extract text of press release from the Philippines Department of Health
 website}
 \usage{
-get_press_release(url)
+get_press_release(url, date)
 }
 \arguments{
 \item{url}{of press release to extract text from}
+
+\item{date}{Date press release was issued. Should be in <DD/MM/YYYY> format.}
 }
 \value{
 A tibble containing text of the press release with additional
@@ -21,6 +23,7 @@ website
 \examples{
 baseURL <- "https://www.doh.gov.ph/press-release"
 prTitle <- "ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Behavior-Needed-to-Sustain-Gains"
-get_press_release(url = paste(baseURL, prTitle, sep = "/"))
+get_press_release(url = paste(baseURL, prTitle, sep = "/"),
+                  date = "07/04/2020")
 
 }
