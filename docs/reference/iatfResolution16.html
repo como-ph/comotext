@@ -130,9 +130,11 @@ Diseases Resolution Number 16</p>
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A tibble with 87 rows and 2 columns:</p><dl'>
+    <p>A tibble with 87 rows and 4 columns:</p><dl'>
   <dt><code>linenumber</code></dt><dd><p>Linenumber</p></dd>
   <dt><code>text</code></dt><dd><p>Character string of text about 70 characters</p></dd>
+  <dt><code>resolution</code></dt><dd><p>Resolution number</p></dd>
+  <dt><code>date</code></dt><dd><p>Date in &lt;YYYY-MM-DD&gt; format when resolution was made</p></dd>
 
 </dl>
 
@@ -141,19 +143,19 @@ Diseases Resolution Number 16</p>
     <p><a href='https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-16.pdf'>https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-16.pdf</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>iatfResolution16</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 87 x 2</span><span>
-#&gt;    linenumber text                                                              
-#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>                                                             
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 </span><span style='color: #555555;'>"</span><span>                      Inter-Agency Task Force for COVID-19</span><span style='color: #555555;'>"</span><span>      
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 </span><span style='color: #555555;'>"</span><span>          Additional Guidelines for the Enhanced Community Quara…
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 </span><span style='color: #555555;'>"</span><span>                                   March 30, 2020</span><span style='color: #555555;'>"</span><span>               
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 </span><span style='color: #555555;'>"</span><span>                                  Resolution No. 16</span><span style='color: #555555;'>"</span><span>             
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 </span><span style='color: #555555;'>"</span><span>A. Ayon sa direktiba ng DILG, inaatasan ang lahat ng mga LGU, ka…
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 </span><span style='color: #555555;'>"</span><span>   Autonomous Region in Muslim Mindanao (BARMM), at mga GOCC na …
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 </span><span style='color: #555555;'>"</span><span>   mga pasilidad na maaring pansamantalang gamitin bilang isolat…
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 </span><span style='color: #555555;'>"</span><span>   Inaatasan and DOT at ibang mga ahensya na makipagtulungan sa …
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 </span><span style='color: #555555;'>"</span><span>   pagtukoy ng mga pasilidad na pwedeng gamitin bilang isolation…
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 </span><span style='color: #555555;'>"</span><span>   Ang mga natukoy na pasilidad ay dapat ipagbigay-alam sa NTF n…
+    <pre class="examples"><div class='input'><span class='no'>iatfResolution16</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 87 x 4</span><span>
+#&gt;    linenumber text                                         resolution date      
+#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>                                             </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 </span><span style='color: #555555;'>"</span><span>                      Inter-Agency Task Fo…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 </span><span style='color: #555555;'>"</span><span>          Additional Guidelines for the En…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 </span><span style='color: #555555;'>"</span><span>                                   March 3…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 </span><span style='color: #555555;'>"</span><span>                                  Resoluti…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 </span><span style='color: #555555;'>"</span><span>A. Ayon sa direktiba ng DILG, inaatasan an…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 </span><span style='color: #555555;'>"</span><span>   Autonomous Region in Muslim Mindanao (B…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 </span><span style='color: #555555;'>"</span><span>   mga pasilidad na maaring pansamantalang…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 </span><span style='color: #555555;'>"</span><span>   Inaatasan and DOT at ibang mga ahensya …         16 2020-03-30
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 </span><span style='color: #555555;'>"</span><span>   pagtukoy ng mga pasilidad na pwedeng ga…         16 2020-03-30
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 </span><span style='color: #555555;'>"</span><span>   Ang mga natukoy na pasilidad ay dapat i…         16 2020-03-30
 #&gt; </span><span style='color: #555555;'># … with 77 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>
