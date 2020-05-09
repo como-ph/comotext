@@ -23,6 +23,7 @@ reference:
 
 - title: Extract
   contents:
+  - get_pr_title
   - get_press_release
 
 - title: Combine
