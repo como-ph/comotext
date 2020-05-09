@@ -2,6 +2,7 @@
 
 export(combine_docs)
 export(combine_iatf)
+export(get_pr_title)
 export(get_press_release)
 importFrom(magrittr,"%>%")
 importFrom(rvest,html_nodes)
