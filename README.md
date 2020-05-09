@@ -30,3 +30,7 @@ development version of `comotext` from
 if(!require(remotes)) install.packages("remotes")
 remotes::install_github("como-ph/comotext")
 ```
+
+## Usage
+
+### Datasets
