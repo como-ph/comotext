@@ -4,14 +4,13 @@
 \alias{combine_iatf}
 \title{Combine all Inter-Agency Task Force for the management of emerging
 infectious diseases (IATF) resolutions datasets into a single dataset}
-\source{
-\url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}
-}
 \usage{
-combine_iatf(res = 9:19)
+combine_iatf(doc = "iatfResolution", res = 9:19)
 }
 \arguments{
-\item{res}{A vector of resolution numbers to concatenate. Default is 9:19.}
+\item{doc}{A vector of terms to search for in the document names}
+
+\item{res}{A vector of document identifiers to concatenate. Default is 9:19.}
 }
 \value{
 A tibble of all the IATF resolutions
