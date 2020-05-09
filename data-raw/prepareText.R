@@ -466,4 +466,3 @@ y <- data.frame(linenumber = 1:length(y),
 iatfResolution19 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution19, overwrite = TRUE, compress = "xz")
-
