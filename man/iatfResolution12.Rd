@@ -6,10 +6,12 @@
 \title{COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 Diseases Resolution Number 12}
 \format{
-A tibble with 136 rows and 2 columns:
+A tibble with 136 rows and 4 columns:
 \describe{
   \item{\code{linenumber}}{Linenumber}
   \item{\code{text}}{Character string of text about 70 characters}
+  \item{\code{resolution}}{Resolution number}
+  \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 }
 }
 \source{
