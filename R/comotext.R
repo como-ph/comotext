@@ -15,8 +15,11 @@
 #' @name comotext
 #' @keywords internal
 #' @importFrom utils data
-#' @importFrom stringr str_to_title str_detect
+#' @importFrom stringr str_to_title str_detect str_wrap str_trim
 #' @importFrom tibble tibble
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_nodes html_text
+#' @importFrom magrittr %>%
 #'
 #
 ################################################################################
