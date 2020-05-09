@@ -11,6 +11,8 @@ knitr::opts_chunk$set(
   fig.path = "man/figures/README-",
   out.width = "100%"
 )
+
+library(comotext)
 ```
 
 # comotext: R Tools to Extract COVID-19-Related Resolutions and Policies in the Philippines <img src="man/figures/comotext.png" width = "200px" align="right" />
@@ -36,4 +38,30 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
+`comotext` currently has 11 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 11 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
 
+A description of the available datesets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
+
+### Concatenating text datasets
+
+The datasets described above can be processed and analysed on their own or as a combined corpus of text data. `comotext` provides convenience functions that concatenates all or specific text datasets available from the `comotext` package.
+
+#### Concatenating datasets based on a specific search term
+
+The `combine_docs` function allows the user to specify search terms to use in identifying datasets provided by the `comotext` package. The `docs` argument allows the specification of a vector of search terms to use to identify the names of datasets to concatenate. If the name/s of the datasets contain these search terms, the datasets with these name/s will be returned.
+
+```{r usage1, echo = TRUE, eval = TRUE}
+combine_docs(docs = "resolution")
+```
+
+The `combine_iatf` function is a specialised wrapper of the `combine_docs` function that specifically returns datasets containing IATF resolutions. An additional argument `res` allows users to specify which IATF resolutions to return. To get IATF resolution 10, 11, and 12, the following call to `combine_iatf` is made as follows:
+
+```{r usage2, echo = TRUE, eval = TRUE}
+combine_iatf(docs = "resolution", res = 10:12)
+```
+
+To check if only resolutions 10 to 12 have been returned:
+
+```{r usage3, echo = TRUE, eval = TRUE}
+combine_iatf(docs = "resolution", res = 10:12)[ , c("type", "id")]
+```
