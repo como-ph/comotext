@@ -21,6 +21,10 @@ reference:
   contents:
   - comotext
 
+- title: Combine
+  contents:
+  - combine_iatf
+
 - title: Datasets
   contents:
   - iatfResolution09
