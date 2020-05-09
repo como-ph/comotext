@@ -14,6 +14,8 @@
 #' @docType package
 #' @name comotext
 #' @keywords internal
+#' @importFrom utils data
+#' @importFrom stringr str_to_title str_detect
 #'
 #'
 #
