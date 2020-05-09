@@ -44,7 +44,9 @@ y <- y[1:90]
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 9,
+                date = as.Date("03/03/2020", format = "%d/%m/%y"))
 
 iatfResolution09 <- tibble::tibble(y)
 
@@ -106,19 +108,15 @@ y[109] <- "Assistant Secretary, Department of Information and Communications Tec
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 10,
+                date = as.Date("09/03/2020", format = "%d/%m/%y"))
 
 iatfResolution10 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution10, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 11 ################################
-
-#textFile <- "https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-11.pdf"
-
-#download.file(url = textFile, destfile = paste(tempdir(), "/resolution.pdf", sep = ""))
-
-#x <- pdf_text(pdf = paste(tempdir(), "/resolution.pdf", sep = ""))
 
 x <- pdf_text(pdf = "data-raw/IATF/IATF-RESO-11.pdf")
 
@@ -128,19 +126,15 @@ y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 y <- y[c(1:32, 41:66, 75:101, 110:138, 147:161, 170:177)]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 11,
+                date = as.Date("12/03/2020", format = "%d/%m/%y"))
 
 iatfResolution11 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution11, overwrite = TRUE, compress = "xz")
 
 ################################# Resolution 12 ################################
-
-#textFile <- "https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-12.pdf"
-
-#download.file(url = textFile, destfile = paste(tempdir(), "/resolution.pdf", sep = ""))
-
-#x <- pdf_text(pdf = paste(tempdir(), "/resolution.pdf", sep = ""))
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-12.pdf")
 
@@ -174,7 +168,9 @@ y[84] <- stringr::str_remove(string = y[84], pattern = " \\|")
 y[119] <- stringr::str_remove(string = y[119], pattern = " \\|")
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 12,
+                date = as.Date("13/03/2020", format = "%d/%m/%y"))
 
 iatfResolution12 <- tibble::tibble(y)
 
@@ -274,12 +270,13 @@ y[120] <- stringr::str_remove(string = y[120], pattern = "= ")
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 13,
+                date = as.Date("17/03/2020", format = "%d/%m/%y"))
 
 iatfResolution13 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution13, overwrite = TRUE, compress = "xz")
-
 
 ################################# Resolution 14 ################################
 
@@ -348,7 +345,9 @@ y[73] <- stringr::str_remove(string = y[73], pattern = ". ")
 y[124] <- stringr::str_replace(string = y[124], pattern = "ui.", replacement = "iii.")
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 14,
+                date = as.Date("20/03/2020", format = "%d/%m/%y"))
 
 iatfResolution14 <- tibble::tibble(y)
 
@@ -371,7 +370,9 @@ y[132] <- stringr::str_remove(string = y[150], pattern = "1 ")
 y[150] <- stringr::str_remove(string = y[150], pattern = "! ")
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 15,
+                date = as.Date("25/03/2020", format = "%d/%m/%y"))
 
 iatfResolution15 <- tibble::tibble(y)
 
@@ -387,7 +388,9 @@ y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 16,
+                date = as.Date("30/03/2020", format = "%d/%m/%y"))
 
 iatfResolution16 <- tibble::tibble(y)
 
@@ -407,7 +410,9 @@ y <- y[y != ""]
 y[112] <- "SALVADOR C. MEDIALDEA"
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 17,
+                date = as.Date("30/03/2020", format = "%d/%m/%y"))
 
 iatfResolution17 <- tibble::tibble(y)
 
@@ -431,7 +436,9 @@ y[4] <- ""
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 18,
+                date = as.Date("01/04/2020", format = "%d/%m/%y"))
 
 iatfResolution18 <- tibble::tibble(y)
 
@@ -452,7 +459,9 @@ y[141] <- ""
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
-                text = y)
+                text = y,
+                resolution = 19,
+                date = as.Date("03/04/2020", format = "%d/%m/%y"))
 
 iatfResolution19 <- tibble::tibble(y)
 
