@@ -133,7 +133,8 @@ Diseases Resolution Number 18</p>
     <p>A tibble with 108 rows and 4 columns:</p><dl'>
   <dt><code>linenumber</code></dt><dd><p>Linenumber</p></dd>
   <dt><code>text</code></dt><dd><p>Character string of text about 70 characters</p></dd>
-  <dt><code>resolution</code></dt><dd><p>Resolution number</p></dd>
+  <dt><code>type</code></dt><dd><p>Type of document</p></dd>
+  <dt><code>id</code></dt><dd><p>Text document identifier</p></dd>
   <dt><code>date</code></dt><dd><p>Date in &lt;YYYY-MM-DD&gt; format when resolution was made</p></dd>
 
 </dl>
@@ -143,19 +144,19 @@ Diseases Resolution Number 18</p>
     <p><a href='https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-18.pdf'>https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-18.pdf</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>iatfResolution18</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 108 x 4</span><span>
-#&gt;    linenumber text                                         resolution date      
-#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>                                             </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 REPUBLIC OF THE PHILIPPINES                          18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 INTER-AGENCY TASK FORCE                              18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 FOR THE MANAGEMENT OF EMERGING INFECTIOUS D…         18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 RESOLUTION NO. 18                                    18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 Series of 2020                                       18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 April 1, 2020                                        18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 RECOMMENDATIONS RELATIVE TO THE MANAGEMENT           18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 OF THE CORONAVIRUS DISEASE 2019 (COVID-19) …         18 2020-04-01
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 WHEREAS, on March 8, 2020, recognizing that…         18 2020-04-01
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 mobilization of a whole-of-government respo…         18 2020-04-01
+    <pre class="examples"><div class='input'><span class='no'>iatfResolution18</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 108 x 5</span><span>
+#&gt;    linenumber text                                      type       id date      
+#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 REPUBLIC OF THE PHILIPPINES               resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 INTER-AGENCY TASK FORCE                   resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 FOR THE MANAGEMENT OF EMERGING INFECTIOU… resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 RESOLUTION NO. 18                         resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 Series of 2020                            resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 April 1, 2020                             resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 RECOMMENDATIONS RELATIVE TO THE MANAGEME… resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 OF THE CORONAVIRUS DISEASE 2019 (COVID-1… resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 WHEREAS, on March 8, 2020, recognizing t… resolu…    18 2020-04-01
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 mobilization of a whole-of-government re… resolu…    18 2020-04-01
 #&gt; </span><span style='color: #555555;'># … with 98 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>

@@ -125,39 +125,40 @@ infectious diseases (IATF) resolutions datasets into a single dataset</h1>
 infectious diseases (IATF) resolutions datasets into a single dataset</p>
     </div>
 
-    <pre class="usage"><span class='fu'>combine_iatf</span>(<span class='kw'>res</span> <span class='kw'>=</span> <span class='fl'>9</span>:<span class='fl'>19</span>)</pre>
+    <pre class="usage"><span class='fu'>combine_iatf</span>(<span class='kw'>docs</span> <span class='kw'>=</span> <span class='st'>"iatfResolution"</span>, <span class='kw'>res</span> <span class='kw'>=</span> <span class='fl'>9</span>:<span class='fl'>19</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
+      <th>docs</th>
+      <td><p>A vector of terms to search for in the document names</p></td>
+    </tr>
+    <tr>
       <th>res</th>
-      <td><p>A vector of resolution numbers to concatenate. Default is 9:19.</p></td>
+      <td><p>A vector of document identifiers to concatenate. Default is 9:19.</p></td>
     </tr>
     </table>
 
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://www.doh.gov.ph/COVID-19/IATF-Resolutions'>https://www.doh.gov.ph/COVID-19/IATF-Resolutions</a></p>
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>A tibble of all the IATF resolutions</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>combine_iatf</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1,530 x 4</span><span>
-#&gt;    linenumber text                                         resolution date      
-#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;fct&gt;</span><span>                                             </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 REPUBLIC OF THE PHILIPPINES                           9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 DOH - DPA - DILG - DOJ - DOLE - DOT - DOTr …          9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 INTER-AGENCY TASK FORCE FOR THE MANAGEMENT …          9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 EMERGING INFECTIOUS DISEASE                           9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 RESOLUTION NO. 09                                     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 Series of 2020                                        9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 March 3, 2020                                         9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 RECOMMENDATIONS FOR THE MANAGEMENT                    9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 OF THE CORONAVIRUS DISEASE 2019 (COVID-19) …          9 2020-03-03
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 WHEREAS, on January 31, 2020, upon directiv…          9 2020-03-03
-#&gt; </span><span style='color: #555555;'># … with 1,520 more rows</span><span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>combine_iatf</span>()</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 1,727 x 5</span><span>
+#&gt;    linenumber text                                      type       id date      
+#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 </span><span style='color: #555555;'>"</span><span>                                    ​RE…  resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 </span><span style='color: #555555;'>"</span><span>                                ​INTER-…  resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 </span><span style='color: #555555;'>"</span><span>                      FOR THE MANAGEMEN… resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 </span><span style='color: #555555;'>"</span><span>                                       … resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 </span><span style='color: #555555;'>"</span><span>                                       … resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 </span><span style='color: #555555;'>"</span><span>                                       … resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 </span><span style='color: #555555;'>"</span><span>        RECOMMENDATIONS RELATIVE TO THE… resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 </span><span style='color: #555555;'>"</span><span>     OF THE CORONAVIRUS DISEASE 2019 (C… resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 </span><span style='color: #555555;'>"</span><span>        WHEREAS, ​on March 8, 2020, rec…  resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 </span><span style='color: #555555;'>"</span><span>mobilization of a whole-of-government r… resolu…    19 2020-04-03
+#&gt; </span><span style='color: #555555;'># … with 1,717 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

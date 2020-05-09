@@ -23,6 +23,7 @@ reference:
 
 - title: Combine
   contents:
+  - combine_docs
   - combine_iatf
 
 - title: Datasets
