@@ -1,5 +1,61 @@
 ################################################################################
 #
+#'
+#' Extract title of press releases from Department of Health website
+#'
+#' @param pages A vector of page numbers corresponding to the page panel
+#'   containing the press release link
+#'
+#' @return A tibble of 2 columns: 1) press release title; and, 2) date of press
+#'   release.
+#'
+#' @examples
+#' get_pr_title(pages = 1:5)
+#'
+#' @export
+#'
+#
+################################################################################
+
+get_pr_title <- function(pages = 1:13) {
+  ## Concatenating vectors
+  prTitle <- NULL
+  prDate <- NULL
+
+  ## Cycle through pages
+  for(i in pages) {
+    wp <- paste("https://www.doh.gov.ph/press-releases?page=", i - 1, sep = "")
+    if(i == 1) wp <- "https://www.doh.gov.ph/press-releases"
+
+    htmlText <- xml2::read_html(x = wp) %>%
+      rvest::html_nodes(css = ".panel") %>%
+      rvest::html_text() %>%
+      stringr::str_split(pattern = "\n") %>%
+      unlist() %>%
+      stringr::str_trim(side = "both")
+
+    ##
+    htmlText <- htmlText[!htmlText %in% c("", "Press Releases",
+                                          "?php print render($page['highlighted']); ?>")]
+
+    ##
+    htmlText <- htmlText[1:30]
+
+    ##
+    prTitle <- c(prTitle, htmlText[seq(from = 1, to = length(htmlText), by = 2)])
+    prDate <- c(prDate, htmlText[seq(from = 2, to = length(htmlText), by = 2)])
+  }
+
+  ##
+  pr <- tibble::tibble(data.frame(prTitle, prDate, stringsAsFactors = FALSE))
+
+  ## Return DF
+  return(pr)
+}
+
+
+################################################################################
+#
 #' Extract text of press release from the Philippines Department of Health
 #' website
 #'
@@ -45,7 +101,8 @@ get_press_release <- function(url, date) {
                              text = pressRelease,
                              type = "press release",
                              id = NA,
-                             date = as.Date(date, format = "%d/%m/%y"))
+                             date = as.Date(date, format = "%d/%m/%y"),
+                             stringsAsFactors = FALSE)
 
   ## Convert pressRelease to tibble
   pressRelease <- tibble::tibble(pressRelease)
