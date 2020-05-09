@@ -5,10 +5,10 @@
 \title{Combine all Inter-Agency Task Force for the management of emerging
 infectious diseases (IATF) resolutions datasets into a single dataset}
 \usage{
-combine_iatf(doc = "iatfResolution", res = 9:19)
+combine_iatf(docs = "iatfResolution", res = 9:19)
 }
 \arguments{
-\item{doc}{A vector of terms to search for in the document names}
+\item{docs}{A vector of terms to search for in the document names}
 
 \item{res}{A vector of document identifiers to concatenate. Default is 9:19.}
 }

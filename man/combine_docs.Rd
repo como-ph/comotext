@@ -5,10 +5,10 @@
 \title{Combine specific documents available in the comotext package into a single
 dataset}
 \usage{
-combine_docs(doc = c("resolution"))
+combine_docs(docs = c("resolution"))
 }
 \arguments{
-\item{doc}{A vector of terms to search for in the document names}
+\item{docs}{A vector of terms to search for in the document names}
 }
 \value{
 A tibble of all document types called for.
@@ -18,6 +18,6 @@ Combine specific documents available in the comotext package into a single
 dataset
 }
 \examples{
-combine_docs(doc = "resolution")
+combine_docs(docs = "resolution")
 
 }
