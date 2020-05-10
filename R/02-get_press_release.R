@@ -7,12 +7,14 @@
 #'   Default is \url{https://www.doh.gov.ph/press-releases}
 #' @param pages A vector of page numbers corresponding to the page panel
 #'   containing the press release link
+#' @param proxy Logical. Are you running on a network with a proxy server?
+#'   Default is FALSE.
 #'
 #' @return A tibble of 2 columns: 1) press release title; and, 2) date of press
 #'   release.
 #'
 #' @examples
-#' get_pr_url(pages = 1)
+#' get_pr_url(pages = 1, proxy = FALSE)
 #'
 #' @export
 #'
@@ -20,7 +22,8 @@
 ################################################################################
 
 get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
-                       pages = 1:13) {
+                       pages = 1:13,
+                       proxy = FALSE) {
   ## Concatenating vectors
   prURL <- NULL
   prDate <- NULL
@@ -30,8 +33,10 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
     wp <- paste(base, "?page=", i - 1, sep = "")
     if(i == 1) wp <- base
 
-    #wp <- rvest::html_session(wp,
-    #  httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
+    if(proxy) {
+      utils::download.file(url = wp, destfile = paste(tempdir(), "temp.html", sep = "/"))
+      wp <- paste(tempdir(), "temp.html", sep = "/")
+    }
 
     href <- xml2::read_html(x = wp) %>%
       rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
@@ -87,10 +92,6 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
 ################################################################################
 
 get_press_release <- function(url, date) {
-  ##
-  #url <- rvest::html_session(url,
-  #  httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
-
   ## Extract text from URL
   z <- xml2::read_html(x = url) %>%
     rvest::html_nodes(css = ".panel") %>%
