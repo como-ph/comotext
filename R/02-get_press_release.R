@@ -19,7 +19,7 @@
 #
 ################################################################################
 
-get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
+get_pr_url <- function(base = "http://www.doh.gov.ph/press-releases",
                        pages = 1:13) {
   ## Concatenating vectors
   prURL <- NULL
@@ -78,7 +78,7 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
 #'   information on line number, type of text and date of press release.
 #'
 #' @examples
-#' baseURL <- "https://www.doh.gov.ph"
+#' baseURL <- "http://www.doh.gov.ph"
 #' prURL <- get_pr_url(pages = 1)[1, "url"]
 #' get_press_release(url = paste(baseURL, prURL, sep = ""),
 #'                   date = get_pr_url(pages = 1)[1, "date"])
