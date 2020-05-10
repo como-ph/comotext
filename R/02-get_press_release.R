@@ -42,10 +42,10 @@ get_pr_url <- function(pages = 1:13) {
     ##
     prURL <- c(prURL, href)
     prDate <- c(prDate, hrefDate)
-
-    ##
-    prDate <- lubridate::mdy(prDate)
   }
+
+  ##
+  prDate <- lubridate::mdy(prDate)
 
   ##
   pr <- tibble::tibble(data.frame(url = prURL,
