@@ -44,13 +44,11 @@ A description of the available datesets can be found
 [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
 `comotext` also now holds 1 dataset of [Department of
-Health](http://www.doh.gov.ph) press releases dating from December 2019
+Health](http://www.doh.gov.ph) press releases dating from January 2017
 to May 2020. A description of the `pressRelease` dataset can be found
 [here](https://como-ph.github.io/comotext/reference/pressRelease.html).
 This dataset has been generated using the `get_press_release()` (see
-description below) function included in `comotext`. If a much longer
-period of press release text data is required, `get_press_release()`
-function can be used to extend the period.
+description below) function included in `comotext`.
 
 ### Extracting text data from press releases
 
@@ -69,24 +67,24 @@ the press releases panel, we use:
 
 ``` r
 get_pr_url(pages = 1)
-#> # A tibble: 15 x 2
-#>    url                                                                date      
-#>    <chr>                                                              <date>    
-#>  1 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Beh… 2020-05-09
-#>  2 /press-release/biggest-mega-swabbing-center-in-moa-arena-to-open-… 2020-05-08
-#>  3 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTLINERS-… 2020-05-07
-#>  4 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-OF-PPE… 2020-05-07
-#>  5 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CURVE-RE… 2020-05-07
-#>  6 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%3B-DOH… 2020-05-06
-#>  7 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVID-19-T… 2020-05-06
-#>  8 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-PAST-TW… 2020-05-06
-#>  9 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHYSICAL-… 2020-05-06
-#> 10 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-ON-NCDs 2020-05-05
-#> 11 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-MORE-M… 2020-05-05
-#> 12 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-BE-A-LE… 2020-05-04
-#> 13 /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-COVID-19… 2020-05-04
-#> 14 /doh-press-release/doh-commends-osmaks-effective-infection-contro… 2020-04-30
-#> 15 /doh-press-release/Duque-enlists-governors-in-5-point-%23BEATCOVI… 2020-04-30
+#> # A tibble: 15 x 3
+#>    url                                                             id date      
+#>    <chr>                                                        <dbl> <date>    
+#>  1 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
+#>  2 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
+#>  3 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
+#>  4 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
+#>  5 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
+#>  6 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
+#>  7 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
+#>  8 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
+#>  9 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
+#> 10 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
+#> 11 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
+#> 12 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-…  3415 2020-05-05
+#> 13 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-B…  4158 2020-05-04
+#> 14 /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-CO…  3152 2020-05-04
+#> 15 /doh-press-release/doh-commends-osmaks-effective-infection-…  4158 2020-04-30
 ```
 
 The function `get_press_releases` creates a dataset of text of press
@@ -100,23 +98,56 @@ panel, we use:
 prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
-get_press_release(url = prURL$url[1], 
-                  date = prURL$date[1])
-#> # A tibble: 57 x 5
-#>    linenumber text                                     type     id    date      
-#>         <int> <chr>                                    <chr>    <lgl> <date>    
-#>  1          1 ECQ Buys PH Time; Continued Practice of… press r… NA    2020-05-09
-#>  2          2 Press Release/07 May 2020 The Philippin… press r… NA    2020-05-09
-#>  3          3 how many people test positive for COVID… press r… NA    2020-05-09
-#>  4          4 which meets the benchmark set by the Wo… press r… NA    2020-05-09
-#>  5          5 media forum, Health Undersecretary Dr. … press r… NA    2020-05-09
-#>  6          6 the welcome news with Dr. Edsel Salvana… press r… NA    2020-05-09
-#>  7          7 the Technical Advisory Group that advis… press r… NA    2020-05-09
-#>  8          8 Inter-Agency Task Force (IATF). Conside… press r… NA    2020-05-09
-#>  9          9 up its testing capacity, and that the s… press r… NA    2020-05-09
-#> 10         10 individuals, the low positivity rate ha… press r… NA    2020-05-09
-#> # … with 47 more rows
+get_press_release(df = prURL[1, ])
+#> # A tibble: 44 x 5
+#>    linenumber text                                     type        id date      
+#>         <int> <chr>                                    <chr>    <dbl> <date>    
+#>  1          1 ADB-Sponsored COVID-19 Lab in Pampanga … press r…  1421 2020-05-10
+#>  2          2 Press Release/10 May 2020Health Secreta… press r…  1421 2020-05-10
+#>  3          3 with Cabinet Secretary Karlo Nograles a… press r…  1421 2020-05-10
+#>  4          4 Health (DOH), inaugurated the state-of-… press r…  1421 2020-05-10
+#>  5          5 funded Molecular and Diagnostic Patholo… press r…  1421 2020-05-10
+#>  6          6 Memorial General Hospital (JBLMGH) in S… press r…  1421 2020-05-10
+#>  7          7 2020. JBLMGH was the recipient of the U… press r…  1421 2020-05-10
+#>  8          8 to set up a Pandemic Sub national Refer… press r…  1421 2020-05-10
+#>  9          9 country’s testing capacity by an additi… press r…  1421 2020-05-10
+#> 10         10 Ahmed M. Saeed, Vice President for East… press r…  1421 2020-05-10
+#> # … with 34 more rows
 ```
+
+To get all the [DoH](https://www.doh.gov.ph) press releases available
+from their [website](https://www.doh.gov.ph/press-releases), use:
+
+``` r
+## Extract URLs
+pr <- get_pr_url(pages = 1:25)
+
+## Extract all press releases text
+pressRelease <- NULL
+
+for(i in 1:nrow(pr)) {
+  currentPR <- get_press_release(df = pr)
+
+  pressRelease <- rbind(pressRelease, currentPR)
+}
+```
+
+    #> # A tibble: 12,953 x 5
+    #>    linenumber text                                     type        id date      
+    #>         <int> <chr>                                    <chr>    <dbl> <date>    
+    #>  1          1 ADB-Sponsored COVID-19 Lab in Pampanga … press r…  1421 2020-05-10
+    #>  2          2 Press Release/10 May 2020Health Secreta… press r…  1421 2020-05-10
+    #>  3          3 with Cabinet Secretary Karlo Nograles a… press r…  1421 2020-05-10
+    #>  4          4 Health (DOH), inaugurated the state-of-… press r…  1421 2020-05-10
+    #>  5          5 funded Molecular and Diagnostic Patholo… press r…  1421 2020-05-10
+    #>  6          6 Memorial General Hospital (JBLMGH) in S… press r…  1421 2020-05-10
+    #>  7          7 2020. JBLMGH was the recipient of the U… press r…  1421 2020-05-10
+    #>  8          8 to set up a Pandemic Sub national Refer… press r…  1421 2020-05-10
+    #>  9          9 country’s testing capacity by an additi… press r…  1421 2020-05-10
+    #> 10         10 Ahmed M. Saeed, Vice President for East… press r…  1421 2020-05-10
+    #> # … with 12,943 more rows
+
+This produces the same dataset as `pressRelease` included in `comotext`.
 
 ### Concatenating text datasets
 

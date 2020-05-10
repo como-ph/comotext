@@ -42,7 +42,7 @@ remotes::install_github("como-ph/comotext")
 
 A description of the available datesets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
-`comotext` also now holds 1 dataset of [Department of Health](http://www.doh.gov.ph) press releases dating from December 2019 to May 2020. A description of the `pressRelease` dataset can be found [here](https://como-ph.github.io/comotext/reference/pressRelease.html). This dataset has been generated using the `get_press_release()` (see description below) function included in `comotext`. If a much longer period of press release text data is required, `get_press_release()` function can be used to extend the period.
+`comotext` also now holds 1 dataset of [Department of Health](http://www.doh.gov.ph) press releases dating from January 2017 to May 2020. A description of the `pressRelease` dataset can be found [here](https://como-ph.github.io/comotext/reference/pressRelease.html). This dataset has been generated using the `get_press_release()` (see description below) function included in `comotext`.
 
 ### Extracting text data from press releases
 
@@ -61,9 +61,30 @@ The function `get_press_releases` creates a dataset of text of press releases gi
 prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
-get_press_release(url = prURL$url[1], 
-                  date = prURL$date[1])
+get_press_release(df = prURL[1, ])
 ```
+
+To get all the [DoH](https://www.doh.gov.ph) press releases available from their [website](https://www.doh.gov.ph/press-releases), use:
+
+```{r usage3, echo = TRUE, eval = FALSE}
+## Extract URLs
+pr <- get_pr_url(pages = 1:25)
+
+## Extract all press releases text
+pressRelease <- NULL
+
+for(i in 1:nrow(pr)) {
+  currentPR <- get_press_release(df = pr)
+
+  pressRelease <- rbind(pressRelease, currentPR)
+}
+```
+
+```{r usage4, echo = FALSE, eval = TRUE}
+pressRelease
+```
+
+This produces the same dataset as `pressRelease` included in `comotext`.
 
 ### Concatenating text datasets
 
@@ -73,18 +94,18 @@ The datasets described above can be processed and analysed on their own or as a 
 
 The `combine_docs` function allows the user to specify search terms to use in identifying datasets provided by the `comotext` package. The `docs` argument allows the specification of a vector of search terms to use to identify the names of datasets to concatenate. If the name/s of the datasets contain these search terms, the datasets with these name/s will be returned.
 
-```{r usage3, echo = TRUE, eval = TRUE}
+```{r usage5, echo = TRUE, eval = TRUE}
 combine_docs(docs = "resolution")
 ```
 
 The `combine_iatf` function is a specialised wrapper of the `combine_docs` function that specifically returns datasets containing IATF resolutions. An additional argument `res` allows users to specify which IATF resolutions to return. To get IATF resolution 10, 11, and 12, the following call to `combine_iatf` is made as follows:
 
-```{r usage4, echo = TRUE, eval = TRUE}
+```{r usage6, echo = TRUE, eval = TRUE}
 combine_iatf(docs = "resolution", res = 10:12)
 ```
 
 To check if only resolutions 10 to 12 have been returned:
 
-```{r usage5, echo = TRUE, eval = TRUE}
+```{r usage7, echo = TRUE, eval = TRUE}
 combine_iatf(docs = "resolution", res = 10:12)[ , c("type", "id")]
 ```
