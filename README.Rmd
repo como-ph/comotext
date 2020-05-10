@@ -57,14 +57,11 @@ get_pr_url(pages = 1)
 The function `get_press_releases` creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by `get_pr_url`. If we want to get the text data of the press releases from page 1 of the press release panel, we use:
 
 ```{r usage2, echo = TRUE, eval = TRUE}
-##
-baseURL <- "https://www.doh.gov.ph"
-
-##
+## Extract URLs from DoH press releases page 1
 prURL <- get_pr_url(pages = 1)
 
-##
-get_press_release(url = paste(baseURL, prURL$url[1], sep = ""), 
+## Extract text from first press release
+get_press_release(url = prURL$url[1], 
                   date = prURL$date[1])
 ```
 

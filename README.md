@@ -96,14 +96,11 @@ get the text data of the press releases from page 1 of the press release
 panel, we use:
 
 ``` r
-##
-baseURL <- "https://www.doh.gov.ph"
-
-##
+## Extract URLs from DoH press releases page 1
 prURL <- get_pr_url(pages = 1)
 
-##
-get_press_release(url = paste(baseURL, prURL$url[1], sep = ""), 
+## Extract text from first press release
+get_press_release(url = prURL$url[1], 
                   date = prURL$date[1])
 #> # A tibble: 57 x 5
 #>    linenumber text                                     type     id    date      
