@@ -6,7 +6,8 @@
 #' @param base Base URL for press releases in the Department of Health website.
 #'   Default is \url{https://www.doh.gov.ph/press-releases}
 #' @param pages A vector of page numbers corresponding to the page panel
-#'   containing the press release link
+#'   containing the press release link. Default is 1:25. Press releases only go
+#'   up to page 25.
 #'
 #' @return A tibble of 2 columns: 1) press release title; and, 2) date of press
 #'   release.
@@ -21,7 +22,7 @@
 ################################################################################
 
 get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
-                       pages = 1:13) {
+                       pages = 1:25) {
   ## Concatenating vectors
   prURL <- NULL
   prDate <- NULL
@@ -35,7 +36,8 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
       rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
       rvest::html_attr(name = "href")
 
-    href <- href[stringr::str_detect(string = href, pattern = "press-release")]
+    href <- stringr::str_subset(string = href, pattern = "press-release|node")
+    href <- stringr::str_subset(string = href, pattern = "20343|19904", negate = TRUE)
 
     hrefDate <- xml2::read_html(x = wp) %>%
       rvest::html_nodes(css = ".view-content .content-time") %>%
