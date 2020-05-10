@@ -98,7 +98,7 @@
 <a href="#datasets" class="anchor"></a>Datasets</h3>
 <p><code>comotext</code> currently has 11 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 11 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).</p>
 <p>A description of the available datesets can be found <a href="https://como-ph.github.io/comotext/reference/index.html#section-datasets">here</a>.</p>
-<p><code>comotext</code> also now holds 1 dataset of <a href="http://www.doh.gov.ph">Department of Health</a> press releases dating from December 2019 to May 2020. A description of the <code>pressRelease</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/pressRelease.html">here</a>. This dataset has been generated using the <code><a href="reference/get_press_release.html">get_press_release()</a></code> (see description below) function included in <code>comotext</code>. If a much longer period of press release text data is required, <code><a href="reference/get_press_release.html">get_press_release()</a></code> function can be used to extend the period.</p>
+<p><code>comotext</code> also now holds 1 dataset of <a href="http://www.doh.gov.ph">Department of Health</a> press releases dating from January 2017 to May 2020. A description of the <code>pressRelease</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/pressRelease.html">here</a>. This dataset has been generated using the <code><a href="reference/get_press_release.html">get_press_release()</a></code> (see description below) function included in <code>comotext</code>. If a much longer period of press release text data is required, <code><a href="reference/get_press_release.html">get_press_release()</a></code> function can be used to extend the period.</p>
 </div>
 <div id="extracting-text-data-from-press-releases" class="section level3">
 <h3 class="hasAnchor">
@@ -109,21 +109,21 @@
 <span class="co">#&gt; # A tibble: 15 x 2</span>
 <span class="co">#&gt;    url                                                                date      </span>
 <span class="co">#&gt;    &lt;chr&gt;                                                              &lt;date&gt;    </span>
-<span class="co">#&gt;  1 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Beh… 2020-05-09</span>
-<span class="co">#&gt;  2 /press-release/biggest-mega-swabbing-center-in-moa-arena-to-open-… 2020-05-08</span>
-<span class="co">#&gt;  3 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTLINERS-… 2020-05-07</span>
-<span class="co">#&gt;  4 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-OF-PPE… 2020-05-07</span>
-<span class="co">#&gt;  5 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CURVE-RE… 2020-05-07</span>
-<span class="co">#&gt;  6 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%3B-DOH… 2020-05-06</span>
-<span class="co">#&gt;  7 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVID-19-T… 2020-05-06</span>
-<span class="co">#&gt;  8 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-PAST-TW… 2020-05-06</span>
-<span class="co">#&gt;  9 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHYSICAL-… 2020-05-06</span>
-<span class="co">#&gt; 10 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-ON-NCDs 2020-05-05</span>
-<span class="co">#&gt; 11 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-MORE-M… 2020-05-05</span>
-<span class="co">#&gt; 12 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-BE-A-LE… 2020-05-04</span>
-<span class="co">#&gt; 13 /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-COVID-19… 2020-05-04</span>
-<span class="co">#&gt; 14 /doh-press-release/doh-commends-osmaks-effective-infection-contro… 2020-04-30</span>
-<span class="co">#&gt; 15 /doh-press-release/Duque-enlists-governors-in-5-point-%23BEATCOVI… 2020-04-30</span></pre></div>
+<span class="co">#&gt;  1 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launched-to… 2020-05-10</span>
+<span class="co">#&gt;  2 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Beh… 2020-05-09</span>
+<span class="co">#&gt;  3 /press-release/biggest-mega-swabbing-center-in-moa-arena-to-open-… 2020-05-08</span>
+<span class="co">#&gt;  4 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTLINERS-… 2020-05-07</span>
+<span class="co">#&gt;  5 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-OF-PPE… 2020-05-07</span>
+<span class="co">#&gt;  6 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CURVE-RE… 2020-05-07</span>
+<span class="co">#&gt;  7 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%3B-DOH… 2020-05-06</span>
+<span class="co">#&gt;  8 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVID-19-T… 2020-05-06</span>
+<span class="co">#&gt;  9 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-PAST-TW… 2020-05-06</span>
+<span class="co">#&gt; 10 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHYSICAL-… 2020-05-06</span>
+<span class="co">#&gt; 11 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-ON-NCDs 2020-05-05</span>
+<span class="co">#&gt; 12 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-MORE-M… 2020-05-05</span>
+<span class="co">#&gt; 13 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-BE-A-LE… 2020-05-04</span>
+<span class="co">#&gt; 14 /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-COVID-19… 2020-05-04</span>
+<span class="co">#&gt; 15 /doh-press-release/doh-commends-osmaks-effective-infection-contro… 2020-04-30</span></pre></div>
 <p>The function <code>get_press_releases</code> creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by <code>get_pr_url</code>. If we want to get the text data of the press releases from page 1 of the press release panel, we use:</p>
 <div class="sourceCode" id="cb3"><pre class="r"><span class="co">## Extract URLs from DoH press releases page 1</span>
 <span class="no">prURL</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_pr_url.html">get_pr_url</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>)
@@ -131,20 +131,20 @@
 <span class="co">## Extract text from first press release</span>
 <span class="fu"><a href="reference/get_press_release.html">get_press_release</a></span>(<span class="kw">url</span> <span class="kw">=</span> <span class="no">prURL</span>$<span class="no">url</span>[<span class="fl">1</span>],
                   <span class="kw">date</span> <span class="kw">=</span> <span class="no">prURL</span>$<span class="no">date</span>[<span class="fl">1</span>])
-<span class="co">#&gt; # A tibble: 57 x 5</span>
+<span class="co">#&gt; # A tibble: 44 x 5</span>
 <span class="co">#&gt;    linenumber text                                     type     id    date      </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                                    &lt;chr&gt;    &lt;lgl&gt; &lt;date&gt;    </span>
-<span class="co">#&gt;  1          1 ECQ Buys PH Time; Continued Practice of… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  2          2 Press Release/07 May 2020 The Philippin… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  3          3 how many people test positive for COVID… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  4          4 which meets the benchmark set by the Wo… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  5          5 media forum, Health Undersecretary Dr. … press r… NA    2020-05-09</span>
-<span class="co">#&gt;  6          6 the welcome news with Dr. Edsel Salvana… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  7          7 the Technical Advisory Group that advis… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  8          8 Inter-Agency Task Force (IATF). Conside… press r… NA    2020-05-09</span>
-<span class="co">#&gt;  9          9 up its testing capacity, and that the s… press r… NA    2020-05-09</span>
-<span class="co">#&gt; 10         10 individuals, the low positivity rate ha… press r… NA    2020-05-09</span>
-<span class="co">#&gt; # … with 47 more rows</span></pre></div>
+<span class="co">#&gt;  1          1 ADB-Sponsored COVID-19 Lab in Pampanga … press r… NA    2020-05-10</span>
+<span class="co">#&gt;  2          2 Press Release/10 May 2020Health Secreta… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  3          3 with Cabinet Secretary Karlo Nograles a… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  4          4 Health (DOH), inaugurated the state-of-… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  5          5 funded Molecular and Diagnostic Patholo… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  6          6 Memorial General Hospital (JBLMGH) in S… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  7          7 2020. JBLMGH was the recipient of the U… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  8          8 to set up a Pandemic Sub national Refer… press r… NA    2020-05-10</span>
+<span class="co">#&gt;  9          9 country’s testing capacity by an additi… press r… NA    2020-05-10</span>
+<span class="co">#&gt; 10         10 Ahmed M. Saeed, Vice President for East… press r… NA    2020-05-10</span>
+<span class="co">#&gt; # … with 34 more rows</span></pre></div>
 </div>
 <div id="concatenating-text-datasets" class="section level3">
 <h3 class="hasAnchor">
