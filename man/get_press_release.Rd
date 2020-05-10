@@ -24,7 +24,8 @@ Extract text of press release from the Philippines Department of Health
 website
 }
 \examples{
-prURL <- get_pr_url(pages = 1)
+prURL <- get_pr_url(base = "http://www.doh.gov.ph/press-releases",
+                    pages = 1)
 get_press_release(base = "http://www.doh.gov.ph",
                   url = prURL$url[1],
                   date = prURL$date[1])
