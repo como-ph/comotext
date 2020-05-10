@@ -287,9 +287,9 @@
 ################################################################################
 #
 #'
-#' Department of Health press releases from December 2019 to May 2020
+#' Department of Health press releases from 2017 to May 2020
 #'
-#' @format A tibble with 3656 rows and 5 columns:
+#' @format A tibble with 12909 rows and 5 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
