@@ -12,7 +12,7 @@ pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
   ##
-  currentURL <- paste("https://www.doh.gov.ph", pr$url[i], sep = "")
+  currentURL <- pr$url[i]
   currentURLdate <- pr$date[i]
 
   currentPR <- get_press_release(url = currentURL, date = currentURLdate)
