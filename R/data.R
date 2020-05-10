@@ -294,16 +294,41 @@
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
 #'   \item{\code{type}}{Type of document}
-#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{id}}{Text document numeric identifier (8 digits)}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 #' }
 #'
 #' @examples
 #' pressRelease
 #'
-#' @source \url{https://www.doh.gov.ph/press-releases}
+#' @source \url{https://www.doh.gov.ph/press-releases}. Updated as of
+#'   10 May 2020
 #'
 #'
 #
 ################################################################################
 "pressRelease"
+
+
+################################################################################
+#
+#'
+#' Department of Health press releases URLs from 2017 to May 2020
+#'
+#' @format A tibble with 353 rows and 3 columns:
+#' \describe{
+#'   \item{\code{url}}{Relative URL of press releases}
+#'   \item{\code{id}}{Unique identifier of press release}
+#'   \item{\code{date}}{Date of issue of press release}
+#' }
+#'
+#' @examples
+#' pressReleaseLinks
+#'
+#' @source Produced by \code{get_pr_url(pages = 1:25)}. Updated as of
+#'   10 May 2020
+#'
+#'
+#
+################################################################################
+"pressReleaseLinks"
