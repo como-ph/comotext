@@ -2,7 +2,7 @@ library(rvest)
 library(pdftools)
 library(stringr)
 
-################################# Resolution 9 #################################
+## Resolution 9 ################################################################
 
 ## Read resolution
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-9.pdf")
@@ -53,7 +53,8 @@ iatfResolution09 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution09, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 10 ################################
+
+## Resolution 10 ###############################################################
 
 ## Read resolution
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-10.pdf")
@@ -118,7 +119,8 @@ iatfResolution10 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution10, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 11 ################################
+
+## Resolution 11 ###############################################################
 
 x <- pdf_text(pdf = "data-raw/IATF/IATF-RESO-11.pdf")
 
@@ -137,7 +139,8 @@ iatfResolution11 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution11, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 12 ################################
+
+## Resolution 12 ###############################################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-12.pdf")
 
@@ -180,7 +183,8 @@ iatfResolution12 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution12, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 13 ################################
+
+## Resolution 13 ###############################################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-13.pdf")
 
