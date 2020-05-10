@@ -14,7 +14,7 @@
 #'   release.
 #'
 #' @examples
-#' get_pr_url(pages = 1, proxy = FALSE)
+#' get_pr_url(pages = 1, proxy = TRUE)
 #'
 #' @export
 #'
