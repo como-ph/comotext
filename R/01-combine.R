@@ -15,9 +15,18 @@
 #
 ################################################################################
 
-combine_docs <- function(docs = c("resolution")) {
+combine_docs <- function(docs = c("resolution", "press release")) {
   ## Get multiple variations of search term
-  x <- c(docs, stringr::str_to_title(string = docs))
+  x <- NULL
+
+  for(i in docs) {
+    x <- c(x,
+           stringr::str_to_title(string = i),
+           stringr::str_split_fixed(string = i, pattern = " ", n = 2),
+           paste(i, collapse = ""))
+  }
+
+  x <- x[x != ""]
 
   ## Check whether dataset names in comotext matches search term
   y <- stringr::str_detect(string = utils::data(package = "comotext")$results[ , "Item"],
