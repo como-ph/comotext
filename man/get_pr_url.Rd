@@ -28,6 +28,6 @@ A tibble of 2 columns: 1) press release title; and, 2) date of press
 Extract title of press releases from Department of Health website
 }
 \examples{
-get_pr_url(pages = 1, proxy = FALSE)
+get_pr_url(pages = 1, proxy = TRUE)
 
 }
