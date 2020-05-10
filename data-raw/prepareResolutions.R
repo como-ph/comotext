@@ -407,6 +407,8 @@ y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
 y <- y[y != ""]
 
+y <- stringr::str_trim(string = y, side = "both")
+
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
                 type = "resolution",
@@ -430,6 +432,8 @@ y <- y[c(1:70, 74:75, 77:101, 104:119, 121, 124:139, 142:157, 160:165)]
 y <- y[y != ""]
 
 y[112] <- "SALVADOR C. MEDIALDEA"
+
+y <- stringr::str_trim(string = y, side = "both")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
@@ -483,6 +487,8 @@ y[140] <- "RYAN ALVIN R. ACOSTA"
 
 y[141] <- ""
 y <- y[y != ""]
+
+y <- stringr::str_trim(string = y, side = "both")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
