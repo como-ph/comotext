@@ -6,16 +6,16 @@ library(comotext)
 
 pr <- get_pr_url(pages = 1:25)
 
+pressReleaseLinks <- pr
+
+usethis::use_data(pressReleaseLinks, overwrite = TRUE, compress = "xz")
+
 ## Extract text from press releases ############################################
 
 pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
-  ##
-  currentURL <- pr$url[i]
-  currentURLdate <- pr$date[i]
-
-  currentPR <- get_press_release(url = currentURL, date = currentURLdate)
+  currentPR <- get_press_release(df = pr)
 
   pressRelease <- rbind(pressRelease, currentPR)
 }
