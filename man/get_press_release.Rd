@@ -5,19 +5,20 @@
 \title{Extract text of press release from the Philippines Department of Health
 website}
 \usage{
-get_press_release(base = "https://www.doh.gov.ph", url, date)
+get_press_release(base = "https://www.doh.gov.ph", df)
 }
 \arguments{
 \item{base}{Base URL for press releases in the Department of Health website.
 Default is \url{https://www.doh.gov.ph}}
 
-\item{url}{of press release to extract text from}
-
-\item{date}{Date press release was issued. Should be in <YYYY-MM-DD> format.}
+\item{df}{A data.frame created using \code{get_pr_url} providing values for
+relative URL of press release/s, unique identifier of press release and,
+date of issue of press release.}
 }
 \value{
 A tibble containing text of the press release with additional
-  information on line number, type of text and date of press release.
+  information on line number, type of text, unique identifier and date of
+  press release.
 }
 \description{
 Extract text of press release from the Philippines Department of Health
@@ -27,7 +28,6 @@ website
 prURL <- get_pr_url(base = "http://www.doh.gov.ph/press-releases",
                     pages = 1)
 get_press_release(base = "http://www.doh.gov.ph",
-                  url = prURL$url[1],
-                  date = prURL$date[1])
+                  df = prURL[1, ])
 
 }

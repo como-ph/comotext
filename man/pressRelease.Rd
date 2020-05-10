@@ -10,12 +10,13 @@ A tibble with 12909 rows and 5 columns:
   \item{\code{linenumber}}{Linenumber}
   \item{\code{text}}{Character string of text about 70 characters}
   \item{\code{type}}{Type of document}
-  \item{\code{id}}{Text document identifier}
+  \item{\code{id}}{Text document numeric identifier (8 digits)}
   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
 }
 }
 \source{
-\url{https://www.doh.gov.ph/press-releases}
+\url{https://www.doh.gov.ph/press-releases}. Updated as of
+  10 May 2020
 }
 \usage{
 pressRelease

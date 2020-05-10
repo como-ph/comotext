@@ -12,16 +12,19 @@ Default is \url{https://www.doh.gov.ph/press-releases}}
 
 \item{pages}{A vector of page numbers corresponding to the page panel
 containing the press release link. Default is 1:25. Press releases only go
-up to page 25.}
+up to page 25. Values higher than 25 will error.}
 }
 \value{
-A tibble of 2 columns: 1) press release title; and, 2) date of press
-  release.
+A tibble of 2 columns: 1) press release title; 2) press release
+  unique identifier; and, 3) date of press release.
 }
 \description{
 Extract title of press releases from Department of Health website
 }
 \examples{
+## Get press release URLs for first page of press release panel. The base
+## argument has been specified using non-SSL version of base URL to prevent
+## erroring for those with proxy server connections (i.e., in Travis tests)
 get_pr_url(base = "http://www.doh.gov.ph/press-releases",
            pages = 1)
 
