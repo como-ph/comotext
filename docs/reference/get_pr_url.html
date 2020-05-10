@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
-Diseases Resolution Number 12 — iatfResolution12 • comotext</title>
+<title>Extract title of press releases from Department of Health website — get_pr_url • comotext</title>
 
 
 <!-- jquery -->
@@ -40,10 +39,8 @@ Diseases Resolution Number 12 — iatfResolution12 • comotext</title>
 
 
 
-<meta property="og:title" content="COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
-Diseases Resolution Number 12 — iatfResolution12" />
-<meta property="og:description" content="COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
-Diseases Resolution Number 12" />
+<meta property="og:title" content="Extract title of press releases from Department of Health website — get_pr_url" />
+<meta property="og:description" content="Extract title of press releases from Department of Health website" />
 
 
 
@@ -114,50 +111,58 @@ Diseases Resolution Number 12" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
-Diseases Resolution Number 12</h1>
-    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/data.R'><code>R/data.R</code></a></small>
-    <div class="hidden name"><code>iatfResolution12.Rd</code></div>
+    <h1>Extract title of press releases from Department of Health website</h1>
+    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/02-get_press_release.R'><code>R/02-get_press_release.R</code></a></small>
+    <div class="hidden name"><code>get_pr_url.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
-Diseases Resolution Number 12</p>
+    <p>Extract title of press releases from Department of Health website</p>
     </div>
 
-    <pre class="usage"><span class='no'>iatfResolution12</span></pre>
+    <pre class="usage"><span class='fu'>get_pr_url</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"https://www.doh.gov.ph/press-releases"</span>, <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>25</span>)</pre>
 
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>base</th>
+      <td><p>Base URL for press releases in the Department of Health website.
+Default is <a href='https://www.doh.gov.ph/press-releases'>https://www.doh.gov.ph/press-releases</a></p></td>
+    </tr>
+    <tr>
+      <th>pages</th>
+      <td><p>A vector of page numbers corresponding to the page panel
+containing the press release link. Default is 1:25. Press releases only go
+up to page 25.</p></td>
+    </tr>
+    </table>
 
-    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble with 136 rows and 5 columns:</p><dl'>
-  <dt><code>linenumber</code></dt><dd><p>Linenumber</p></dd>
-  <dt><code>text</code></dt><dd><p>Character string of text about 70 characters</p></dd>
-  <dt><code>type</code></dt><dd><p>Type of document</p></dd>
-  <dt><code>id</code></dt><dd><p>Text document identifier</p></dd>
-  <dt><code>date</code></dt><dd><p>Date in &lt;YYYY-MM-DD&gt; format when resolution was made</p></dd>
-
-</dl>
-
-    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
-
-    <p><a href='https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-12.pdf'>https://www.doh.gov.ph/sites/default/files/health-update/IATF-RESO-12.pdf</a></p>
+    <p>A tibble of 2 columns: 1) press release title; and, 2) date of press
+  release.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>iatfResolution12</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 136 x 5</span><span>
-#&gt;    linenumber text                                      type       id date      
-#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 REPUBLIC OF THE PHILIPPINES               resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 DOH - DFA - DILG - DOJ - DOLE - DOT - DO… resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 INTER-AGENCY TASK FORCE FOR THE MANAGEME… resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 EMERGING INFECTIOUS DISEASE               resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 RESOLUTION NO. 12                         resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 Series of 2020                            resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 March 13, 2020                            resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 RECOMMENDATIONS FOR THE MANAGEMENT        resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 OF THE CORONAVIRUS DISEASE 2019 (COVID-1… resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 WHEREAS, on March 12, 2020, the IATF wit… resolu…    12 2020-03-13
-#&gt; </span><span style='color: #555555;'># … with 126 more rows</span><span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='fu'>get_pr_url</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph/press-releases"</span>,
+           <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 15 x 2</span><span>
+#&gt;    url                                                                date      
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                                              </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'> 1</span><span> /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Beh… 2020-05-09
+#&gt; </span><span style='color: #555555;'> 2</span><span> /press-release/biggest-mega-swabbing-center-in-moa-arena-to-open-… 2020-05-08
+#&gt; </span><span style='color: #555555;'> 3</span><span> /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTLINERS-… 2020-05-07
+#&gt; </span><span style='color: #555555;'> 4</span><span> /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-OF-PPE… 2020-05-07
+#&gt; </span><span style='color: #555555;'> 5</span><span> /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CURVE-RE… 2020-05-07
+#&gt; </span><span style='color: #555555;'> 6</span><span> /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%3B-DOH… 2020-05-06
+#&gt; </span><span style='color: #555555;'> 7</span><span> /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVID-19-T… 2020-05-06
+#&gt; </span><span style='color: #555555;'> 8</span><span> /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-PAST-TW… 2020-05-06
+#&gt; </span><span style='color: #555555;'> 9</span><span> /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHYSICAL-… 2020-05-06
+#&gt; </span><span style='color: #555555;'>10</span><span> /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-ON-NCDs 2020-05-05
+#&gt; </span><span style='color: #555555;'>11</span><span> /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-MORE-M… 2020-05-05
+#&gt; </span><span style='color: #555555;'>12</span><span> /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-BE-A-LE… 2020-05-04
+#&gt; </span><span style='color: #555555;'>13</span><span> /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-COVID-19… 2020-05-04
+#&gt; </span><span style='color: #555555;'>14</span><span> /doh-press-release/doh-commends-osmaks-effective-infection-contro… 2020-04-30
+#&gt; </span><span style='color: #555555;'>15</span><span> /doh-press-release/Duque-enlists-governors-in-5-point-%23BEATCOVI… 2020-04-30</div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
