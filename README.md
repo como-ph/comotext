@@ -55,8 +55,71 @@ function can be used to extend the period.
 ### Extracting text data from press releases
 
 Press releases issued by the [Department of
-Health](https://www.doh.gov.ph) are available publicly via the [DoH
-website](https://www.doh.gov.ph).
+Health](https://www.doh.gov.ph) are available publicly via their
+[website](https://www.doh.gov.ph/press-releases). The structure of the
+press releases page is that the section with the links to the press
+releases text is in a panel within the web page with the panel itself
+having pagination with each page containing links to 15 press releases
+with press releases ordered in reverse chronological order.
+
+The function `get_pr_url` extracts the relative URL links to each of the
+press releases on a current page within the press releases panel. If we
+want to get the relative URL links for the press releases on page 1 of
+the press releases panel, we use:
+
+``` r
+get_pr_url(pages = 1)
+#> # A tibble: 15 x 2
+#>    url                                                                date      
+#>    <chr>                                                              <date>    
+#>  1 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Beh… 2020-05-09
+#>  2 /press-release/biggest-mega-swabbing-center-in-moa-arena-to-open-… 2020-05-08
+#>  3 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTLINERS-… 2020-05-07
+#>  4 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-OF-PPE… 2020-05-07
+#>  5 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CURVE-RE… 2020-05-07
+#>  6 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%3B-DOH… 2020-05-06
+#>  7 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVID-19-T… 2020-05-06
+#>  8 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-PAST-TW… 2020-05-06
+#>  9 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHYSICAL-… 2020-05-06
+#> 10 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-ON-NCDs 2020-05-05
+#> 11 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-MORE-M… 2020-05-05
+#> 12 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-BE-A-LE… 2020-05-04
+#> 13 /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-COVID-19… 2020-05-04
+#> 14 /doh-press-release/doh-commends-osmaks-effective-infection-contro… 2020-04-30
+#> 15 /doh-press-release/Duque-enlists-governors-in-5-point-%23BEATCOVI… 2020-04-30
+```
+
+The function `get_press_releases` creates a dataset of text of press
+releases given a URL of a specific press release text and the date of
+release. This information is provided for by `get_pr_url`. If we want to
+get the text data of the press releases from page 1 of the press release
+panel, we use:
+
+``` r
+##
+baseURL <- "https://www.doh.gov.ph"
+
+##
+prURL <- get_pr_url(pages = 1)
+
+##
+get_press_release(url = paste(baseURL, prURL$url[1], sep = ""), 
+                  date = prURL$date[1])
+#> # A tibble: 57 x 5
+#>    linenumber text                                     type     id    date      
+#>         <int> <chr>                                    <chr>    <lgl> <date>    
+#>  1          1 ECQ Buys PH Time; Continued Practice of… press r… NA    2020-05-09
+#>  2          2 Press Release/07 May 2020 The Philippin… press r… NA    2020-05-09
+#>  3          3 how many people test positive for COVID… press r… NA    2020-05-09
+#>  4          4 which meets the benchmark set by the Wo… press r… NA    2020-05-09
+#>  5          5 media forum, Health Undersecretary Dr. … press r… NA    2020-05-09
+#>  6          6 the welcome news with Dr. Edsel Salvana… press r… NA    2020-05-09
+#>  7          7 the Technical Advisory Group that advis… press r… NA    2020-05-09
+#>  8          8 Inter-Agency Task Force (IATF). Conside… press r… NA    2020-05-09
+#>  9          9 up its testing capacity, and that the s… press r… NA    2020-05-09
+#> 10         10 individuals, the low positivity rate ha… press r… NA    2020-05-09
+#> # … with 47 more rows
+```
 
 ### Concatenating text datasets
 

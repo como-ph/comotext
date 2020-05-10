@@ -46,7 +46,27 @@ A description of the available datesets can be found [here](https://como-ph.gith
 
 ### Extracting text data from press releases
 
-Press releases issued by the [Department of Health](https://www.doh.gov.ph) are available publicly via the [DoH website](https://www.doh.gov.ph).
+Press releases issued by the [Department of Health](https://www.doh.gov.ph) are available publicly via their [website](https://www.doh.gov.ph/press-releases). The structure of the press releases page is that the section with the links to the press releases text is in a panel within the web page with the panel itself having pagination with each page containing links to 15 press releases with press releases ordered in reverse chronological order.
+
+The function `get_pr_url` extracts the relative URL links to each of the press releases on a current page within the press releases panel. If we want to get the relative URL links for the press releases on page 1 of the press releases panel, we use:
+
+```{r usage1, echo = TRUE, eval = TRUE}
+get_pr_url(pages = 1)
+```
+
+The function `get_press_releases` creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by `get_pr_url`. If we want to get the text data of the press releases from page 1 of the press release panel, we use:
+
+```{r usage2, echo = TRUE, eval = TRUE}
+##
+baseURL <- "https://www.doh.gov.ph"
+
+##
+prURL <- get_pr_url(pages = 1)
+
+##
+get_press_release(url = paste(baseURL, prURL$url[1], sep = ""), 
+                  date = prURL$date[1])
+```
 
 ### Concatenating text datasets
 
@@ -56,18 +76,18 @@ The datasets described above can be processed and analysed on their own or as a 
 
 The `combine_docs` function allows the user to specify search terms to use in identifying datasets provided by the `comotext` package. The `docs` argument allows the specification of a vector of search terms to use to identify the names of datasets to concatenate. If the name/s of the datasets contain these search terms, the datasets with these name/s will be returned.
 
-```{r usage1, echo = TRUE, eval = TRUE}
+```{r usage3, echo = TRUE, eval = TRUE}
 combine_docs(docs = "resolution")
 ```
 
 The `combine_iatf` function is a specialised wrapper of the `combine_docs` function that specifically returns datasets containing IATF resolutions. An additional argument `res` allows users to specify which IATF resolutions to return. To get IATF resolution 10, 11, and 12, the following call to `combine_iatf` is made as follows:
 
-```{r usage2, echo = TRUE, eval = TRUE}
+```{r usage4, echo = TRUE, eval = TRUE}
 combine_iatf(docs = "resolution", res = 10:12)
 ```
 
 To check if only resolutions 10 to 12 have been returned:
 
-```{r usage3, echo = TRUE, eval = TRUE}
+```{r usage5, echo = TRUE, eval = TRUE}
 combine_iatf(docs = "resolution", res = 10:12)[ , c("type", "id")]
 ```
