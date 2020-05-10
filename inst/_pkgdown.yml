@@ -23,7 +23,7 @@ reference:
 
 - title: Extract
   contents:
-  - get_pr_title
+  - get_pr_url
   - get_press_release
 
 - title: Combine
@@ -44,3 +44,4 @@ reference:
   - iatfResolution17
   - iatfResolution18
   - iatfResolution19
+  - pressRelease
