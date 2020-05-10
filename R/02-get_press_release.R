@@ -12,14 +12,15 @@
 #'   release.
 #'
 #' @examples
-#' get_pr_url(pages = 1)
+#' get_pr_url(base = "http://www.doh.gov.ph/press-releases",
+#'            pages = 1)
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_pr_url <- function(base = "http://www.doh.gov.ph/press-releases",
+get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
                        pages = 1:13) {
   ## Concatenating vectors
   prURL <- NULL
@@ -29,12 +30,6 @@ get_pr_url <- function(base = "http://www.doh.gov.ph/press-releases",
   for(i in pages) {
     wp <- paste(base, "?page=", i - 1, sep = "")
     if(i == 1) wp <- base
-
-    #if(proxy) {
-      #utils::download.file(url = wp, destfile = paste(tempdir(), "temp.html", sep = "/"))
-      #wp <- paste(tempdir(), "temp.html", sep = "/")
-    #  wp <- httr::GET()
-    #}
 
     href <- xml2::read_html(x = wp) %>%
       rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
@@ -71,6 +66,8 @@ get_pr_url <- function(base = "http://www.doh.gov.ph/press-releases",
 #' Extract text of press release from the Philippines Department of Health
 #' website
 #'
+#' @param base Base URL for press releases in the Department of Health website.
+#'   Default is \url{https://www.doh.gov.ph}
 #' @param url of press release to extract text from
 #' @param date Date press release was issued. Should be in <YYYY-MM-DD> format.
 #'
@@ -78,10 +75,10 @@ get_pr_url <- function(base = "http://www.doh.gov.ph/press-releases",
 #'   information on line number, type of text and date of press release.
 #'
 #' @examples
-#' baseURL <- "http://www.doh.gov.ph"
-#' prURL <- get_pr_url(pages = 1)[1, "url"]
-#' get_press_release(url = paste(baseURL, prURL, sep = ""),
-#'                   date = get_pr_url(pages = 1)[1, "date"])
+#' prURL <- get_pr_url(pages = 1)
+#' get_press_release(base = "http://www.doh.gov.ph",
+#'                   url = prURL$url[1],
+#'                   date = prURL$date[1])
 #'
 #' @export
 #'
@@ -89,7 +86,12 @@ get_pr_url <- function(base = "http://www.doh.gov.ph/press-releases",
 #
 ################################################################################
 
-get_press_release <- function(url, date) {
+get_press_release <- function(base = "https://www.doh.gov.ph",
+                              url,
+                              date) {
+  ## Form URL
+  url <- paste(base, url, sep = "")
+
   ## Extract text from URL
   z <- xml2::read_html(x = url) %>%
     rvest::html_nodes(css = ".panel") %>%

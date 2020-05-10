@@ -5,9 +5,12 @@
 \title{Extract text of press release from the Philippines Department of Health
 website}
 \usage{
-get_press_release(url, date)
+get_press_release(base = "https://www.doh.gov.ph", url, date)
 }
 \arguments{
+\item{base}{Base URL for press releases in the Department of Health website.
+Default is \url{https://www.doh.gov.ph}}
+
 \item{url}{of press release to extract text from}
 
 \item{date}{Date press release was issued. Should be in <YYYY-MM-DD> format.}
@@ -21,9 +24,9 @@ Extract text of press release from the Philippines Department of Health
 website
 }
 \examples{
-baseURL <- "http://www.doh.gov.ph"
-prURL <- get_pr_url(pages = 1)[1, "url"]
-get_press_release(url = paste(baseURL, prURL, sep = ""),
-                  date = get_pr_url(pages = 1)[1, "date"])
+prURL <- get_pr_url(pages = 1)
+get_press_release(base = "http://www.doh.gov.ph",
+                  url = prURL$url[1],
+                  date = prURL$date[1])
 
 }
