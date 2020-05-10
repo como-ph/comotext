@@ -10,16 +10,16 @@
 #'   release.
 #'
 #' @examples
-#' get_pr_title(pages = 1:5)
+#' get_pr_url(pages = 1:5)
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_pr_title <- function(pages = 1:13) {
+get_pr_url <- function(pages = 1:13) {
   ## Concatenating vectors
-  prTitle <- NULL
+  prURL <- NULL
   prDate <- NULL
 
   ## Cycle through pages
@@ -27,27 +27,30 @@ get_pr_title <- function(pages = 1:13) {
     wp <- paste("https://www.doh.gov.ph/press-releases?page=", i - 1, sep = "")
     if(i == 1) wp <- "https://www.doh.gov.ph/press-releases"
 
-    htmlText <- xml2::read_html(x = wp) %>%
-      rvest::html_nodes(css = ".panel") %>%
-      rvest::html_text() %>%
-      stringr::str_split(pattern = "\n") %>%
-      unlist() %>%
-      stringr::str_trim(side = "both")
+    href <- xml2::read_html(x = wp) %>%
+      rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
+      rvest::html_attr(name = "href")
+
+    href <- href[stringr::str_detect(string = href, pattern = "press-release")]
+
+    hrefDate <- xml2::read_html(x = wp) %>%
+      rvest::html_nodes(css = ".view-content .content-time") %>%
+      rvest::html_text()
+
+    hrefDate <- hrefDate[1:length(href)]
 
     ##
-    htmlText <- htmlText[!htmlText %in% c("", "Press Releases",
-                                          "?php print render($page['highlighted']); ?>")]
+    prURL <- c(prURL, href)
+    prDate <- c(prDate, hrefDate)
 
     ##
-    htmlText <- htmlText[1:30]
-
-    ##
-    prTitle <- c(prTitle, htmlText[seq(from = 1, to = length(htmlText), by = 2)])
-    prDate <- c(prDate, htmlText[seq(from = 2, to = length(htmlText), by = 2)])
+    prDate <- lubridate::mdy(prDate)
   }
 
   ##
-  pr <- tibble::tibble(data.frame(prTitle, prDate, stringsAsFactors = FALSE))
+  pr <- tibble::tibble(data.frame(url = prURL,
+                                  date = prDate,
+                                  stringsAsFactors = FALSE))
 
   ## Return DF
   return(pr)
@@ -60,16 +63,16 @@ get_pr_title <- function(pages = 1:13) {
 #' website
 #'
 #' @param url of press release to extract text from
-#' @param date Date press release was issued. Should be in <DD/MM/YYYY> format.
+#' @param date Date press release was issued. Should be in <YYYY-MM-DD> format.
 #'
 #' @return A tibble containing text of the press release with additional
 #'   information on line number, type of text and date of press release.
 #'
 #' @examples
-#' baseURL <- "https://www.doh.gov.ph/press-release"
-#' prTitle <- "ECQ-Buys-PH-Time-Continued-Practice-of-Healthy-Behavior-Needed-to-Sustain-Gains"
-#' get_press_release(url = paste(baseURL, prTitle, sep = "/"),
-#'                   date = "07/04/2020")
+#' baseURL <- "https://www.doh.gov.ph"
+#' prURL <- get_pr_url(pages = 1)[1, "url"]
+#' get_press_release(url = paste(baseURL, prURL, sep = ""),
+#'                   date = get_pr_url(pages = 1)[1, "date"])
 #'
 #' @export
 #'
@@ -101,7 +104,7 @@ get_press_release <- function(url, date) {
                              text = pressRelease,
                              type = "press release",
                              id = NA,
-                             date = as.Date(date, format = "%d/%m/%y"),
+                             date = date,
                              stringsAsFactors = FALSE)
 
   ## Convert pressRelease to tibble
