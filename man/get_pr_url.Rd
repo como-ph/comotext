@@ -4,9 +4,12 @@
 \alias{get_pr_url}
 \title{Extract title of press releases from Department of Health website}
 \usage{
-get_pr_url(pages = 1:13)
+get_pr_url(base = "https://www.doh.gov.ph/press-releases", pages = 1:13)
 }
 \arguments{
+\item{base}{Base URL for press releases in the Department of Health website.
+Default is \url{https://www.doh.gov.ph/press-releases}}
+
 \item{pages}{A vector of page numbers corresponding to the page panel
 containing the press release link}
 }
@@ -18,6 +21,6 @@ A tibble of 2 columns: 1) press release title; and, 2) date of press
 Extract title of press releases from Department of Health website
 }
 \examples{
-get_pr_url(pages = 1:5)
+get_pr_url(pages = 1)
 
 }
