@@ -21,6 +21,7 @@
 #' @importFrom rvest html_nodes html_text
 #' @importFrom magrittr %>%
 #' @importFrom lubridate mdy
+#' @importFrom httr user_agent
 #'
 #
 ################################################################################
