@@ -49,13 +49,12 @@ the `pressRelease` dataset can be found
 [here](https://como-ph.github.io/comotext/reference/pressRelease.html).
 This dataset has been generated using the `get_press_release()` function
 (see description below) included in `comotext`. Related to this is the
-dataset `pressReleaseLinks` which holds the relative URL links for each
-of the press releases in the [Department of
-Health](http://www.doh.gov.ph) website to date. This dataset has been
-produced using the `get_pr_url()` function (see description below)
-included in `comotext`. A description of the `pressReleaseLink` dataset
-can be found
-[here](https://como-ph.github.io/comotext/reference/pressReleaseLinks.html).
+dataset `prLinks` which holds the relative URL links for each of the
+press releases in the [Department of Health](http://www.doh.gov.ph)
+website to date. This dataset has been produced using the `get_pr_url()`
+function (see description below) included in `comotext`. A description
+of the `prLinks` dataset can be found
+[here](https://como-ph.github.io/comotext/reference/prLinks.html).
 
 ### Extracting text data from press releases
 
@@ -177,16 +176,16 @@ combine_docs(docs = "resolution")
 #> # A tibble: 1,727 x 5
 #>    linenumber text                                      type       id date      
 #>         <int> <chr>                                     <chr>   <dbl> <date>    
-#>  1          1 "                                    ​RE…  resolu…    19 2020-04-03
-#>  2          2 "                                ​INTER-…  resolu…    19 2020-04-03
-#>  3          3 "                      FOR THE MANAGEMEN… resolu…    19 2020-04-03
-#>  4          4 "                                       … resolu…    19 2020-04-03
-#>  5          5 "                                       … resolu…    19 2020-04-03
-#>  6          6 "                                       … resolu…    19 2020-04-03
-#>  7          7 "        RECOMMENDATIONS RELATIVE TO THE… resolu…    19 2020-04-03
-#>  8          8 "     OF THE CORONAVIRUS DISEASE 2019 (C… resolu…    19 2020-04-03
-#>  9          9 "        WHEREAS, ​on March 8, 2020, rec…  resolu…    19 2020-04-03
-#> 10         10 "mobilization of a whole-of-government r… resolu…    19 2020-04-03
+#>  1          1 ​REPUBLIC    OF THE PHILIPPINES            resolu…    19 2020-04-03
+#>  2          2 ​INTER-AGENCY TASK FORCE                   resolu…    19 2020-04-03
+#>  3          3 FOR THE MANAGEMENT OF EMERGING INFECTIOU… resolu…    19 2020-04-03
+#>  4          4 ​RESOLUTION NO. 19                         resolu…    19 2020-04-03
+#>  5          5 Series of 2020                            resolu…    19 2020-04-03
+#>  6          6 April 3, 2020                             resolu…    19 2020-04-03
+#>  7          7 RECOMMENDATIONS RELATIVE TO THE MANAGEME… resolu…    19 2020-04-03
+#>  8          8 OF THE CORONAVIRUS DISEASE 2019 (COVID-1… resolu…    19 2020-04-03
+#>  9          9 WHEREAS, ​on March 8, 2020, recognizing …  resolu…    19 2020-04-03
+#> 10         10 mobilization of a whole-of-government re… resolu…    19 2020-04-03
 #> # … with 1,717 more rows
 ```
 
