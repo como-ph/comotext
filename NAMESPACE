@@ -2,8 +2,9 @@
 
 export(combine_docs)
 export(combine_iatf)
-export(get_pr_title)
+export(get_pr_url)
 export(get_press_release)
+importFrom(lubridate,mdy)
 importFrom(magrittr,"%>%")
 importFrom(rvest,html_nodes)
 importFrom(rvest,html_text)
