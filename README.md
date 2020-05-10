@@ -43,12 +43,19 @@ Diseases (IATF).
 A description of the available datesets can be found
 [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
-`comotext` also now holds 1 dataset of [Department of
-Health](http://www.doh.gov.ph) press releases dating from January 2017
-to May 2020. A description of the `pressRelease` dataset can be found
+`comotext` also holds 1 dataset of all [Department of
+Health](http://www.doh.gov.ph) press releases to date. A description of
+the `pressRelease` dataset can be found
 [here](https://como-ph.github.io/comotext/reference/pressRelease.html).
-This dataset has been generated using the `get_press_release()` (see
-description below) function included in `comotext`.
+This dataset has been generated using the `get_press_release()` function
+(see description below) included in `comotext`. Related to this is the
+dataset `pressReleaseLinks` which holds the relative URL links for each
+of the press releases in the [Department of
+Health](http://www.doh.gov.ph) website to date. This dataset has been
+produced using the `get_pr_url()` function (see description below)
+included in `comotext`. A description of the `pressReleaseLink` dataset
+can be found
+[here](https://como-ph.github.io/comotext/reference/pressReleaseLinks.html).
 
 ### Extracting text data from press releases
 
