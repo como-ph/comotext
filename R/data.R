@@ -323,7 +323,7 @@
 #' }
 #'
 #' @examples
-#' pressReleaseLinks
+#' prLinks
 #'
 #' @source Produced by \code{get_pr_url(pages = 1:25)}. Updated as of
 #'   10 May 2020
@@ -331,4 +331,4 @@
 #'
 #
 ################################################################################
-"pressReleaseLinks"
+"prLinks"

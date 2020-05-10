@@ -6,9 +6,9 @@ library(comotext)
 
 pr <- get_pr_url(pages = 1:25)
 
-pressReleaseLinks <- pr
+prLinks <- pr
 
-usethis::use_data(pressReleaseLinks, overwrite = TRUE, compress = "xz")
+usethis::use_data(prLinks, overwrite = TRUE, compress = "xz")
 
 ## Extract text from press releases ############################################
 
