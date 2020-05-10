@@ -3,6 +3,8 @@
 #'
 #' Extract title of press releases from Department of Health website
 #'
+#' @param base Base URL for press releases in the Department of Health website.
+#'   Default is \url{https://www.doh.gov.ph/press-releases}
 #' @param pages A vector of page numbers corresponding to the page panel
 #'   containing the press release link
 #'
@@ -10,22 +12,26 @@
 #'   release.
 #'
 #' @examples
-#' get_pr_url(pages = 1:5)
+#' get_pr_url(pages = 1)
 #'
 #' @export
 #'
 #
 ################################################################################
 
-get_pr_url <- function(pages = 1:13) {
+get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
+                       pages = 1:13) {
   ## Concatenating vectors
   prURL <- NULL
   prDate <- NULL
 
   ## Cycle through pages
   for(i in pages) {
-    wp <- paste("https://www.doh.gov.ph/press-releases?page=", i - 1, sep = "")
-    if(i == 1) wp <- "https://www.doh.gov.ph/press-releases"
+    wp <- paste(base, "?page=", i - 1, sep = "")
+    if(i == 1) wp <- base
+
+    wp <- rvest::html_session(wp,
+      httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
 
     href <- xml2::read_html(x = wp) %>%
       rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
@@ -81,6 +87,10 @@ get_pr_url <- function(pages = 1:13) {
 ################################################################################
 
 get_press_release <- function(url, date) {
+  ##
+  url <- rvest::html_session(url,
+    httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
+
   ## Extract text from URL
   z <- xml2::read_html(x = url) %>%
     rvest::html_nodes(css = ".panel") %>%
