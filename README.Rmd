@@ -42,6 +42,12 @@ remotes::install_github("como-ph/comotext")
 
 A description of the available datesets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
+`comotext` also now holds 1 dataset of [Department of Health](http://www.doh.gov.ph) press releases dating from December 2019 to May 2020. A description of the `pressRelease` dataset can be found [here](https://como-ph.github.io/comotext/reference/pressRelease.html). This dataset has been generated using the `get_press_release()` (see description below) function included in `comotext`. If a much longer period of press release text data is required, `get_press_release()` function can be used to extend the period.
+
+### Extracting text data from press releases
+
+Press releases issued by the [Department of Health](https://www.doh.gov.ph) are available publicly via the [DoH website](https://www.doh.gov.ph).
+
 ### Concatenating text datasets
 
 The datasets described above can be processed and analysed on their own or as a combined corpus of text data. `comotext` provides convenience functions that concatenates all or specific text datasets available from the `comotext` package.
