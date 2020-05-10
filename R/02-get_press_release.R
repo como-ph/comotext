@@ -30,8 +30,8 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
     wp <- paste(base, "?page=", i - 1, sep = "")
     if(i == 1) wp <- base
 
-    wp <- rvest::html_session(wp,
-      httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
+    #wp <- rvest::html_session(wp,
+    #  httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
 
     href <- xml2::read_html(x = wp) %>%
       rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
@@ -88,8 +88,8 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
 
 get_press_release <- function(url, date) {
   ##
-  url <- rvest::html_session(url,
-    httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
+  #url <- rvest::html_session(url,
+  #  httr::user_agent("Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US) AppleWebKit/534.20 (KHTML, like Gecko) Chrome/11.0.672.2 Safari/534.20"))
 
   ## Extract text from URL
   z <- xml2::read_html(x = url) %>%
