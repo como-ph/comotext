@@ -4,7 +4,7 @@ library(comotext)
 
 ## Extract press releases ######################################################
 
-pr <- get_pr_url(pages = 1:7)
+pr <- get_pr_url(pages = 1:25)
 
 ## Extract text from press releases ############################################
 
