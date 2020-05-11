@@ -40,7 +40,7 @@ combine_docs <- function(docs = c("resolution", "press release")) {
 
   ## Cycle through dataset names matching search term
   for(i in z) {
-    allDocs <- rbind(allDocs, eval(parse(text = z)))
+    allDocs <- rbind(allDocs, eval(parse(text = i)))
   }
 
   allDocs <- tibble::tibble(allDocs)
