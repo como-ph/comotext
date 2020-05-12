@@ -300,7 +300,7 @@ iatfResolution13 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution13, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 14 ################################
+## Resolution 14 ###############################################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-14.pdf")
 
@@ -377,7 +377,7 @@ iatfResolution14 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution14, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 15 ################################
+## Resolution 15 ###############################################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-15.pdf")
 
@@ -404,7 +404,7 @@ iatfResolution15 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution15, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 16 ################################
+## Resolution 16 ###############################################################
 
 x <- pdf_text(pdf = "data-raw/IATF/IATF-RESO-16.pdf")
 
@@ -426,7 +426,7 @@ iatfResolution16 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution16, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 17 ################################
+## Resolution 17 ###############################################################
 
 x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 17.pdf")
 
@@ -452,7 +452,7 @@ iatfResolution17 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution17, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 18 ################################
+## Resolution 18 ###############################################################
 
 x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-18.pdf")
 
@@ -480,7 +480,7 @@ iatfResolution18 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution18, overwrite = TRUE, compress = "xz")
 
-################################# Resolution 19 ################################
+## Resolution 19 ###############################################################
 
 x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 19.pdf")
 
@@ -506,3 +506,9 @@ y <- data.frame(linenumber = 1:length(y),
 iatfResolution19 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution19, overwrite = TRUE, compress = "xz")
+
+## Resolution 20 ###############################################################
+
+
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 19.pdf")
