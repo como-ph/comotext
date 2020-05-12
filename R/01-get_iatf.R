@@ -21,13 +21,17 @@ get_iatf_links <- function(base = "https://www.doh.gov.ph/COVID-19/IATF-Resoluti
     rvest::html_nodes(css = ".panel .view-content .views-table") %>%
     rvest::html_table()
 
+  ## Convert date to date class with format YYYY-MM-DD
+  xx[[1]]$Date <- lubridate::mdy(xx[[1]]$Date)
+
   ## Get href links per resolution
   yy <- xml2::read_html(base) %>%
     rvest::html_nodes(css = ".panel .view-content .views-field a") %>%
     rvest::html_attr(name = "href")
 
   ## Extract Resolution number from links
-  id <- stringr::str_extract(string = yy, pattern = "[0-9]+")
+  id <- stringr::str_remove_all(string = yy, pattern = "%20")
+  id <- stringr::str_extract(string = id, pattern = "[0-9]+")
 
   ## Add links id to links
   yy <- data.frame(id, link = yy)
