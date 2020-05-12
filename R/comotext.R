@@ -14,9 +14,10 @@
 #' @docType package
 #' @name comotext
 #' @keywords internal
-#' @importFrom utils data
+#' @importFrom utils data download.file
 #' @importFrom stringr str_to_title str_detect str_wrap str_trim str_subset
 #'   str_split str_split_fixed str_remove_all str_extract str_to_upper
+#'   str_replace
 #' @importFrom tibble tibble
 #' @importFrom xml2 read_html
 #' @importFrom rvest html_nodes html_text html_attr html_table
@@ -27,4 +28,8 @@
 #
 ################################################################################
 "_PACKAGE"
+
+
+## quiets concerns of R CMD check re: iatfResList
+if(getRversion() >= "2.15.1")  utils::globalVariables("iatfResList")
 
