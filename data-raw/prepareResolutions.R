@@ -6,6 +6,8 @@ library(stringr)
 
 iatfResList <- get_iatf_links()
 
+usethis::use_data(iatfResList, overwrite = TRUE, compress = "xz")
+
 ## Resolution 9 ################################################################
 
 ## Read resolution
