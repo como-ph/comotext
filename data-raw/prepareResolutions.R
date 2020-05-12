@@ -2,6 +2,10 @@ library(rvest)
 library(pdftools)
 library(stringr)
 
+## Resolutions table ###########################################################
+
+iatfResList <- get_iatf_links()
+
 ## Resolution 9 ################################################################
 
 ## Read resolution

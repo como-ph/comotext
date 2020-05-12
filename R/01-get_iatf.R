@@ -36,6 +36,9 @@ get_iatf_links <- function(base = "https://www.doh.gov.ph/COVID-19/IATF-Resoluti
   linkTable <- merge(xx[[1]], yy, by.x = "Resolution No.", by.y = "id")
   names(linkTable) <- c("id", "title", "date", "link")
 
+  ## Convert to tibble
+  linkTable <- tibble::tibble(linkTable)
+
   ## Return
   return(linkTable)
 }
