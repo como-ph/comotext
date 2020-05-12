@@ -332,3 +332,27 @@
 #
 ################################################################################
 "prLinks"
+
+
+################################################################################
+#
+#'
+#' IATF resolutions URL links
+#'
+#' @format A tibble with 24 rows and 4 columns:
+#' \describe{
+#'   \item{\code{id}}{Unique identifier}
+#'   \item{\code{title}}{Title of resolution}
+#'   \item{\code{date}}{Date resolution released. Format <YYYY-MM-DD>}
+#'   \item{\code{link}}{Relative URL of IATF resolution}
+#' }
+#'
+#' @examples
+#' iatfResList
+#'
+#' @source \url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}
+#'
+#'
+#
+################################################################################
+"iatfResList"
