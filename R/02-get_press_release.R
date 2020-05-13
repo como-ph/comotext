@@ -161,6 +161,7 @@ get_press_release <- function(base = "https://www.doh.gov.ph",
   ## Create pressRelease data.frame
   pressRelease <- data.frame(linenumber = 1:length(pressRelease),
                              text = pressRelease,
+                             source = "DOH",
                              type = "press release",
                              id = df$id,
                              date = df$date,
