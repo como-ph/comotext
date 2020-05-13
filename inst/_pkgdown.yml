@@ -48,7 +48,19 @@ reference:
   - iatfResolution19
   - iatfResolution20
   - iatfResolution21
+  - iatfResolution22
+  - iatfResolution23
+  - iatfResolution24
+  - iatfResolution25
+  - iatfResolution26
+  - iatfResolution27
+  - iatfResolution28
+  - iatfResolution29
+  - iatfResolution31
+  - iatfResolution32
+  - iatfResolution33
 
 - title: Datasets - DOH press releases
+  contents:
   - prLinks
   - pressRelease
