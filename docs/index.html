@@ -100,7 +100,7 @@
 <p>A description of the available datasets can be found <a href="https://como-ph.github.io/comotext/reference/index.html#section-datasets">here</a>.</p>
 <p>A table of the 24 IATF resolutions and the URLs to download them can be generated using the function <code><a href="reference/get_iatf_links.html">get_iatf_links()</a></code> as follows:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference/get_iatf_links.html">get_iatf_links</a></span>()
-<span class="co">#&gt; # A tibble: 24 x 4</span>
+<span class="co">#&gt; # A tibble: 25 x 4</span>
 <span class="co">#&gt;       id title                          date       link                         </span>
 <span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                          &lt;date&gt;     &lt;chr&gt;                        </span>
 <span class="co">#&gt;  1     9 Recommendations for the Manag… 2020-03-03 https://doh.gov.ph/sites/def…</span>
@@ -113,7 +113,7 @@
 <span class="co">#&gt;  8    16 Additional Guidelines for the… 2020-03-30 https://doh.gov.ph/sites/def…</span>
 <span class="co">#&gt;  9    17 Recommendations Relative to t… 2020-03-30 https://doh.gov.ph/sites/def…</span>
 <span class="co">#&gt; 10    18 Recommendations Relative to t… 2020-04-01 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt; # … with 14 more rows</span></pre></div>
+<span class="co">#&gt; # … with 15 more rows</span></pre></div>
 <p><code>comotext</code> also holds 1 dataset of all <a href="http://www.doh.gov.ph">Department of Health</a> press releases to date. A description of the <code>pressRelease</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/pressRelease.html">here</a>. This dataset has been generated using the <code><a href="reference/get_press_release.html">get_press_release()</a></code> function (see description below) included in <code>comotext</code>. Related to this is the dataset <code>prLinks</code> which holds the relative URL links for each of the press releases in the <a href="http://www.doh.gov.ph">Department of Health</a> website to date. This dataset has been produced using the <code><a href="reference/get_pr_url.html">get_pr_url()</a></code> function (see description below) included in <code>comotext</code>. A description of the <code>prLinks</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/prLinks.html">here</a>.</p>
 </div>
 <div id="extracting-text-data-from-press-releases" class="section level3">
@@ -150,12 +150,12 @@
 <span class="co">#&gt;    linenumber text                              source type        id date      </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                             &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt; &lt;date&gt;    </span>
 <span class="co">#&gt;  1          1 STATEMENT ON DATA INTEGRITY       DOH    press r…  1920 2020-05-13</span>
-<span class="co">#&gt;  2          2 The Department of Health appreci… DOH    press r…  1920 2020-05-13</span>
-<span class="co">#&gt;  3          3 Pandemic Response Team in its Po… DOH    press r…  1920 2020-05-13</span>
-<span class="co">#&gt;  4          4 DOH has already taken note of th… DOH    press r…  1920 2020-05-13</span>
-<span class="co">#&gt;  5          5 data drops.These issues have bee… DOH    press r…  1920 2020-05-13</span>
-<span class="co">#&gt;  6          6 as other inconsistencies communi… DOH    press r…  1920 2020-05-13</span>
-<span class="co">#&gt;  7          7 tracker@doh.gov.ph​. We very muc…  DOH    press r…  1920 2020-05-13</span>
+<span class="co">#&gt;  2          2 13, May 2020The Department of He… DOH    press r…  1920 2020-05-13</span>
+<span class="co">#&gt;  3          3 UP COVID-19 Pandemic Response Te… DOH    press r…  1920 2020-05-13</span>
+<span class="co">#&gt;  4          4 2020. The DOH has already taken … DOH    press r…  1920 2020-05-13</span>
+<span class="co">#&gt;  5          5 24 and 25 data drops.These issue… DOH    press r…  1920 2020-05-13</span>
+<span class="co">#&gt;  6          6 as well as other inconsistencies… DOH    press r…  1920 2020-05-13</span>
+<span class="co">#&gt;  7          7 covid tracker@doh.gov.ph​. We ve…  DOH    press r…  1920 2020-05-13</span>
 <span class="co">#&gt;  8          8 for raising their concerns.  We … DOH    press r…  1920 2020-05-13</span>
 <span class="co">#&gt;  9          9 area nominal percentage of the w… DOH    press r…  1920 2020-05-13</span>
 <span class="co">#&gt; 10         10 overall interpretation of data a… DOH    press r…  1920 2020-05-13</span>
@@ -278,7 +278,7 @@
   <div class="dev-status">
 <h2>Dev status</h2>
 <ul class="list-unstyled">
-<li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
+<li><a href="https://www.tidyverse.org/lifecycle/#maturing"><img src="https://img.shields.io/badge/lifecycle-maturing-blue.svg" alt="Lifecycle: maturing"></a></li>
 <li><a href="https://travis-ci.org/como-ph/comotext"><img src="https://travis-ci.org/como-ph/comotext.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/como-ph/comotext"><img src="https://ci.appveyor.com/api/projects/status/github/como-ph/comotext?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
 </ul>
