@@ -8,7 +8,7 @@
 #' @return A tibble of links to all the current IATF resolutions
 #'
 #' @examples
-#' get_iatf_links()
+#' get_iatf_links(base = "http://www.doh.gov.ph/COVID-19/IATF-Resolutions")
 #'
 #' @export
 #'
