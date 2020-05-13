@@ -4,7 +4,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 9
 #'
-#' @format A tibble with 69 rows and 6 columns:
+#' @format A tibble with 60 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -31,7 +31,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 10
 #'
-#' @format A tibble with 84 rows and 6 columns:
+#' @format A tibble with 69 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -58,7 +58,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 11
 #'
-#' @format A tibble with 137 rows and 6 columns:
+#' @format A tibble with 128 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -85,7 +85,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 12
 #'
-#' @format A tibble with 136 rows and 6 columns:
+#' @format A tibble with 127 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -112,7 +112,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 13
 #'
-#' @format A tibble with 204 rows and 6 columns:
+#' @format A tibble with 196 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -139,7 +139,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 14
 #'
-#' @format A tibble with 231 rows and 6 columns:
+#' @format A tibble with 222 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -166,7 +166,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 15
 #'
-#' @format A tibble with 166 rows and 6 columns:
+#' @format A tibble with 157 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -193,7 +193,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 16
 #'
-#' @format A tibble with 87 rows and 6 columns:
+#' @format A tibble with 83 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -220,7 +220,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 17
 #'
-#' @format A tibble with 151 rows and 6 columns:
+#' @format A tibble with 143 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -247,7 +247,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 18
 #'
-#' @format A tibble with 108 rows and 6 columns:
+#' @format A tibble with 100 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -274,7 +274,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 19
 #'
-#' @format A tibble with 157 rows and 6 columns:
+#' @format A tibble with 149 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -328,7 +328,7 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 21
 #'
-#' @format A tibble with 86 rows and 6 columns:
+#' @format A tibble with 150 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -339,7 +339,7 @@
 #' }
 #'
 #' @examples
-#' iatfResolution20
+#' iatfResolution21
 #'
 #' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/Revised-IATF-Resolution-No.-21.pdf}
 #'
