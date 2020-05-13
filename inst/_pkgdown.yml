@@ -23,6 +23,7 @@ reference:
 
 - title: Extract
   contents:
+  - get_iatf_links
   - get_pr_url
   - get_press_release
 
@@ -31,8 +32,9 @@ reference:
   - combine_docs
   - combine_iatf
 
-- title: Datasets
+- title: Datasets - IATF resolutions
   contents:
+  - iatfResList
   - iatfResolution09
   - iatfResolution10
   - iatfResolution11
@@ -44,5 +46,9 @@ reference:
   - iatfResolution17
   - iatfResolution18
   - iatfResolution19
+  - iatfResolution20
+  - iatfResolution21
+
+- title: Datasets - DOH press releases
   - prLinks
   - pressRelease

@@ -522,6 +522,7 @@ y[140] <- "RYAN ALVIN R. ACOSTA"
 
 y[141] <- ""
 y <- y[y != ""]
+y <- y[9:length(y)]
 
 y <- stringr::str_trim(string = y, side = "both")
 

@@ -6,7 +6,7 @@
 \title{COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 Diseases Resolution Number 12}
 \format{
-A tibble with 136 rows and 6 columns:
+A tibble with 127 rows and 6 columns:
 \describe{
   \item{\code{linenumber}}{Linenumber}
   \item{\code{text}}{Character string of text about 70 characters}
