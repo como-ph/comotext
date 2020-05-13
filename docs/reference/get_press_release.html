@@ -153,20 +153,20 @@ date of issue of press release.</p></td>
     <pre class="examples"><div class='input'><span class='no'>prURL</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='get_pr_url.html'>get_pr_url</a></span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph/press-releases"</span>,
                     <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>)
 <span class='fu'>get_press_release</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph"</span>,
-                  <span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>prURL</span>[<span class='fl'>1</span>, ])</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 44 x 5</span><span>
-#&gt;    linenumber text                                     type        id date      
-#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 ADB-Sponsored COVID-19 Lab in Pampanga … press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Press Release/10 May 2020Health Secreta… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 with Cabinet Secretary Karlo Nograles a… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 Health (DOH), inaugurated the state-of-… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 funded Molecular and Diagnostic Patholo… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 Memorial General Hospital (JBLMGH) in S… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 2020. JBLMGH was the recipient of the U… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 to set up a Pandemic Sub national Refer… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 country’s testing capacity by an additi… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 Ahmed M. Saeed, Vice President for East… press r…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'># … with 34 more rows</span><span></div><div class='input'>
+                  <span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>prURL</span>[<span class='fl'>1</span>, ])</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 42 x 6</span><span>
+#&gt;    linenumber text                              source type        id date      
+#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                             </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 HONORING NURSE’S DAY: DOH CALLS … DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Press Release/13 May 2020The Dep… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 more healthcare workers to join … DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 announcement of the Inter-Agency… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 Emerging Infectious Diseases new… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 the nation.In the May 12 Beat CO… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 International Nurses Day, Health… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 Vergeire spoke with the National… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 Inc. (PNA) Dr. Rosie De Leon on … DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 response against COVID-19.De Leo… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
+#&gt; </span><span style='color: #555555;'># … with 32 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
