@@ -4,10 +4,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 9
 #'
-#' @format A tibble with 69 rows and 5 columns:
+#' @format A tibble with 69 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -30,10 +31,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 10
 #'
-#' @format A tibble with 84 rows and 5 columns:
+#' @format A tibble with 84 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -56,10 +58,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 11
 #'
-#' @format A tibble with 137 rows and 5 columns:
+#' @format A tibble with 137 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -82,10 +85,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 12
 #'
-#' @format A tibble with 136 rows and 5 columns:
+#' @format A tibble with 136 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -108,10 +112,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 13
 #'
-#' @format A tibble with 204 rows and 5 columns:
+#' @format A tibble with 204 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -134,10 +139,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 14
 #'
-#' @format A tibble with 231 rows and 5 columns:
+#' @format A tibble with 231 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -160,10 +166,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 15
 #'
-#' @format A tibble with 166 rows and 5 columns:
+#' @format A tibble with 166 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -186,10 +193,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 16
 #'
-#' @format A tibble with 87 rows and 5 columns:
+#' @format A tibble with 87 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -212,10 +220,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 17
 #'
-#' @format A tibble with 151 rows and 5 columns:
+#' @format A tibble with 151 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -238,10 +247,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 18
 #'
-#' @format A tibble with 108 rows and 5 columns:
+#' @format A tibble with 108 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -264,10 +274,11 @@
 #' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
 #' Diseases Resolution Number 19
 #'
-#' @format A tibble with 157 rows and 5 columns:
+#' @format A tibble with 157 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document identifier}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -282,6 +293,61 @@
 #
 ################################################################################
 "iatfResolution19"
+
+
+################################################################################
+#
+#'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 20
+#'
+#' @format A tibble with 86 rows and 6 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
+#' }
+#'
+#' @examples
+#' iatfResolution20
+#'
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-20.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution20"
+
+
+################################################################################
+#
+#'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 21
+#'
+#' @format A tibble with 86 rows and 6 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
+#' }
+#'
+#' @examples
+#' iatfResolution20
+#'
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/Revised-IATF-Resolution-No.-21.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution21"
+
 
 
 ################################################################################
