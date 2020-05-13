@@ -588,3 +588,311 @@ y <- data.frame(linenumber = 1:length(y),
 iatfResolution21 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution21, overwrite = TRUE, compress = "xz")
+
+## Resolution 22 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF-Resolution-No.-22.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y[177] <- "RICARDO P. BERNABE III"
+
+y <- y[c(9:33, 38:68, 73:88, 90:93, 95:104, 109:131, 136:150, 155:168, 173:177, 179:189, 194:199)]
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 22,
+                date = as.Date("08/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution22 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution22, overwrite = TRUE, compress = "xz")
+
+## Resolution 23 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/Revised-IATF-Resolution-No.-23.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y[143] <- "RICARDO P. BERNABE III"
+
+y <- y[c(9:36, 41:75, 80:99, 104:118, 123:137, 142:143, 145:156, 161:165)]
+
+y[128] <- stringr::str_replace(string = y[128], pattern = "Comm\\\\nt", replacement = "Commandant")
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 23,
+                date = as.Date("13/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution23 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution23, overwrite = TRUE, compress = "xz")
+
+## Resolution 24 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF-Resolution-No.-24.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y[123] <- "RICARDO P. BERNABE III"
+
+y <- y[c(9:34, 39:67, 72:87, 92:104, 109:123, 125, 130:143, 148:149)]
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 24,
+                date = as.Date("15/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution24 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution24, overwrite = TRUE, compress = "xz")
+
+## Resolution 25 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF-Resolution-No.-25.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:33, 40:45, 47:67, 75:95)]
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 25,
+                date = as.Date("17/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution25 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution25, overwrite = TRUE, compress = "xz")
+
+## Resolution 26 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF-Resolution-No.-26.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:34, 39:43, 50:70)]
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 26,
+                date = as.Date("20/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution26 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution26, overwrite = TRUE, compress = "xz")
+
+## Resolution 27 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/IATF-Resolution-No.-27.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:35, 40:70, 75:79, 86:106)]
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 27,
+                date = as.Date("22/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution27 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution27, overwrite = TRUE, compress = "xz")
+
+## Resolution 28 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-28.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(12:46, 64:99, 109:131, 139:172)]
+
+y <- y[y != ""]
+
+y[74] <- "minutes of the meeting, held this 23rd April, 2020 via video conference."
+y[75] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[76] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[77] <- "IATF Chairperson         IATF Co-Chairperson"
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 28,
+                date = as.Date("23/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution28 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution28, overwrite = TRUE, compress = "xz")
+
+## Resolution 29 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-29.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(14:48, 55:90, 98:109, 115:149)]
+y <- y[y != ""]
+
+y[69] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[70] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[71] <- "IATF Chairperson         IATF Co-Chairperson"
+y[74] <- "1. I am presently an Assistant Secretary of the Department of Health;"
+y[83] <- stringr::str_replace(string = y[83], pattern = "\\[", replacement = "I")
+y[84] <- stringr::str_replace(string = y[84], pattern = "\\[", replacement = "I")
+y[87] <- stringr::str_replace(string = y[87], pattern = "\\[", replacement = "I")
+y[93] <- stringr::str_replace(string = y[93], pattern = "1g!", replacement = "28th")
+y[95] <- "Kenneth G. Ronquillo, MD, MPHM"
+y[97] <- stringr::str_replace(string = y[97], pattern = "\\[", replacement = "I")
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 29,
+                date = as.Date("27/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution29 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution29, overwrite = TRUE, compress = "xz")
+
+## Resolution 31 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-31.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:51, 63:97, 107:131)]
+y <- y[y != ""]
+
+y[59] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[60] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[61] <- "IATF Chairperson         IATF Co-Chairperson"
+y[73] <- stringr::str_replace(string = y[73], pattern = "\\[", replacement = "I")
+y[74] <- stringr::str_replace(string = y[74], pattern = "\\[", replacement = "I")
+y[77] <- stringr::str_replace(string = y[77], pattern = "\\[", replacement = "I")
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 31,
+                date = as.Date("01/05/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution31 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution31, overwrite = TRUE, compress = "xz")
+
+## Resolution 32 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-32.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:44, 53:94, 103:123, 136:170)]
+y <- y[y != ""]
+
+y[80] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[81] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[82] <- "IATF Chairperson         IATF Co-Chairperson"
+y[94] <- stringr::str_replace(string = y[94], pattern = "\\[", replacement = "I")
+y[95] <- stringr::str_replace(string = y[95], pattern = "\\[", replacement = "I")
+y[98] <- stringr::str_replace(string = y[98], pattern = "\\[", replacement = "I")
+y[102] <- stringr::str_remove(string = y[102], pattern = "\\[")
+y[108] <- stringr::str_replace(string = y[108], pattern = "\\[", replacement = "I")
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 32,
+                date = as.Date("04/05/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution32 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution32, overwrite = TRUE, compress = "xz")
+
+## Resolution 33 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-33.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:46, 53:93, 103:122, 130:164)]
+y <- y[y != ""]
+
+y[79] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[80] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[81] <- "IATF Chairperson         IATF Co-Chairperson"
+y[93] <- stringr::str_replace(string = y[93], pattern = "\\[", replacement = "I")
+y[94] <- stringr::str_replace(string = y[94], pattern = "\\[", replacement = "I")
+y[97] <- stringr::str_replace(string = y[97], pattern = "\\[", replacement = "I")
+y[103] <- stringr::str_remove(string = y[103], pattern = "\\[")
+y[107] <- stringr::str_replace(string = y[107], pattern = "\\[", replacement = "I")
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 33,
+                date = as.Date("06/05/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution33 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution33, overwrite = TRUE, compress = "xz")
