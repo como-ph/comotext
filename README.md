@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
+experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build
 status](https://travis-ci.org/como-ph/comotext.svg?branch=master)](https://travis-ci.org/como-ph/comotext)
 [![AppVeyor build
@@ -97,21 +97,21 @@ get_pr_url(pages = 1)
 #> # A tibble: 15 x 3
 #>    url                                                             id date      
 #>    <chr>                                                        <dbl> <date>    
-#>  1 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
-#>  2 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
-#>  3 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
-#>  4 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
-#>  5 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
-#>  6 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
-#>  7 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
-#>  8 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
-#>  9 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
-#> 10 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
-#> 11 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
-#> 12 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
-#> 13 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
-#> 14 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
-#> 15 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-…  3415 2020-05-05
+#>  1 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13
+#>  2 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
+#>  3 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
+#>  4 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
+#>  5 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
+#>  6 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
+#>  7 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
+#>  8 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
+#>  9 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
+#> 10 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
+#> 11 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
+#> 12 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
+#> 13 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
+#> 14 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
+#> 15 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
 ```
 
 The function `get_press_releases` creates a dataset of text of press
@@ -126,20 +126,26 @@ prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
 get_press_release(df = prURL[1, ])
-#> # A tibble: 32 x 6
+#> # A tibble: 17 x 6
 #>    linenumber text                              source type        id date      
 #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-#>  1          1 STATEMENT ON DATA INTEGRITY       DOH    press r…  1920 2020-05-13
-#>  2          2 13, May 2020The Department of He… DOH    press r…  1920 2020-05-13
-#>  3          3 UP COVID-19 Pandemic Response Te… DOH    press r…  1920 2020-05-13
-#>  4          4 2020. The DOH has already taken … DOH    press r…  1920 2020-05-13
-#>  5          5 24 and 25 data drops.These issue… DOH    press r…  1920 2020-05-13
-#>  6          6 as well as other inconsistencies… DOH    press r…  1920 2020-05-13
-#>  7          7 covid tracker@doh.gov.ph​. We ve…  DOH    press r…  1920 2020-05-13
-#>  8          8 for raising their concerns.  We … DOH    press r…  1920 2020-05-13
-#>  9          9 area nominal percentage of the w… DOH    press r…  1920 2020-05-13
-#> 10         10 overall interpretation of data a… DOH    press r…  1920 2020-05-13
-#> # … with 22 more rows
+#>  1          1 NEW QUARANTINE SITE IN ALABANG I… DOH    press r…  1452 2020-05-13
+#>  2          2 Press Release/13 May 2020  Healt… DOH    press r…  1452 2020-05-13
+#>  3          3 with National Task Force Against… DOH    press r…  1452 2020-05-13
+#>  4          4 inaugurated a new quarantine sit… DOH    press r…  1452 2020-05-13
+#>  5          5 City.  The new quarantine center… DOH    press r…  1452 2020-05-13
+#>  6          6 Foundation in partnership with E… DOH    press r…  1452 2020-05-13
+#>  7          7 on the Management of Emerging In… DOH    press r…  1452 2020-05-13
+#>  8          8 with the Department of Health, D… DOH    press r…  1452 2020-05-13
+#>  9          9 National Defense and Bases Conve… DOH    press r…  1452 2020-05-13
+#> 10         10 the Filinvest group of companies… DOH    press r…  1452 2020-05-13
+#> 11         11 facility. This will help the nat… DOH    press r…  1452 2020-05-13
+#> 12         12 we endeavor to manage the number… DOH    press r…  1452 2020-05-13
+#> 13         13 said Secretary Duque. The 108-be… DOH    press r…  1452 2020-05-13
+#> 14         14 nextweek, will be managed by the… DOH    press r…  1452 2020-05-13
+#> 15         15 suspect and probable COVID-19 pa… DOH    press r…  1452 2020-05-13
+#> 16         16 the efforts of private-sector pa… DOH    press r…  1452 2020-05-13
+#> 17         17 Smart Telecom, Vista Land and Me… DOH    press r…  1452 2020-05-13
 ```
 
 To get all the [DoH](https://www.doh.gov.ph) press releases available
@@ -159,20 +165,20 @@ for(i in 1:nrow(pr)) {
 }
 ```
 
-    #> # A tibble: 12,953 x 6
+    #> # A tibble: 13,020 x 6
     #>    linenumber text                              source type        id date      
     #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-    #>  1          1 ADB-Sponsored COVID-19 Lab in Pa… DOH    press r…  1421 2020-05-10
-    #>  2          2 Press Release/10 May 2020Health … DOH    press r…  1421 2020-05-10
-    #>  3          3 with Cabinet Secretary Karlo Nog… DOH    press r…  1421 2020-05-10
-    #>  4          4 Health (DOH), inaugurated the st… DOH    press r…  1421 2020-05-10
-    #>  5          5 funded Molecular and Diagnostic … DOH    press r…  1421 2020-05-10
-    #>  6          6 Memorial General Hospital (JBLMG… DOH    press r…  1421 2020-05-10
-    #>  7          7 2020. JBLMGH was the recipient o… DOH    press r…  1421 2020-05-10
-    #>  8          8 to set up a Pandemic Sub nationa… DOH    press r…  1421 2020-05-10
-    #>  9          9 country’s testing capacity by an… DOH    press r…  1421 2020-05-10
-    #> 10         10 Ahmed M. Saeed, Vice President f… DOH    press r…  1421 2020-05-10
-    #> # … with 12,943 more rows
+    #>  1          1 HONORING NURSE’S DAY: DOH CALLS … DOH    press r…  8151 2020-05-13
+    #>  2          2 Press Release/13 May 2020The Dep… DOH    press r…  8151 2020-05-13
+    #>  3          3 more healthcare workers to join … DOH    press r…  8151 2020-05-13
+    #>  4          4 announcement of the Inter-Agency… DOH    press r…  8151 2020-05-13
+    #>  5          5 Emerging Infectious Diseases new… DOH    press r…  8151 2020-05-13
+    #>  6          6 the nation.In the May 12 Beat CO… DOH    press r…  8151 2020-05-13
+    #>  7          7 International Nurses Day, Health… DOH    press r…  8151 2020-05-13
+    #>  8          8 Vergeire spoke with the National… DOH    press r…  8151 2020-05-13
+    #>  9          9 Inc. (PNA) Dr. Rosie De Leon on … DOH    press r…  8151 2020-05-13
+    #> 10         10 response against COVID-19.De Leo… DOH    press r…  8151 2020-05-13
+    #> # … with 13,010 more rows
 
 This produces the same dataset as `pressRelease` included in `comotext`.
 
