@@ -35,13 +35,34 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
-`comotext` currently has 11 datasets of COVID-19-related resolutions and
-policies in the Philippines. These datasets are 11 resolutions made by
+`comotext` currently has 24 datasets of COVID-19-related resolutions and
+policies in the Philippines. These datasets are 24 resolutions made by
 the Inter-Agency Task Force for the Management of Emerging Infectious
 Diseases (IATF).
 
 A description of the available datesets can be found
 [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
+
+A table of the 24 IATF resolutions and the URLs to download them can be
+generated using the function `get_iatf_links()` as follows:
+
+``` r
+get_iatf_links()
+#> # A tibble: 24 x 4
+#>       id title                          date       link                         
+#>    <dbl> <chr>                          <date>     <chr>                        
+#>  1     9 Recommendations for the Manag… 2020-03-03 https://doh.gov.ph/sites/def…
+#>  2    10 Recommendations for the Manag… 2020-03-09 https://doh.gov.ph/sites/def…
+#>  3    11 Recommendations for the Manag… 2020-03-12 https://doh.gov.ph/sites/def…
+#>  4    12 Recommendations for the Manag… 2020-03-13 https://doh.gov.ph/sites/def…
+#>  5    13 Recommendations for the Manag… 2020-03-17 https://doh.gov.ph/sites/def…
+#>  6    14 Resolutions Relative to the M… 2020-03-20 https://doh.gov.ph/sites/def…
+#>  7    15 Resolutions Relative to the M… 2020-03-25 https://doh.gov.ph/sites/def…
+#>  8    16 Additional Guidelines for the… 2020-03-30 https://doh.gov.ph/sites/def…
+#>  9    17 Recommendations Relative to t… 2020-03-30 https://doh.gov.ph/sites/def…
+#> 10    18 Recommendations Relative to t… 2020-04-01 https://doh.gov.ph/sites/def…
+#> # … with 14 more rows
+```
 
 `comotext` also holds 1 dataset of all [Department of
 Health](http://www.doh.gov.ph) press releases to date. A description of
@@ -76,21 +97,21 @@ get_pr_url(pages = 1)
 #> # A tibble: 15 x 3
 #>    url                                                             id date      
 #>    <chr>                                                        <dbl> <date>    
-#>  1 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
-#>  2 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
-#>  3 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
-#>  4 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
-#>  5 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
-#>  6 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
-#>  7 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
-#>  8 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
-#>  9 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
-#> 10 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
-#> 11 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
-#> 12 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-…  3415 2020-05-05
-#> 13 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-B…  4158 2020-05-04
-#> 14 /doh-press-release/DOH%2C-OTHER-AGENCIES-WORK-TO-PREVENT-CO…  3152 2020-05-04
-#> 15 /doh-press-release/doh-commends-osmaks-effective-infection-…  4158 2020-04-30
+#>  1 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
+#>  2 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
+#>  3 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
+#>  4 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
+#>  5 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
+#>  6 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
+#>  7 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
+#>  8 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
+#>  9 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
+#> 10 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
+#> 11 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
+#> 12 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
+#> 13 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
+#> 14 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-…  3415 2020-05-05
+#> 15 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-B…  4158 2020-05-04
 ```
 
 The function `get_press_releases` creates a dataset of text of press
@@ -105,20 +126,20 @@ prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
 get_press_release(df = prURL[1, ])
-#> # A tibble: 44 x 5
-#>    linenumber text                                     type        id date      
-#>         <int> <chr>                                    <chr>    <dbl> <date>    
-#>  1          1 ADB-Sponsored COVID-19 Lab in Pampanga … press r…  1421 2020-05-10
-#>  2          2 Press Release/10 May 2020Health Secreta… press r…  1421 2020-05-10
-#>  3          3 with Cabinet Secretary Karlo Nograles a… press r…  1421 2020-05-10
-#>  4          4 Health (DOH), inaugurated the state-of-… press r…  1421 2020-05-10
-#>  5          5 funded Molecular and Diagnostic Patholo… press r…  1421 2020-05-10
-#>  6          6 Memorial General Hospital (JBLMGH) in S… press r…  1421 2020-05-10
-#>  7          7 2020. JBLMGH was the recipient of the U… press r…  1421 2020-05-10
-#>  8          8 to set up a Pandemic Sub national Refer… press r…  1421 2020-05-10
-#>  9          9 country’s testing capacity by an additi… press r…  1421 2020-05-10
-#> 10         10 Ahmed M. Saeed, Vice President for East… press r…  1421 2020-05-10
-#> # … with 34 more rows
+#> # A tibble: 42 x 6
+#>    linenumber text                              source type        id date      
+#>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
+#>  1          1 HONORING NURSE’S DAY: DOH CALLS … DOH    press r…  8151 2020-05-13
+#>  2          2 Press Release/13 May 2020The Dep… DOH    press r…  8151 2020-05-13
+#>  3          3 more healthcare workers to join … DOH    press r…  8151 2020-05-13
+#>  4          4 announcement of the Inter-Agency… DOH    press r…  8151 2020-05-13
+#>  5          5 Emerging Infectious Diseases new… DOH    press r…  8151 2020-05-13
+#>  6          6 the nation.In the May 12 Beat CO… DOH    press r…  8151 2020-05-13
+#>  7          7 International Nurses Day, Health… DOH    press r…  8151 2020-05-13
+#>  8          8 Vergeire spoke with the National… DOH    press r…  8151 2020-05-13
+#>  9          9 Inc. (PNA) Dr. Rosie De Leon on … DOH    press r…  8151 2020-05-13
+#> 10         10 response against COVID-19.De Leo… DOH    press r…  8151 2020-05-13
+#> # … with 32 more rows
 ```
 
 To get all the [DoH](https://www.doh.gov.ph) press releases available
@@ -132,25 +153,25 @@ pr <- get_pr_url(pages = 1:25)
 pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
-  currentPR <- get_press_release(df = pr)
+  currentPR <- get_press_release(df = pr[i, ])
 
   pressRelease <- rbind(pressRelease, currentPR)
 }
 ```
 
-    #> # A tibble: 12,953 x 5
-    #>    linenumber text                                     type        id date      
-    #>         <int> <chr>                                    <chr>    <dbl> <date>    
-    #>  1          1 ADB-Sponsored COVID-19 Lab in Pampanga … press r…  1421 2020-05-10
-    #>  2          2 Press Release/10 May 2020Health Secreta… press r…  1421 2020-05-10
-    #>  3          3 with Cabinet Secretary Karlo Nograles a… press r…  1421 2020-05-10
-    #>  4          4 Health (DOH), inaugurated the state-of-… press r…  1421 2020-05-10
-    #>  5          5 funded Molecular and Diagnostic Patholo… press r…  1421 2020-05-10
-    #>  6          6 Memorial General Hospital (JBLMGH) in S… press r…  1421 2020-05-10
-    #>  7          7 2020. JBLMGH was the recipient of the U… press r…  1421 2020-05-10
-    #>  8          8 to set up a Pandemic Sub national Refer… press r…  1421 2020-05-10
-    #>  9          9 country’s testing capacity by an additi… press r…  1421 2020-05-10
-    #> 10         10 Ahmed M. Saeed, Vice President for East… press r…  1421 2020-05-10
+    #> # A tibble: 12,953 x 6
+    #>    linenumber text                              source type        id date      
+    #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
+    #>  1          1 ADB-Sponsored COVID-19 Lab in Pa… DOH    press r…  1421 2020-05-10
+    #>  2          2 Press Release/10 May 2020Health … DOH    press r…  1421 2020-05-10
+    #>  3          3 with Cabinet Secretary Karlo Nog… DOH    press r…  1421 2020-05-10
+    #>  4          4 Health (DOH), inaugurated the st… DOH    press r…  1421 2020-05-10
+    #>  5          5 funded Molecular and Diagnostic … DOH    press r…  1421 2020-05-10
+    #>  6          6 Memorial General Hospital (JBLMG… DOH    press r…  1421 2020-05-10
+    #>  7          7 2020. JBLMGH was the recipient o… DOH    press r…  1421 2020-05-10
+    #>  8          8 to set up a Pandemic Sub nationa… DOH    press r…  1421 2020-05-10
+    #>  9          9 country’s testing capacity by an… DOH    press r…  1421 2020-05-10
+    #> 10         10 Ahmed M. Saeed, Vice President f… DOH    press r…  1421 2020-05-10
     #> # … with 12,943 more rows
 
 This produces the same dataset as `pressRelease` included in `comotext`.
@@ -173,20 +194,20 @@ will be returned.
 
 ``` r
 combine_docs(docs = "resolution")
-#> # A tibble: 1,727 x 5
-#>    linenumber text                                      type       id date      
-#>         <int> <chr>                                     <chr>   <dbl> <date>    
-#>  1          1 ​REPUBLIC    OF THE PHILIPPINES            resolu…    19 2020-04-03
-#>  2          2 ​INTER-AGENCY TASK FORCE                   resolu…    19 2020-04-03
-#>  3          3 FOR THE MANAGEMENT OF EMERGING INFECTIOU… resolu…    19 2020-04-03
-#>  4          4 ​RESOLUTION NO. 19                         resolu…    19 2020-04-03
-#>  5          5 Series of 2020                            resolu…    19 2020-04-03
-#>  6          6 April 3, 2020                             resolu…    19 2020-04-03
-#>  7          7 RECOMMENDATIONS RELATIVE TO THE MANAGEME… resolu…    19 2020-04-03
-#>  8          8 OF THE CORONAVIRUS DISEASE 2019 (COVID-1… resolu…    19 2020-04-03
-#>  9          9 WHEREAS, ​on March 8, 2020, recognizing …  resolu…    19 2020-04-03
-#> 10         10 mobilization of a whole-of-government re… resolu…    19 2020-04-03
-#> # … with 1,717 more rows
+#> # A tibble: 2,785 x 6
+#>    linenumber text                               source type       id date      
+#>         <int> <chr>                              <chr>  <chr>   <dbl> <date>    
+#>  1          1 WHEREAS, on January 31, 2020, upo… IATF   resolu…     9 2020-03-03
+#>  2          2 Inter-Agency Task Force (IATF) fo… IATF   resolu…     9 2020-03-03
+#>  3          3 a travel ban covering China, Maca… IATF   resolu…     9 2020-03-03
+#>  4          4 SAR. On February 11, 2020, travel… IATF   resolu…     9 2020-03-03
+#>  5          5 that it was being used as a trans… IATF   resolu…     9 2020-03-03
+#>  6          6 WHEREAS, on February 14, 2020, tr… IATF   resolu…     9 2020-03-03
+#>  7          7 lifted. On February 18, 2020, the… IATF   resolu…     9 2020-03-03
+#>  8          8 exemptions in favor of certain cl… IATF   resolu…     9 2020-03-03
+#>  9          9 SAR, and Macau SAR;                IATF   resolu…     9 2020-03-03
+#> 10         10 WHEREAS, on February 26, 2020, fo… IATF   resolu…     9 2020-03-03
+#> # … with 2,775 more rows
 ```
 
 The `combine_iatf` function is a specialised wrapper of the
@@ -197,38 +218,38 @@ the following call to `combine_iatf` is made as follows:
 
 ``` r
 combine_iatf(docs = "resolution", res = 10:12)
-#> # A tibble: 408 x 5
-#>    linenumber text                                      type       id date      
-#>         <int> <chr>                                     <chr>   <dbl> <date>    
-#>  1          1 REPUBLIC OF THE PHILIPPINES               resolu…    12 2020-03-13
-#>  2          2 DOH - DFA - DILG - DOJ - DOLE - DOT - DO… resolu…    12 2020-03-13
-#>  3          3 INTER-AGENCY TASK FORCE FOR THE MANAGEME… resolu…    12 2020-03-13
-#>  4          4 EMERGING INFECTIOUS DISEASE               resolu…    12 2020-03-13
-#>  5          5 RESOLUTION NO. 12                         resolu…    12 2020-03-13
-#>  6          6 Series of 2020                            resolu…    12 2020-03-13
-#>  7          7 March 13, 2020                            resolu…    12 2020-03-13
-#>  8          8 RECOMMENDATIONS FOR THE MANAGEMENT        resolu…    12 2020-03-13
-#>  9          9 OF THE CORONAVIRUS DISEASE 2019 (COVID-1… resolu…    12 2020-03-13
-#> 10         10 WHEREAS, on March 12, 2020, the IATF wit… resolu…    12 2020-03-13
-#> # … with 398 more rows
+#> # A tibble: 324 x 6
+#>    linenumber text                               source type       id date      
+#>         <int> <chr>                              <chr>  <chr>   <dbl> <date>    
+#>  1          1 WHEREAS, Section 15 of Article II… IATF   resolu…    10 2020-03-09
+#>  2          2 protect and promote the right to … IATF   resolu…    10 2020-03-09
+#>  3          3 them:                              IATF   resolu…    10 2020-03-09
+#>  4          4 WHEREAS, recognizing the need for… IATF   resolu…    10 2020-03-09
+#>  5          5 preparedness and ensure efficient… IATF   resolu…    10 2020-03-09
+#>  6          6 and prevent the spread of any pot… IATF   resolu…    10 2020-03-09
+#>  7          7 (IATF) for the Management of Emer… IATF   resolu…    10 2020-03-09
+#>  8          8 Executive Order No. 168, series o… IATF   resolu…    10 2020-03-09
+#>  9          9 WHEREAS, on January 7, 2020, Chin… IATF   resolu…    10 2020-03-09
+#> 10         10 a viral pneumonia outbreak in the… IATF   resolu…    10 2020-03-09
+#> # … with 314 more rows
 ```
 
 To check if only resolutions 10 to 12 have been returned:
 
 ``` r
 combine_iatf(docs = "resolution", res = 10:12)[ , c("type", "id")]
-#> # A tibble: 408 x 2
+#> # A tibble: 324 x 2
 #>    type          id
 #>    <chr>      <dbl>
-#>  1 resolution    12
-#>  2 resolution    12
-#>  3 resolution    12
-#>  4 resolution    12
-#>  5 resolution    12
-#>  6 resolution    12
-#>  7 resolution    12
-#>  8 resolution    12
-#>  9 resolution    12
-#> 10 resolution    12
-#> # … with 398 more rows
+#>  1 resolution    10
+#>  2 resolution    10
+#>  3 resolution    10
+#>  4 resolution    10
+#>  5 resolution    10
+#>  6 resolution    10
+#>  7 resolution    10
+#>  8 resolution    10
+#>  9 resolution    10
+#> 10 resolution    10
+#> # … with 314 more rows
 ```

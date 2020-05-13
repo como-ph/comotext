@@ -38,9 +38,15 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
-`comotext` currently has 11 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 11 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
+`comotext` currently has 24 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 24 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
 
 A description of the available datesets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
+
+A table of the 24 IATF resolutions and the URLs to download them can be generated using the function `get_iatf_links()` as follows:
+
+```{r usage, echo = TRUE, eval = TRUE}
+get_iatf_links()
+```
 
 `comotext` also holds 1 dataset of all [Department of Health](http://www.doh.gov.ph) press releases to date. A description of the `pressRelease` dataset can be found [here](https://como-ph.github.io/comotext/reference/pressRelease.html). This dataset has been generated using the `get_press_release()` function (see description below) included in `comotext`. Related to this is the dataset `prLinks` which holds the relative URL links for each of the press releases in the [Department of Health](http://www.doh.gov.ph) website to date. This dataset has been produced using the `get_pr_url()` function (see description below) included in `comotext`. A description of the `prLinks` dataset can be found [here](https://como-ph.github.io/comotext/reference/prLinks.html).
 
@@ -74,7 +80,7 @@ pr <- get_pr_url(pages = 1:25)
 pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
-  currentPR <- get_press_release(df = pr)
+  currentPR <- get_press_release(df = pr[i, ])
 
   pressRelease <- rbind(pressRelease, currentPR)
 }
