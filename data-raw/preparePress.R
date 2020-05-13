@@ -15,7 +15,7 @@ usethis::use_data(prLinks, overwrite = TRUE, compress = "xz")
 pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
-  currentPR <- get_press_release(df = pr)
+  currentPR <- get_press_release(df = pr[i, ])
 
   pressRelease <- rbind(pressRelease, currentPR)
 }

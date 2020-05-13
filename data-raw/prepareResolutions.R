@@ -45,12 +45,15 @@ y[87] <- ""
 y[88] <- "MA. TERESITA S. CUCUECO"
 y[90] <- ""
 
-y <- y[1:90]
+y[29] <- stringr::str_replace(string = y[29], pattern = "\\[ATF", replacement = "IATF")
+
+y <- y[11:90]
 
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 9,
                 date = as.Date("03/03/2020", format = "%d/%m/%y"),
@@ -114,10 +117,14 @@ y[107] <- ""
 y[108] <- "ALAN A. SILOR"
 y[109] <- "Assistant Secretary, Department of Information and Communications Technology"
 
+y[80] <- stringr::str_replace(string = y[80], pattern = "Malacafiang", replacement = "Malacañang")
+
+y <- y[c(11:41, 46:81, 87:length(y))]
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 10,
                 date = as.Date("09/03/2020", format = "%d/%m/%y"),
@@ -135,12 +142,13 @@ x <- pdf_text(pdf = "data-raw/IATF/IATF-RESO-11.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
-y <- y[c(1:32, 41:66, 75:101, 110:138, 147:161, 170:177)]
+y <- y[c(10:32, 41:66, 75:101, 110:138, 147:161, 170:177)]
 
 y <- stringr::str_trim(string = y, side = "both")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 11,
                 date = as.Date("12/03/2020", format = "%d/%m/%y"),
@@ -177,15 +185,16 @@ y[151] <- ""
 y[152] <- "ALAN A. SILOR"
 y[153] <- "Assistant Secretary, Department of Information and Communications Technology"
 
-y <- y[c(1:9, 11:13, 15, 17:22, 24:32, 34:42, 44:48, 50:51, 53:60, 62:99,
+y <- y[c(11:13, 15, 17:22, 24:32, 34:42, 44:48, 50:51, 53:60, 62:99,
          101:107, 109:111, 113:118, 120:133, 135:136, 138:139, 141:150, 152:153)]
 
-y[65] <- stringr::str_remove(string = y[65], pattern = " \\|")
-y[84] <- stringr::str_remove(string = y[84], pattern = " \\|")
-y[119] <- stringr::str_remove(string = y[119], pattern = " \\|")
+y[56] <- stringr::str_remove(string = y[56], pattern = " \\|")
+y[75] <- stringr::str_remove(string = y[75], pattern = " \\|")
+y[110] <- stringr::str_remove(string = y[110], pattern = " \\|")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 12,
                 date = as.Date("13/03/2020", format = "%d/%m/%y"),
@@ -251,6 +260,7 @@ y[215] <- "Assistant Secretary, Office of the Chief Presidential Legal Counsel"
 
 y <- y[1:215]
 y <- y[y != ""]
+
 y[14] <- stringr::str_remove(string = y[14], pattern = ": ")
 y[14] <- stringr::str_remove(string = y[14], pattern = ":")
 y[15] <- stringr::str_remove(string = y[15], pattern = "z ")
@@ -287,10 +297,12 @@ y[149] <- stringr::str_remove(string = y[149], pattern = "\\| ")
 y[152] <- stringr::str_remove(string = y[152], pattern = "2 ")
 y[120] <- stringr::str_remove(string = y[120], pattern = "= ")
 
+y <- y[9:length(y)]
 y <- y[y != ""]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 13,
                 date = as.Date("17/03/2020", format = "%d/%m/%y"),
@@ -366,8 +378,11 @@ y[68] <- stringr::str_remove(string = y[68], pattern = ". ")
 y[73] <- stringr::str_remove(string = y[73], pattern = ". ")
 y[124] <- stringr::str_replace(string = y[124], pattern = "ui.", replacement = "iii.")
 
+y <- y[10:length(y)]
+
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 14,
                 date = as.Date("20/03/2020", format = "%d/%m/%y"),
@@ -384,7 +399,7 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-RESO-15.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
-y <- stringr::str_remove_all(string = y, pattern = "\\| |\\||= |\\/ |\\|!|\\)")
+y <- stringr::str_remove_all(string = y, pattern = "\\| |\\||= |\\/ |\\|!")
 y <- y[y != ""]
 
 y <- y[c(6:34, 43:69, 76:104, 113:123, 125:133, 135:142, 151:181, 191:208, 211:214)]
@@ -393,8 +408,17 @@ y[97] <- stringr::str_replace(string = y[97], pattern = "].", replacement = "1."
 y[132] <- stringr::str_remove(string = y[150], pattern = "1 ")
 y[150] <- stringr::str_remove(string = y[150], pattern = "! ")
 
+y[18] <- stringr::str_replace(string = y[18], pattern = "\\[ATF", replacement = "IATF")
+y[163] <- "EDUARDO MAÑO"
+
+y <- y[c(9:143, 145:length(y))]
+
+y[101] <- stringr::str_replace(string = y[101], pattern = "OF Ws", replacement = "OFWs")
+y[104] <- stringr::str_replace(string = y[104], pattern = "OF Ws", replacement = "OFWs")
+
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 15,
                 date = as.Date("25/03/2020", format = "%d/%m/%y"),
@@ -411,12 +435,14 @@ x <- pdf_text(pdf = "data-raw/IATF/IATF-RESO-16.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
+y <- y[c(5:length(y))]
 y <- y[y != ""]
 
 y <- stringr::str_trim(string = y, side = "both")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 16,
                 date = as.Date("30/03/2020", format = "%d/%m/%y"),
@@ -433,16 +459,17 @@ x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 17.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
-y <- y[c(1:70, 74:75, 77:101, 104:119, 121, 124:139, 142:157, 160:165)]
+y <- y[c(9:70, 74:75, 77:101, 104:119, 121, 124:139, 142:157, 160:165)]
 
 y <- y[y != ""]
 
-y[112] <- "SALVADOR C. MEDIALDEA"
+y[104] <- "SALVADOR C. MEDIALDEA"
 
 y <- stringr::str_trim(string = y, side = "both")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 17,
                 date = as.Date("30/03/2020", format = "%d/%m/%y"),
@@ -468,9 +495,11 @@ y[3] <- "FOR THE MANAGEMENT OF EMERGING INFECTIOUS DISEASE"
 y[4] <- ""
 
 y <- y[y != ""]
+y <- y[9:length(y)]
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 18,
                 date = as.Date("01/04/2020", format = "%d/%m/%y"),
@@ -498,6 +527,7 @@ y <- stringr::str_trim(string = y, side = "both")
 
 y <- data.frame(linenumber = 1:length(y),
                 text = y,
+                source = "IATF",
                 type = "resolution",
                 id = 19,
                 date = as.Date("03/04/2020", format = "%d/%m/%y"),
@@ -509,6 +539,51 @@ usethis::use_data(iatfResolution19, overwrite = TRUE, compress = "xz")
 
 ## Resolution 20 ###############################################################
 
+x <- pdf_text(pdf = "data-raw/IATF/IATF-Resolution-No.-20.pdf")
 
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
-x <- pdf_text(pdf = "data-raw/IATF/IATF Resolution No. 19.pdf")
+y <- y[c(9:36, 42:57, 64:77, 83:93, 95:97, 103:116)]
+
+y[69] <- "RYAN ALVIN R. ACOSTA"
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 20,
+                date = as.Date("06/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution20 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution20, overwrite = TRUE, compress = "xz")
+
+## Resolution 21 ###############################################################
+
+x <- pdf_text(pdf = "data-raw/IATF/Revised-IATF-Resolution-No.-21.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:35, 41:72, 78:111, 117:132, 138:152, 158:166, 168:173, 179:189)]
+
+y[133] <- "RYAN ALVIN R. ACOSTA"
+y[30] <- "3. The Abok Kamay ang Pagtulong (AKAP) so OFWs program."
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 21,
+                date = as.Date("06/04/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution21 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution21, overwrite = TRUE, compress = "xz")
