@@ -6,7 +6,7 @@
 <!-- badges: start -->
 
 [![Lifecycle:
-experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+maturing](https://img.shields.io/badge/lifecycle-maturing-blue.svg)](https://www.tidyverse.org/lifecycle/#maturing)
 [![Travis build
 status](https://travis-ci.org/como-ph/comotext.svg?branch=master)](https://travis-ci.org/como-ph/comotext)
 [![AppVeyor build
@@ -48,7 +48,7 @@ generated using the function `get_iatf_links()` as follows:
 
 ``` r
 get_iatf_links()
-#> # A tibble: 24 x 4
+#> # A tibble: 25 x 4
 #>       id title                          date       link                         
 #>    <dbl> <chr>                          <date>     <chr>                        
 #>  1     9 Recommendations for the Manag… 2020-03-03 https://doh.gov.ph/sites/def…
@@ -61,7 +61,7 @@ get_iatf_links()
 #>  8    16 Additional Guidelines for the… 2020-03-30 https://doh.gov.ph/sites/def…
 #>  9    17 Recommendations Relative to t… 2020-03-30 https://doh.gov.ph/sites/def…
 #> 10    18 Recommendations Relative to t… 2020-04-01 https://doh.gov.ph/sites/def…
-#> # … with 14 more rows
+#> # … with 15 more rows
 ```
 
 `comotext` also holds 1 dataset of all [Department of
@@ -97,21 +97,21 @@ get_pr_url(pages = 1)
 #> # A tibble: 15 x 3
 #>    url                                                             id date      
 #>    <chr>                                                        <dbl> <date>    
-#>  1 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
-#>  2 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
-#>  3 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
-#>  4 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
-#>  5 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
-#>  6 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
-#>  7 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
-#>  8 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
-#>  9 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
-#> 10 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
-#> 11 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
-#> 12 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
-#> 13 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
-#> 14 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-…  3415 2020-05-05
-#> 15 /doh-press-release/DOH-VISITS-STA.ANA-HOSPITAL%2C-SOON-TO-B…  4158 2020-05-04
+#>  1 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
+#>  2 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
+#>  3 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
+#>  4 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
+#>  5 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
+#>  6 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
+#>  7 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
+#>  8 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
+#>  9 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
+#> 10 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
+#> 11 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
+#> 12 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
+#> 13 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
+#> 14 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
+#> 15 /doh-press-release/LGUs%2C-DOH-RAMP-UP-TESTING-CAPACITY%3B-…  3415 2020-05-05
 ```
 
 The function `get_press_releases` creates a dataset of text of press
@@ -126,20 +126,20 @@ prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
 get_press_release(df = prURL[1, ])
-#> # A tibble: 42 x 6
+#> # A tibble: 32 x 6
 #>    linenumber text                              source type        id date      
 #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-#>  1          1 HONORING NURSE’S DAY: DOH CALLS … DOH    press r…  8151 2020-05-13
-#>  2          2 Press Release/13 May 2020The Dep… DOH    press r…  8151 2020-05-13
-#>  3          3 more healthcare workers to join … DOH    press r…  8151 2020-05-13
-#>  4          4 announcement of the Inter-Agency… DOH    press r…  8151 2020-05-13
-#>  5          5 Emerging Infectious Diseases new… DOH    press r…  8151 2020-05-13
-#>  6          6 the nation.In the May 12 Beat CO… DOH    press r…  8151 2020-05-13
-#>  7          7 International Nurses Day, Health… DOH    press r…  8151 2020-05-13
-#>  8          8 Vergeire spoke with the National… DOH    press r…  8151 2020-05-13
-#>  9          9 Inc. (PNA) Dr. Rosie De Leon on … DOH    press r…  8151 2020-05-13
-#> 10         10 response against COVID-19.De Leo… DOH    press r…  8151 2020-05-13
-#> # … with 32 more rows
+#>  1          1 STATEMENT ON DATA INTEGRITY       DOH    press r…  1920 2020-05-13
+#>  2          2 13, May 2020The Department of He… DOH    press r…  1920 2020-05-13
+#>  3          3 UP COVID-19 Pandemic Response Te… DOH    press r…  1920 2020-05-13
+#>  4          4 2020. The DOH has already taken … DOH    press r…  1920 2020-05-13
+#>  5          5 24 and 25 data drops.These issue… DOH    press r…  1920 2020-05-13
+#>  6          6 as well as other inconsistencies… DOH    press r…  1920 2020-05-13
+#>  7          7 covid tracker@doh.gov.ph​. We ve…  DOH    press r…  1920 2020-05-13
+#>  8          8 for raising their concerns.  We … DOH    press r…  1920 2020-05-13
+#>  9          9 area nominal percentage of the w… DOH    press r…  1920 2020-05-13
+#> 10         10 overall interpretation of data a… DOH    press r…  1920 2020-05-13
+#> # … with 22 more rows
 ```
 
 To get all the [DoH](https://www.doh.gov.ph) press releases available
