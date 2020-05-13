@@ -40,7 +40,7 @@ policies in the Philippines. These datasets are 24 resolutions made by
 the Inter-Agency Task Force for the Management of Emerging Infectious
 Diseases (IATF).
 
-A description of the available datesets can be found
+A description of the available datasets can be found
 [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
 A table of the 24 IATF resolutions and the URLs to download them can be
