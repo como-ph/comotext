@@ -153,20 +153,26 @@ date of issue of press release.</p></td>
     <pre class="examples"><div class='input'><span class='no'>prURL</span> <span class='kw'>&lt;-</span> <span class='fu'><a href='get_pr_url.html'>get_pr_url</a></span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph/press-releases"</span>,
                     <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>)
 <span class='fu'>get_press_release</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph"</span>,
-                  <span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>prURL</span>[<span class='fl'>1</span>, ])</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 32 x 6</span><span>
+                  <span class='kw'>df</span> <span class='kw'>=</span> <span class='no'>prURL</span>[<span class='fl'>1</span>, ])</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 17 x 6</span><span>
 #&gt;    linenumber text                              source type        id date      
 #&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                             </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 STATEMENT ON DATA INTEGRITY       DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 13, May 2020The Department of He… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 UP COVID-19 Pandemic Response Te… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 2020. The DOH has already taken … DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 24 and 25 data drops.These issue… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 as well as other inconsistencies… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 covid tracker@doh.gov.ph​. We ve…  DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 for raising their concerns.  We … DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 area nominal percentage of the w… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 overall interpretation of data a… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'># … with 22 more rows</span><span></div><div class='input'>
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 NEW QUARANTINE SITE IN ALABANG I… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Press Release/13 May 2020  Healt… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 with National Task Force Against… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 inaugurated a new quarantine sit… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 City.  The new quarantine center… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 Foundation in partnership with E… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 on the Management of Emerging In… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 with the Department of Health, D… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 National Defense and Bases Conve… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 the Filinvest group of companies… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>11</span><span>         11 facility. This will help the nat… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>12</span><span>         12 we endeavor to manage the number… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>13</span><span>         13 said Secretary Duque. The 108-be… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>14</span><span>         14 nextweek, will be managed by the… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>15</span><span>         15 suspect and probable COVID-19 pa… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>16</span><span>         16 the efforts of private-sector pa… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
+#&gt; </span><span style='color: #555555;'>17</span><span>         17 Smart Telecom, Vista Land and Me… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13</div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
