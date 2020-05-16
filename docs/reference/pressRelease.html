@@ -125,9 +125,10 @@
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A tibble with 12909 rows and 5 columns:</p><dl'>
+    <p>A tibble with 13243 rows and 6 columns:</p><dl'>
   <dt><code>linenumber</code></dt><dd><p>Linenumber</p></dd>
   <dt><code>text</code></dt><dd><p>Character string of text about 70 characters</p></dd>
+  #'   <dt><code>source</code></dt><dd><p>Issuer of press release</p></dd>
   <dt><code>type</code></dt><dd><p>Type of document</p></dd>
   <dt><code>id</code></dt><dd><p>Text document numeric identifier (8 digits)</p></dd>
   <dt><code>date</code></dt><dd><p>Date in &lt;YYYY-MM-DD&gt; format when resolution was made</p></dd>
@@ -137,23 +138,23 @@
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
     <p><a href='https://www.doh.gov.ph/press-releases'>https://www.doh.gov.ph/press-releases</a>. Updated as of
-  10 May 2020</p>
+  16 May 2020.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='no'>pressRelease</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 13,020 x 6</span><span>
+    <pre class="examples"><div class='input'><span class='no'>pressRelease</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 13,243 x 6</span><span>
 #&gt;    linenumber text                              source type        id date      
 #&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                             </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 HONORING NURSE’S DAY: DOH CALLS … DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Press Release/13 May 2020The Dep… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 more healthcare workers to join … DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 announcement of the Inter-Agency… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 Emerging Infectious Diseases new… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 the nation.In the May 12 Beat CO… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 International Nurses Day, Health… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 Vergeire spoke with the National… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 Inc. (PNA) Dr. Rosie De Leon on … DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 response against COVID-19.De Leo… DOH    press r…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'># … with 13,010 more rows</span><span></div><div class='input'>
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 Malasakit: panlaban natin sa COV… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Press Release / 16 May 2020The e… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 Philippines is a huge breath of … DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 livelihoods have been displaced,… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 that day-to-day behavior has to … DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 16 media forum, medical anthropo… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 professor, Dr. Michael Tan, appe… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 practice healthy behaviors while… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 UP Chancellor also called on all… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 highlighting the importance of s… DOH    press r…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
+#&gt; </span><span style='color: #555555;'># … with 13,233 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
