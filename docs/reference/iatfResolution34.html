@@ -6,8 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Combine specific documents available in the comotext package into a single
-dataset — combine_docs • comotext</title>
+<title>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 34 — iatfResolution34 • comotext</title>
 
 
 <!-- jquery -->
@@ -40,10 +40,10 @@ dataset — combine_docs • comotext</title>
 
 
 
-<meta property="og:title" content="Combine specific documents available in the comotext package into a single
-dataset — combine_docs" />
-<meta property="og:description" content="Combine specific documents available in the comotext package into a single
-dataset" />
+<meta property="og:title" content="COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 34 — iatfResolution34" />
+<meta property="og:description" content="COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 34" />
 
 
 
@@ -114,47 +114,51 @@ dataset" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Combine specific documents available in the comotext package into a single
-dataset</h1>
-    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/03-combine.R'><code>R/03-combine.R</code></a></small>
-    <div class="hidden name"><code>combine_docs.Rd</code></div>
+    <h1>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 34</h1>
+    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>iatfResolution34.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Combine specific documents available in the comotext package into a single
-dataset</p>
+    <p>COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+Diseases Resolution Number 34</p>
     </div>
 
-    <pre class="usage"><span class='fu'>combine_docs</span>(<span class='kw'>docs</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"resolution"</span>, <span class='st'>"press release"</span>))</pre>
+    <pre class="usage"><span class='no'>iatfResolution34</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>docs</th>
-      <td><p>A vector of terms to search for in the document names</p></td>
-    </tr>
-    </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A tibble of all document types called for.</p>
+    <p>A tibble with 122 rows and 6 columns:</p><dl'>
+  <dt><code>linenumber</code></dt><dd><p>Linenumber</p></dd>
+  <dt><code>text</code></dt><dd><p>Character string of text about 70 characters</p></dd>
+  <dt><code>source</code></dt><dd><p>Issuer of resolution</p></dd>
+  <dt><code>type</code></dt><dd><p>Type of document</p></dd>
+  <dt><code>id</code></dt><dd><p>Text document identifier</p></dd>
+  <dt><code>date</code></dt><dd><p>Date in &lt;YYYY-MM-DD&gt; format when resolution was made</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p><a href='https://doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-34.pdf'>https://doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-34.pdf</a></p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>combine_docs</span>(<span class='kw'>docs</span> <span class='kw'>=</span> <span class='st'>"resolution"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2,907 x 6</span><span>
+    <pre class="examples"><div class='input'><span class='no'>iatfResolution34</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 122 x 6</span><span>
 #&gt;    linenumber text                               source type       id date      
 #&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 WHEREAS, on January 31, 2020, upo… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Inter-Agency Task Force (IATF) fo… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 a travel ban covering China, Maca… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 SAR. On February 11, 2020, travel… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 that it was being used as a trans… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 WHEREAS, on February 14, 2020, tr… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 lifted. On February 18, 2020, the… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 exemptions in favor of certain cl… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 SAR, and Macau SAR;                IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 WHEREAS, on February 26, 2020, fo… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'># … with 2,897 more rows</span><span></div><div class='input'>
+#&gt; </span><span style='color: #555555;'> 1</span><span>          1 WHEREAS, on March 16, 2020, to pr… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 2</span><span>          2 country, the President placed the… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 3</span><span>          3 Quarantine until April 14, 2020;   IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 4</span><span>          4 WHEREAS, on March 30, 2020, to de… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 5</span><span>          5 determining whether the Enhanced … IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 6</span><span>          6 partially lifted, extended, or ex… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 7</span><span>          7 (IATF) convened a sub-Technical W… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 8</span><span>          8 assessing recent developments in … IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'> 9</span><span>          9 WHEREAS, on April 3, 2020, the IA… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'>10</span><span>         10 the lifting or extension of the E… IATF   resolu…    34 2020-05-08
+#&gt; </span><span style='color: #555555;'># … with 112 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
