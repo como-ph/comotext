@@ -11,6 +11,8 @@ experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](h
 status](https://travis-ci.org/como-ph/comotext.svg?branch=master)](https://travis-ci.org/como-ph/comotext)
 [![AppVeyor build
 status](https://ci.appveyor.com/api/projects/status/github/como-ph/comotext?branch=master&svg=true)](https://ci.appveyor.com/project/como-ph/comotext)
+[![Codecov test
+coverage](https://codecov.io/gh/como-ph/comotext/branch/master/graph/badge.svg)](https://codecov.io/gh/como-ph/comotext?branch=master)
 <!-- badges: end -->
 
 To assess possible impact of various COVID-19 prediction models on
