@@ -97,21 +97,21 @@ get_pr_url(pages = 1)
 #> # A tibble: 15 x 3
 #>    url                                                             id date      
 #>    <chr>                                                        <dbl> <date>    
-#>  1 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13
-#>  2 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
-#>  3 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
-#>  4 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
-#>  5 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
-#>  6 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
-#>  7 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
-#>  8 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
-#>  9 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
-#> 10 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
-#> 11 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
-#> 12 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
-#> 13 /doh-press-release/DOH%3A-NO-NEW-CASES-IN-41-PROVINCES%3B-P…  1141 2020-05-06
-#> 14 /doh-press-release/PH-STARTS-TO-FLATTEN-CURVE%3B-ECQ%2C-PHY…  1681 2020-05-06
-#> 15 /doh-press-release/DOH-LAUNCHES-MOBILE-PHONE-SURVEY-PART-2-…  4158 2020-05-05
+#>  1 /press-release/Malasakit%3A-panlaban-natin-sa-COVID-19%3B-f…  1311 2020-05-16
+#>  2 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
+#>  3 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
+#>  4 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13
+#>  5 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
+#>  6 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
+#>  7 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
+#>  8 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
+#>  9 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
+#> 10 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
+#> 11 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
+#> 12 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
+#> 13 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
+#> 14 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
+#> 15 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
 ```
 
 The function `get_press_releases` creates a dataset of text of press
@@ -126,26 +126,20 @@ prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
 get_press_release(df = prURL[1, ])
-#> # A tibble: 17 x 6
+#> # A tibble: 64 x 6
 #>    linenumber text                              source type        id date      
 #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-#>  1          1 NEW QUARANTINE SITE IN ALABANG I… DOH    press r…  1452 2020-05-13
-#>  2          2 Press Release/13 May 2020  Healt… DOH    press r…  1452 2020-05-13
-#>  3          3 with National Task Force Against… DOH    press r…  1452 2020-05-13
-#>  4          4 inaugurated a new quarantine sit… DOH    press r…  1452 2020-05-13
-#>  5          5 City.  The new quarantine center… DOH    press r…  1452 2020-05-13
-#>  6          6 Foundation in partnership with E… DOH    press r…  1452 2020-05-13
-#>  7          7 on the Management of Emerging In… DOH    press r…  1452 2020-05-13
-#>  8          8 with the Department of Health, D… DOH    press r…  1452 2020-05-13
-#>  9          9 National Defense and Bases Conve… DOH    press r…  1452 2020-05-13
-#> 10         10 the Filinvest group of companies… DOH    press r…  1452 2020-05-13
-#> 11         11 facility. This will help the nat… DOH    press r…  1452 2020-05-13
-#> 12         12 we endeavor to manage the number… DOH    press r…  1452 2020-05-13
-#> 13         13 said Secretary Duque. The 108-be… DOH    press r…  1452 2020-05-13
-#> 14         14 nextweek, will be managed by the… DOH    press r…  1452 2020-05-13
-#> 15         15 suspect and probable COVID-19 pa… DOH    press r…  1452 2020-05-13
-#> 16         16 the efforts of private-sector pa… DOH    press r…  1452 2020-05-13
-#> 17         17 Smart Telecom, Vista Land and Me… DOH    press r…  1452 2020-05-13
+#>  1          1 Malasakit: panlaban natin sa COV… DOH    press r…  1311 2020-05-16
+#>  2          2 Press Release / 16 May 2020The e… DOH    press r…  1311 2020-05-16
+#>  3          3 Philippines is a huge breath of … DOH    press r…  1311 2020-05-16
+#>  4          4 livelihoods have been displaced,… DOH    press r…  1311 2020-05-16
+#>  5          5 that day-to-day behavior has to … DOH    press r…  1311 2020-05-16
+#>  6          6 16 media forum, medical anthropo… DOH    press r…  1311 2020-05-16
+#>  7          7 professor, Dr. Michael Tan, appe… DOH    press r…  1311 2020-05-16
+#>  8          8 practice healthy behaviors while… DOH    press r…  1311 2020-05-16
+#>  9          9 UP Chancellor also called on all… DOH    press r…  1311 2020-05-16
+#> 10         10 highlighting the importance of s… DOH    press r…  1311 2020-05-16
+#> # … with 54 more rows
 ```
 
 To get all the [DoH](https://www.doh.gov.ph) press releases available
@@ -165,20 +159,20 @@ for(i in 1:nrow(pr)) {
 }
 ```
 
-    #> # A tibble: 13,020 x 6
+    #> # A tibble: 13,243 x 6
     #>    linenumber text                              source type        id date      
     #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-    #>  1          1 HONORING NURSE’S DAY: DOH CALLS … DOH    press r…  8151 2020-05-13
-    #>  2          2 Press Release/13 May 2020The Dep… DOH    press r…  8151 2020-05-13
-    #>  3          3 more healthcare workers to join … DOH    press r…  8151 2020-05-13
-    #>  4          4 announcement of the Inter-Agency… DOH    press r…  8151 2020-05-13
-    #>  5          5 Emerging Infectious Diseases new… DOH    press r…  8151 2020-05-13
-    #>  6          6 the nation.In the May 12 Beat CO… DOH    press r…  8151 2020-05-13
-    #>  7          7 International Nurses Day, Health… DOH    press r…  8151 2020-05-13
-    #>  8          8 Vergeire spoke with the National… DOH    press r…  8151 2020-05-13
-    #>  9          9 Inc. (PNA) Dr. Rosie De Leon on … DOH    press r…  8151 2020-05-13
-    #> 10         10 response against COVID-19.De Leo… DOH    press r…  8151 2020-05-13
-    #> # … with 13,010 more rows
+    #>  1          1 Malasakit: panlaban natin sa COV… DOH    press r…  1311 2020-05-16
+    #>  2          2 Press Release / 16 May 2020The e… DOH    press r…  1311 2020-05-16
+    #>  3          3 Philippines is a huge breath of … DOH    press r…  1311 2020-05-16
+    #>  4          4 livelihoods have been displaced,… DOH    press r…  1311 2020-05-16
+    #>  5          5 that day-to-day behavior has to … DOH    press r…  1311 2020-05-16
+    #>  6          6 16 media forum, medical anthropo… DOH    press r…  1311 2020-05-16
+    #>  7          7 professor, Dr. Michael Tan, appe… DOH    press r…  1311 2020-05-16
+    #>  8          8 practice healthy behaviors while… DOH    press r…  1311 2020-05-16
+    #>  9          9 UP Chancellor also called on all… DOH    press r…  1311 2020-05-16
+    #> 10         10 highlighting the importance of s… DOH    press r…  1311 2020-05-16
+    #> # … with 13,233 more rows
 
 This produces the same dataset as `pressRelease` included in `comotext`.
 
