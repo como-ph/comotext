@@ -7,3 +7,6 @@ addons:
   apt:
     packages:
       - libxml2-dev
+
+after_success:
+  - Rscript -e 'covr::codecov()'
