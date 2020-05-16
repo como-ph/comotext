@@ -43,8 +43,8 @@ Diseases (IATF).
 A description of the available datasets can be found
 [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
-A table of the 24 IATF resolutions and the URLs to download them can be
-generated using the function `get_iatf_links()` as follows:
+A table of the `25` IATF resolutions and the URLs to download them can
+be generated using the function `get_iatf_links()` as follows:
 
 ``` r
 get_iatf_links()
@@ -194,7 +194,7 @@ will be returned.
 
 ``` r
 combine_docs(docs = "resolution")
-#> # A tibble: 2,785 x 6
+#> # A tibble: 2,907 x 6
 #>    linenumber text                               source type       id date      
 #>         <int> <chr>                              <chr>  <chr>   <dbl> <date>    
 #>  1          1 WHEREAS, on January 31, 2020, upo… IATF   resolu…     9 2020-03-03
@@ -207,7 +207,7 @@ combine_docs(docs = "resolution")
 #>  8          8 exemptions in favor of certain cl… IATF   resolu…     9 2020-03-03
 #>  9          9 SAR, and Macau SAR;                IATF   resolu…     9 2020-03-03
 #> 10         10 WHEREAS, on February 26, 2020, fo… IATF   resolu…     9 2020-03-03
-#> # … with 2,775 more rows
+#> # … with 2,897 more rows
 ```
 
 The `combine_iatf` function is a specialised wrapper of the

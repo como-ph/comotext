@@ -42,7 +42,7 @@ remotes::install_github("como-ph/comotext")
 
 A description of the available datasets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
-A table of the 24 IATF resolutions and the URLs to download them can be generated using the function `get_iatf_links()` as follows:
+A table of the ```r nrow(iatfResList)``` IATF resolutions and the URLs to download them can be generated using the function `get_iatf_links()` as follows:
 
 ```{r usage, echo = TRUE, eval = TRUE}
 get_iatf_links()
