@@ -5,7 +5,7 @@
 \alias{iatfResList}
 \title{IATF resolutions URL links}
 \format{
-A tibble with 24 rows and 4 columns:
+A tibble with 25 rows and 4 columns:
 \describe{
   \item{\code{id}}{Unique identifier}
   \item{\code{title}}{Title of resolution}
@@ -14,7 +14,8 @@ A tibble with 24 rows and 4 columns:
 }
 }
 \source{
-\url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}
+\url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}. Updated
+  as of 16 May 2020.
 }
 \usage{
 iatfResList

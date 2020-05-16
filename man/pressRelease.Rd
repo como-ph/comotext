@@ -5,10 +5,11 @@
 \alias{pressRelease}
 \title{Department of Health press releases from 2017 to May 2020}
 \format{
-A tibble with 12909 rows and 5 columns:
+A tibble with 13243 rows and 6 columns:
 \describe{
   \item{\code{linenumber}}{Linenumber}
   \item{\code{text}}{Character string of text about 70 characters}
+  #'   \item{\code{source}}{Issuer of press release}
   \item{\code{type}}{Type of document}
   \item{\code{id}}{Text document numeric identifier (8 digits)}
   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -16,7 +17,7 @@ A tibble with 12909 rows and 5 columns:
 }
 \source{
 \url{https://www.doh.gov.ph/press-releases}. Updated as of
-  10 May 2020
+  16 May 2020.
 }
 \usage{
 pressRelease

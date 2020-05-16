@@ -5,7 +5,7 @@
 \alias{prLinks}
 \title{Department of Health press releases URLs from 2017 to May 2020}
 \format{
-A tibble with 353 rows and 3 columns:
+A tibble with 360 rows and 3 columns:
 \describe{
   \item{\code{url}}{Relative URL of press releases}
   \item{\code{id}}{Unique identifier of press release}
@@ -14,7 +14,7 @@ A tibble with 353 rows and 3 columns:
 }
 \source{
 Produced by \code{get_pr_url(pages = 1:25)}. Updated as of
-  10 May 2020
+  16 May 2020.
 }
 \usage{
 prLinks

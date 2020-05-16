@@ -651,10 +651,11 @@
 #'
 #' Department of Health press releases from 2017 to May 2020
 #'
-#' @format A tibble with 12909 rows and 5 columns:
+#' @format A tibble with 13243 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
+#'   #'   \item{\code{source}}{Issuer of press release}
 #'   \item{\code{type}}{Type of document}
 #'   \item{\code{id}}{Text document numeric identifier (8 digits)}
 #'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
@@ -664,7 +665,7 @@
 #' pressRelease
 #'
 #' @source \url{https://www.doh.gov.ph/press-releases}. Updated as of
-#'   10 May 2020
+#'   16 May 2020.
 #'
 #'
 #
@@ -677,7 +678,7 @@
 #'
 #' Department of Health press releases URLs from 2017 to May 2020
 #'
-#' @format A tibble with 353 rows and 3 columns:
+#' @format A tibble with 360 rows and 3 columns:
 #' \describe{
 #'   \item{\code{url}}{Relative URL of press releases}
 #'   \item{\code{id}}{Unique identifier of press release}
@@ -688,7 +689,7 @@
 #' prLinks
 #'
 #' @source Produced by \code{get_pr_url(pages = 1:25)}. Updated as of
-#'   10 May 2020
+#'   16 May 2020.
 #'
 #'
 #
@@ -701,7 +702,7 @@
 #'
 #' IATF resolutions URL links
 #'
-#' @format A tibble with 24 rows and 4 columns:
+#' @format A tibble with 25 rows and 4 columns:
 #' \describe{
 #'   \item{\code{id}}{Unique identifier}
 #'   \item{\code{title}}{Title of resolution}
@@ -712,7 +713,8 @@
 #' @examples
 #' iatfResList
 #'
-#' @source \url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}
+#' @source \url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}. Updated
+#'   as of 16 May 2020.
 #'
 #'
 #
