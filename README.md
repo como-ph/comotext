@@ -13,6 +13,7 @@ status](https://travis-ci.org/como-ph/comotext.svg?branch=master)](https://travi
 status](https://ci.appveyor.com/api/projects/status/github/como-ph/comotext?branch=master&svg=true)](https://ci.appveyor.com/project/como-ph/comotext)
 [![Codecov test
 coverage](https://codecov.io/gh/como-ph/comotext/branch/master/graph/badge.svg)](https://codecov.io/gh/como-ph/comotext?branch=master)
+[![DOI](https://zenodo.org/badge/255823130.svg)](https://zenodo.org/badge/latestdoi/255823130)
 <!-- badges: end -->
 
 To assess possible impact of various COVID-19 prediction models on
