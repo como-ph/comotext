@@ -19,7 +19,7 @@
 #'   str_split str_split_fixed str_remove_all str_extract str_to_upper
 #'   str_replace
 #' @importFrom tibble tibble
-#' @importFrom xml2 read_html
+#' @importFrom xml2 read_html url_absolute
 #' @importFrom rvest html_nodes html_text html_attr html_table
 #' @importFrom magrittr %>%
 #' @importFrom lubridate mdy
