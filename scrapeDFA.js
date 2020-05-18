@@ -7,7 +7,7 @@ page.open(url, function(status) {
             return document.documentElement.outerHTML;
         });
         try {
-            fs.write("dfaPressReleases.txt", html, 'w');
+            fs.write("data-raw/dfaPressReleases.txt", html, 'w');
         } catch(e) {
             console.log(e);
         }
