@@ -1,4 +1,4 @@
-var url = 'https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate';
+var url = 'https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate?start=1&end=2352';
 var fs = require('fs');
 var page = require('webpage').create();
 page.open(url, function(status) {
