@@ -16,7 +16,7 @@ containing the press release link. Default is 1:25. Press releases only go
 up to page 25. Values higher than 25 will error.}
 }
 \value{
-A tibble of 4 columns: 1) relative URLs of press release; 2) press
+A tibble of 4 columns: 1) absolute URLs of press release; 2) press
   release title; 3) press release unique identifier; and, 4) date of press
   release.
 }

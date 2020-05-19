@@ -4,11 +4,17 @@
 \alias{get_dfa_links}
 \title{Get URLs of Philippines Department of Foreign Affairs (DFA) press releases}
 \usage{
-get_dfa_links(base = "https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate")
+get_dfa_links(
+  base = "https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate",
+  type
+)
 }
 \arguments{
 \item{base}{Base URL for press releases in the Department of Foreign Affairs
 website. Default is \url{https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate}}
+
+\item{type}{Type of text contained in the URLs. This can be one of the
+following: resolution, press release, advisory, statement, etc.}
 }
 \value{
 A tibble containing information on title of the press release,
@@ -18,6 +24,7 @@ A tibble containing information on title of the press release,
 Get URLs of Philippines Department of Foreign Affairs (DFA) press releases
 }
 \examples{
-get_dfa_links(base = "http://www.dfa.gov.ph/dfa-news/dfa-releasesupdate")
+get_dfa_links(base = "https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate",
+              type = "press release")
 
 }
