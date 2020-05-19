@@ -26,6 +26,13 @@
 
 get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
                        pages = 1:25) {
+  ## Issue deprecation message
+  .Deprecated(new = "get_doh_links",
+              package = "comotext",
+              msg = "'get_pr_url' is now in the process of deprecation and will
+  be unavailable in the next version. Please use 'get_doh_links'
+  instead.")
+
   ## Check that pages goes up to 25 only
   if(max(pages) > 25) {
     stop("The current maximum pages for press releases in the DoH website
@@ -120,7 +127,7 @@ get_pr_url <- function(base = "https://www.doh.gov.ph/press-releases",
 #'   containing the press release link. Default is 1:25. Press releases only go
 #'   up to page 25. Values higher than 25 will error.
 #'
-#' @return A tibble of 4 columns: 1) relative URLs of press release; 2) press
+#' @return A tibble of 4 columns: 1) absolute URLs of press release; 2) press
 #'   release title; 3) press release unique identifier; and, 4) date of press
 #'   release.
 #'
@@ -145,6 +152,7 @@ get_doh_links <- function(base = "https://www.doh.gov.ph/press-releases",
   }
 
   ## Concatenating vectors
+  prTitle <- NULL
   prURL <- NULL
   prID <- NULL
   prDate <- NULL
@@ -154,8 +162,10 @@ get_doh_links <- function(base = "https://www.doh.gov.ph/press-releases",
     wp <- paste(base, "?page=", i - 1, sep = "")
     if(i == 1) wp <- base
 
+    xHTML <- xml2::read_html(x = wp)
+
     ## Extract and process press release relative links
-    href <- xml2::read_html(x = wp) %>%
+    href <- xHTML %>%
       rvest::html_nodes(css = ".view-content .views-field-title .field-content a") %>%
       rvest::html_attr(name = "href")
 
@@ -190,6 +200,7 @@ get_doh_links <- function(base = "https://www.doh.gov.ph/press-releases",
     hrefID <- stringr::str_extract(string = hrefID,
                                    pattern = "[0-9]{4}|[0-9]{5}|[0-9]{6}|[0-9]{7}|[0-9]{8}")
 
+
     ## Extract and process press release issue date
     hrefDate <- xml2::read_html(x = wp) %>%
       rvest::html_nodes(css = ".view-content .content-time") %>%
@@ -197,11 +208,22 @@ get_doh_links <- function(base = "https://www.doh.gov.ph/press-releases",
 
     hrefDate <- hrefDate[1:length(href)]
 
+    ## Extract titles
+    urlTitle <- xHTML %>%
+      rvest::html_nodes(css = ".view-content .views-field-title") %>%
+      rvest::html_text() %>%
+      stringr::str_trim(side = "both")
+
+    urlTitle <- urlTitle[1:length(href)]
+
     ## Concatenate url, id and date
+    prTitle <- c(prTitle, urlTitle)
     prURL <- c(prURL, href)
     prID <- c(prID, hrefID)
     prDate <- c(prDate, hrefDate)
   }
+  ## Convert URL to absolute path
+  prURL <- xml2::url_absolute(x = prURL, base = base)
 
   ## Convert prDate to date format
   prDate <- lubridate::mdy(prDate)
@@ -210,9 +232,12 @@ get_doh_links <- function(base = "https://www.doh.gov.ph/press-releases",
   prID <- as.numeric(prID)
 
   ## Create tibble
-  pr <- tibble::tibble(data.frame(url = prURL,
-                                  id = prID,
+  pr <- tibble::tibble(data.frame(id = prID,
+                                  title = prTitle,
                                   date = prDate,
+                                  source = "DOH",
+                                  type = "press release",
+                                  url = prURL,
                                   stringsAsFactors = FALSE))
 
   ## Return DF
@@ -249,6 +274,13 @@ get_doh_links <- function(base = "https://www.doh.gov.ph/press-releases",
 
 get_press_release <- function(base = "https://www.doh.gov.ph",
                               df) {
+  ## Issue deprecation message
+  .Deprecated(new = "get_doh_release",
+              package = "comotext",
+              msg = "'get_press_release' is now in the process of deprecation and will
+  be unavailable in the next version. Please use 'get_doh_release'
+  instead.")
+
   ## Form URL
   url <- paste(base, df$url, sep = "")
 
@@ -292,8 +324,6 @@ get_press_release <- function(base = "https://www.doh.gov.ph",
 #' Extract text of press release from the Philippines Department of Health
 #' website
 #'
-#' @param base Base URL for press releases in the Department of Health website.
-#'   Default is \url{https://www.doh.gov.ph}
 #' @param df A data.frame created using \code{get_pr_url} providing values for
 #'   relative URL of press release/s, unique identifier of press release and,
 #'   date of issue of press release.
@@ -303,10 +333,9 @@ get_press_release <- function(base = "https://www.doh.gov.ph",
 #'   press release.
 #'
 #' @examples
-#' prURL <- get_pr_url(base = "http://www.doh.gov.ph/press-releases",
-#'                     pages = 1)
-#' get_press_release(base = "http://www.doh.gov.ph",
-#'                   df = prURL[1, ])
+#' prURL <- get_doh_links(base = "http://www.doh.gov.ph/press-releases",
+#'                        pages = 1)
+#' get_doh_release(df = prURL[1, ])
 #'
 #' @export
 #'
@@ -314,9 +343,9 @@ get_press_release <- function(base = "https://www.doh.gov.ph",
 #
 ################################################################################
 
-get_doh_release <- function(base = "https://www.doh.gov.ph", df) {
+get_doh_release <- function(df) {
   ## Form URL
-  url <- paste(base, df$url, sep = "")
+  url <- df$url
 
   ## Extract text from URL
   z <- xml2::read_html(x = url) %>%
