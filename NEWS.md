@@ -1,4 +1,15 @@
-# comotext 0.1.0
+## comotext v0.2.0
+
+* created new versions of `get_` functions to allow for naming of source of text data; deprecation process started on previous versions
+
+* re-structured the output text tibbles from the functions to a more logical sequence of data columns with a general sequence of `linenumber`, `identifier`, `text`, `date`, `source`, `type`, `url` whichever is present for the given tibble
+
+* converted URLs to absolute URLs rather than relative URLs
+
+* renamed datasets to include source of data as prefix to the name
+
+
+# comotext v0.1.0
 
 * Created pull data functions for the Department of Health (DoH) press releases found at [https://www.doh.gov.ph/press-releases](https://www.doh.gov.ph/press-releases)
 
