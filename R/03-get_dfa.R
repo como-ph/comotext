@@ -12,8 +12,7 @@
 #'   release date of press release and the absolute URL link to press release
 #'
 #' @examples
-#' get_dfa_links(base = "https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate",
-#'               type = "press release")
+#' get_dfa_links(type = "press release")
 #'
 #' @export
 #'

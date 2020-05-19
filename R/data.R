@@ -676,6 +676,33 @@
 ################################################################################
 #
 #'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 35
+#'
+#' @format A tibble with 140 rows and 6 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
+#' }
+#'
+#' @examples
+#' iatfResolution35
+#'
+#' @source \url{https://doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-35.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution35"
+
+
+################################################################################
+#
+#'
 #' Department of Health press releases from 2017 to May 2020
 #'
 #' @format A tibble with 13325 rows and 6 columns:

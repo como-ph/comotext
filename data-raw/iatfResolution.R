@@ -934,14 +934,16 @@ x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-35.pdf")
 ## Restructure text
 y <- unlist(stringr::str_split(string = x, pattern = "\n"))
 
-y <- y[c(9:46, 52:76, 79:90, 97:98, 100:103, 105:108, 110:130, 136:147, 153:187)]
+y <- y[c(9:45, 52:90, 98:131, 141:165, 173:207)]
 y <- y[y != ""]
 
-y[97] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
-y[98] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
-y[99] <- "IATF Chairperson         IATF Co-Chairperson"
+y[115] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[116] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[117] <- "IATF Chairperson         IATF Co-Chairperson"
 
 y <- stringr::str_replace_all(string = y, pattern = "\\[ATF", replacement = "IATF")
+
+y <- stringr::str_replace_all(string = y, pattern = "\\[", replacement = "I")
 
 y <- stringr::str_trim(string = y, side = "both")
 
@@ -949,10 +951,10 @@ y <- data.frame(linenumber = 1:length(y),
                 text = y,
                 source = "IATF",
                 type = "resolution",
-                id = 34,
-                date = as.Date("08/05/2020", format = "%d/%m/%y"),
+                id = 35,
+                date = as.Date("11/05/2020", format = "%d/%m/%y"),
                 stringsAsFactors = FALSE)
 
-iatfResolution34 <- tibble::tibble(y)
+iatfResolution35 <- tibble::tibble(y)
 
-usethis::use_data(iatfResolution34, overwrite = TRUE, compress = "xz")
+usethis::use_data(iatfResolution35, overwrite = TRUE, compress = "xz")
