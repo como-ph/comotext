@@ -40,15 +40,15 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
-`comotext` currently has 27 datasets of COVID-19-related resolutions and
-policies in the Philippines. These datasets are 27 resolutions made by
+`comotext` currently has 28 datasets of COVID-19-related resolutions and
+policies in the Philippines. These datasets are 28 resolutions made by
 the Inter-Agency Task Force for the Management of Emerging Infectious
 Diseases (IATF).
 
 A description of the available datasets can be found
 [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
-A table of the `25` IATF resolutions and the URLs to download them can
+A table of the `29` IATF resolutions and the URLs to download them can
 be generated using the function `get_iatf_links()` as follows:
 
 ``` r
@@ -71,16 +71,16 @@ get_iatf_links()
 
 `comotext` also holds 1 dataset of all [Department of
 Health](http://www.doh.gov.ph) press releases to date. A description of
-the `pressRelease` dataset can be found
-[here](https://como-ph.github.io/comotext/reference/pressRelease.html).
-This dataset has been generated using the `get_press_release()` function
+the `dohRelease` dataset can be found
+[here](https://como-ph.github.io/comotext/reference/dohRelease.html).
+This dataset has been generated using the `get_doh_release()` function
 (see description below) included in `comotext`. Related to this is the
-dataset `prLinks` which holds the relative URL links for each of the
+dataset `dohLinks` which holds the relative URL links for each of the
 press releases in the [Department of Health](http://www.doh.gov.ph)
-website to date. This dataset has been produced using the `get_pr_url()`
-function (see description below) included in `comotext`. A description
-of the `prLinks` dataset can be found
-[here](https://como-ph.github.io/comotext/reference/prLinks.html).
+website to date. This dataset has been produced using the
+`get_doh_links()` function (see description below) included in
+`comotext`. A description of the `dohLinks` dataset can be found
+[here](https://como-ph.github.io/comotext/reference/dohLinks.html).
 
 ### Extracting text data from press releases
 
@@ -89,54 +89,48 @@ Health](https://www.doh.gov.ph) are available publicly via their
 [website](https://www.doh.gov.ph/press-releases). The structure of the
 press releases page is that the section with the links to the press
 releases text is in a panel within the web page with the panel itself
-having pagination with each page containing links to 15 press releases
+having pagination with each page containing links to 28 press releases
 with press releases ordered in reverse chronological order.
 
-The function `get_pr_url` extracts the relative URL links to each of the
-press releases on a current page within the press releases panel. If we
-want to get the relative URL links for the press releases on page 1 of
-the press releases panel, we use:
+The function `get_doh_links()` extracts the relative URL links to each
+of the press releases on a current page within the press releases panel.
+If we want to get the absolute URL links for the press releases on page
+1 of the press releases panel, we use:
 
 ``` r
-get_pr_url(pages = 1)
-#> Warning: 'get_pr_url' is now in the process of deprecation and will
-#>   be unavailable in the next version. Please use 'get_doh_links'
-#>   instead.
-#> # A tibble: 15 x 3
-#>    url                                                             id date      
-#>    <chr>                                                        <dbl> <date>    
-#>  1 /press-release/DOH-to-deputize-med-grads-to-assist-in-nat%E…  4158 2020-05-19
-#>  2 /press-release/DOH-Encourages-Virtual-Ceremony-to-Commemora…  4158 2020-05-18
-#>  3 /press-release/Malasakit%3A-panlaban-natin-sa-COVID-19%3B-f…  1311 2020-05-16
-#>  4 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
-#>  5 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
-#>  6 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13
-#>  7 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
-#>  8 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
-#>  9 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
-#> 10 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
-#> 11 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
-#> 12 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
-#> 13 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
-#> 14 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
-#> 15 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
+get_doh_links(pages = 1)
+#> # A tibble: 15 x 6
+#>       id title                   date       source type   url                   
+#>    <dbl> <chr>                   <date>     <chr>  <chr>  <chr>                 
+#>  1  4158 "DOH TO DEPUTIZE MED G… 2020-05-19 DOH    press… https://www.doh.gov.p…
+#>  2  4158 "DOH ENCOURAGES VIRTUA… 2020-05-18 DOH    press… https://www.doh.gov.p…
+#>  3  1311 "Malasakit: panlaban n… 2020-05-16 DOH    press… https://www.doh.gov.p…
+#>  4  5241 "EXPERTS RALLY BEHIND … 2020-05-14 DOH    press… https://www.doh.gov.p…
+#>  5  5241 "GOVERNMENT OFFERS FUL… 2020-05-14 DOH    press… https://www.doh.gov.p…
+#>  6  1452 "NEW QUARANTINE SITE I… 2020-05-13 DOH    press… https://www.doh.gov.p…
+#>  7  1920 "STATEMENT ON DATA INT… 2020-05-13 DOH    press… https://www.doh.gov.p…
+#>  8  8151 "HONORING NURSE’S DAY:… 2020-05-13 DOH    press… https://www.doh.gov.p…
+#>  9  1911 "SAN JUAN CITY THANKS … 2020-05-13 DOH    press… https://www.doh.gov.p…
+#> 10  1421 "ADB-Sponsored COVID-1… 2020-05-10 DOH    press… https://www.doh.gov.p…
+#> 11  5317 "ECQ Buys PH Time; Con… 2020-05-09 DOH    press… https://www.doh.gov.p…
+#> 12  2977 "BIGGEST MEGA SWABBING… 2020-05-08 DOH    press… https://www.doh.gov.p…
+#> 13  4211 "DUQUE THANKS NAVY FRO… 2020-05-07 DOH    press… https://www.doh.gov.p…
+#> 14  2018 "PH GOV’T RECEIVES 7 M… 2020-05-07 DOH    press… https://www.doh.gov.p…
+#> 15  2525 "BEYOND\tNUMBERS:\tWHA… 2020-05-07 DOH    press… https://www.doh.gov.p…
 ```
 
-The function `get_press_releases` creates a dataset of text of press
+The function `get_doh_release()` creates a dataset of text of press
 releases given a URL of a specific press release text and the date of
-release. This information is provided for by `get_pr_url`. If we want to
-get the text data of the press releases from page 1 of the press release
-panel, we use:
+release. This information is provided for by `get_doh_links()`. If we
+want to get the text data of the press releases from page 1 of the press
+release panel, we use:
 
 ``` r
 ## Extract URLs from DoH press releases page 1
-prURL <- get_pr_url(pages = 1)
-#> Warning: 'get_pr_url' is now in the process of deprecation and will
-#>   be unavailable in the next version. Please use 'get_doh_links'
-#>   instead.
+prURL <- get_doh_links(pages = 1)
 
 ## Extract text from first press release
-get_press_release(df = prURL[1, ])
+get_doh_release(df = prURL[1, ])
 #> # A tibble: 49 x 6
 #>    linenumber text                              source type        id date      
 #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
@@ -158,34 +152,34 @@ from their [website](https://www.doh.gov.ph/press-releases), use:
 
 ``` r
 ## Extract URLs
-pr <- get_pr_url(pages = 1:25)
+pr <- get_doh_links(pages = 1:25)
 
 ## Extract all press releases text
 pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
-  currentPR <- get_press_release(df = pr[i, ])
+  currentPR <- get_doh_release(df = pr[i, ])
 
   pressRelease <- rbind(pressRelease, currentPR)
 }
 ```
 
-    #> # A tibble: 13,243 x 6
+    #> # A tibble: 13,325 x 6
     #>    linenumber text                              source type        id date      
     #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-    #>  1          1 Malasakit: panlaban natin sa COV… DOH    press r…  1311 2020-05-16
-    #>  2          2 Press Release / 16 May 2020The e… DOH    press r…  1311 2020-05-16
-    #>  3          3 Philippines is a huge breath of … DOH    press r…  1311 2020-05-16
-    #>  4          4 livelihoods have been displaced,… DOH    press r…  1311 2020-05-16
-    #>  5          5 that day-to-day behavior has to … DOH    press r…  1311 2020-05-16
-    #>  6          6 16 media forum, medical anthropo… DOH    press r…  1311 2020-05-16
-    #>  7          7 professor, Dr. Michael Tan, appe… DOH    press r…  1311 2020-05-16
-    #>  8          8 practice healthy behaviors while… DOH    press r…  1311 2020-05-16
-    #>  9          9 UP Chancellor also called on all… DOH    press r…  1311 2020-05-16
-    #> 10         10 highlighting the importance of s… DOH    press r…  1311 2020-05-16
-    #> # … with 13,233 more rows
+    #>  1          1 DOH TO DEPUTIZE MED GRADS TO ASS… DOH    press r…  4158 2020-05-19
+    #>  2          2 Press Release/18 May 2020 Consis… DOH    press r…  4158 2020-05-19
+    #>  3          3 11469 or the “Bayanihan to Heal … DOH    press r…  4158 2020-05-19
+    #>  4          4 of 1959,” the Department of Heal… DOH    press r…  4158 2020-05-19
+    #>  5          5 2020-0169 last Saturday, which a… DOH    press r…  4158 2020-05-19
+    #>  6          6 practice of medicine as deputize… DOH    press r…  4158 2020-05-19
+    #>  7          7 of registration from the Profess… DOH    press r…  4158 2020-05-19
+    #>  8          8 in the President the power “to e… DOH    press r…  4158 2020-05-19
+    #>  9          9 complement or supplement the cur… DOH    press r…  4158 2020-05-19
+    #> 10         10 R.A. 2382 stipulates “Medical gr… DOH    press r…  4158 2020-05-19
+    #> # … with 13,315 more rows
 
-This produces the same dataset as `pressRelease` included in `comotext`.
+This produces the same dataset as `dohRelease` included in `comotext`.
 
 ### Concatenating text datasets
 
@@ -205,7 +199,7 @@ will be returned.
 
 ``` r
 combine_docs(docs = "resolution")
-#> # A tibble: 2,907 x 6
+#> # A tibble: 3,186 x 6
 #>    linenumber text                               source type       id date      
 #>         <int> <chr>                              <chr>  <chr>   <dbl> <date>    
 #>  1          1 WHEREAS, on January 31, 2020, upo… IATF   resolu…     9 2020-03-03
@@ -218,7 +212,7 @@ combine_docs(docs = "resolution")
 #>  8          8 exemptions in favor of certain cl… IATF   resolu…     9 2020-03-03
 #>  9          9 SAR, and Macau SAR;                IATF   resolu…     9 2020-03-03
 #> 10         10 WHEREAS, on February 26, 2020, fo… IATF   resolu…     9 2020-03-03
-#> # … with 2,897 more rows
+#> # … with 3,176 more rows
 ```
 
 The `combine_iatf` function is a specialised wrapper of the
