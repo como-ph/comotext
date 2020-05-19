@@ -38,8 +38,8 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
-`comotext` currently has 24 datasets of COVID-19-related resolutions and
-policies in the Philippines. These datasets are 24 resolutions made by
+`comotext` currently has 27 datasets of COVID-19-related resolutions and
+policies in the Philippines. These datasets are 27 resolutions made by
 the Inter-Agency Task Force for the Management of Emerging Infectious
 Diseases (IATF).
 
@@ -51,7 +51,7 @@ be generated using the function `get_iatf_links()` as follows:
 
 ``` r
 get_iatf_links()
-#> # A tibble: 25 x 4
+#> # A tibble: 29 x 4
 #>       id title                          date       link                         
 #>    <dbl> <chr>                          <date>     <chr>                        
 #>  1     9 Recommendations for the Manag… 2020-03-03 https://doh.gov.ph/sites/def…
@@ -64,7 +64,7 @@ get_iatf_links()
 #>  8    16 Additional Guidelines for the… 2020-03-30 https://doh.gov.ph/sites/def…
 #>  9    17 Recommendations Relative to t… 2020-03-30 https://doh.gov.ph/sites/def…
 #> 10    18 Recommendations Relative to t… 2020-04-01 https://doh.gov.ph/sites/def…
-#> # … with 15 more rows
+#> # … with 19 more rows
 ```
 
 `comotext` also holds 1 dataset of all [Department of
@@ -100,21 +100,21 @@ get_pr_url(pages = 1)
 #> # A tibble: 15 x 3
 #>    url                                                             id date      
 #>    <chr>                                                        <dbl> <date>    
-#>  1 /press-release/Malasakit%3A-panlaban-natin-sa-COVID-19%3B-f…  1311 2020-05-16
-#>  2 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
-#>  3 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
-#>  4 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13
-#>  5 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
-#>  6 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
-#>  7 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
-#>  8 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
-#>  9 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
-#> 10 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
-#> 11 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
-#> 12 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
-#> 13 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
-#> 14 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06
-#> 15 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06
+#>  1 /press-release/DOH-to-deputize-med-grads-to-assist-in-nat%E…  4158 2020-05-19
+#>  2 /press-release/DOH-Encourages-Virtual-Ceremony-to-Commemora…  4158 2020-05-18
+#>  3 /press-release/Malasakit%3A-panlaban-natin-sa-COVID-19%3B-f…  1311 2020-05-16
+#>  4 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
+#>  5 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14
+#>  6 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13
+#>  7 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13
+#>  8 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13
+#>  9 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13
+#> 10 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10
+#> 11 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09
+#> 12 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08
+#> 13 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07
+#> 14 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07
+#> 15 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07
 ```
 
 The function `get_press_releases` creates a dataset of text of press
@@ -129,20 +129,20 @@ prURL <- get_pr_url(pages = 1)
 
 ## Extract text from first press release
 get_press_release(df = prURL[1, ])
-#> # A tibble: 64 x 6
+#> # A tibble: 49 x 6
 #>    linenumber text                              source type        id date      
 #>         <int> <chr>                             <chr>  <chr>    <dbl> <date>    
-#>  1          1 Malasakit: panlaban natin sa COV… DOH    press r…  1311 2020-05-16
-#>  2          2 Press Release / 16 May 2020The e… DOH    press r…  1311 2020-05-16
-#>  3          3 Philippines is a huge breath of … DOH    press r…  1311 2020-05-16
-#>  4          4 livelihoods have been displaced,… DOH    press r…  1311 2020-05-16
-#>  5          5 that day-to-day behavior has to … DOH    press r…  1311 2020-05-16
-#>  6          6 16 media forum, medical anthropo… DOH    press r…  1311 2020-05-16
-#>  7          7 professor, Dr. Michael Tan, appe… DOH    press r…  1311 2020-05-16
-#>  8          8 practice healthy behaviors while… DOH    press r…  1311 2020-05-16
-#>  9          9 UP Chancellor also called on all… DOH    press r…  1311 2020-05-16
-#> 10         10 highlighting the importance of s… DOH    press r…  1311 2020-05-16
-#> # … with 54 more rows
+#>  1          1 DOH TO DEPUTIZE MED GRADS TO ASS… DOH    press r…  4158 2020-05-19
+#>  2          2 Press Release/18 May 2020 Consis… DOH    press r…  4158 2020-05-19
+#>  3          3 11469 or the “Bayanihan to Heal … DOH    press r…  4158 2020-05-19
+#>  4          4 of 1959,” the Department of Heal… DOH    press r…  4158 2020-05-19
+#>  5          5 2020-0169 last Saturday, which a… DOH    press r…  4158 2020-05-19
+#>  6          6 practice of medicine as deputize… DOH    press r…  4158 2020-05-19
+#>  7          7 of registration from the Profess… DOH    press r…  4158 2020-05-19
+#>  8          8 in the President the power “to e… DOH    press r…  4158 2020-05-19
+#>  9          9 complement or supplement the cur… DOH    press r…  4158 2020-05-19
+#> 10         10 R.A. 2382 stipulates “Medical gr… DOH    press r…  4158 2020-05-19
+#> # … with 39 more rows
 ```
 
 To get all the [DoH](https://www.doh.gov.ph) press releases available

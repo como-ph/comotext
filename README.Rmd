@@ -40,7 +40,7 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
-`comotext` currently has 24 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 24 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
+`comotext` currently has 27 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 27 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
 
 A description of the available datasets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
