@@ -25,7 +25,10 @@ reference:
   contents:
   - get_iatf_links
   - get_pr_url
+  - get_doh_links
   - get_press_release
+  - get_doh_release
+  - get_dfa_release
 
 - title: Combine
   contents:
@@ -34,7 +37,7 @@ reference:
 
 - title: Datasets - IATF resolutions
   contents:
-  - iatfResList
+  - iatfLinks
   - iatfResolution09
   - iatfResolution10
   - iatfResolution11
@@ -63,5 +66,5 @@ reference:
 
 - title: Datasets - DOH press releases
   contents:
-  - prLinks
-  - pressRelease
+  - dohLinks
+  - dohRelease
