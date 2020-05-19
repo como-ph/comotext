@@ -233,7 +233,7 @@
 #' @examples
 #' iatfResolution17
 #'
-#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 17.pdf}
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF\%20Resolution\%20No.\%2017.pdf}
 #'
 #'
 #
@@ -287,7 +287,7 @@
 #' @examples
 #' iatfResolution19
 #'
-#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 19.pdf}
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF\%20Resolution\%20No.\%2019.pdf}
 #'
 #'
 #
