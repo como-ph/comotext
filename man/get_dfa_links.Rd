@@ -24,7 +24,6 @@ A tibble containing information on title of the press release,
 Get URLs of Philippines Department of Foreign Affairs (DFA) press releases
 }
 \examples{
-get_dfa_links(base = "https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate",
-              type = "press release")
+get_dfa_links(type = "press release")
 
 }
