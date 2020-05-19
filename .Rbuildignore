@@ -7,4 +7,4 @@
 ^\.travis\.yml$
 ^appveyor\.yml$
 ^codecov\.yml$
-^scrapeDFA\.js$
+^\.github$
