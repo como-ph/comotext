@@ -958,3 +958,59 @@ y <- data.frame(linenumber = 1:length(y),
 iatfResolution35 <- tibble::tibble(y)
 
 usethis::use_data(iatfResolution35, overwrite = TRUE, compress = "xz")
+
+## Resolution 36 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-36.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(9:46, 54:93, 101:131)]
+y <- y[y != ""]
+
+y[88] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[89] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[90] <- "IATF Chairperson         IATF Co-Chairperson"
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 36,
+                date = as.Date("13/05/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution36 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution36, overwrite = TRUE, compress = "xz")
+
+## Resolution 37 ###############################################################
+
+x <- pdf_ocr_text(pdf = "data-raw/IATF/IATF-Resolution-No.-37.pdf")
+
+## Restructure text
+y <- unlist(stringr::str_split(string = x, pattern = "\n"))
+
+y <- y[c(13:49, 58:76)]
+y <- y[y != ""]
+
+y[47] <- "Francisco T. Duque III       Karlo Alexei B. Nograles"
+y[48] <- "Secretary, Department of Health     Cabinet Secretary, Office of the Cabinet Secretary"
+y[49] <- "IATF Chairperson         IATF Co-Chairperson"
+
+y <- stringr::str_trim(string = y, side = "both")
+
+y <- data.frame(linenumber = 1:length(y),
+                text = y,
+                source = "IATF",
+                type = "resolution",
+                id = 37,
+                date = as.Date("15/05/2020", format = "%d/%m/%y"),
+                stringsAsFactors = FALSE)
+
+iatfResolution37 <- tibble::tibble(y)
+
+usethis::use_data(iatfResolution37, overwrite = TRUE, compress = "xz")
