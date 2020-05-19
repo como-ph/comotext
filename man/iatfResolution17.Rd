@@ -17,7 +17,7 @@ A tibble with 143 rows and 6 columns:
 }
 }
 \source{
-\url{https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 17.pdf}
+
 }
 \usage{
 iatfResolution17
