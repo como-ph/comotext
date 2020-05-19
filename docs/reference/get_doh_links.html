@@ -6,7 +6,8 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Extract title of press releases from Department of Health website — get_pr_url • comotext</title>
+<title>Extract title, URLs, unique identifiers and date of release of press releases
+from the Department of Health website — get_doh_links • comotext</title>
 
 
 <!-- jquery -->
@@ -39,8 +40,10 @@
 
 
 
-<meta property="og:title" content="Extract title of press releases from Department of Health website — get_pr_url" />
-<meta property="og:description" content="Extract title of press releases from Department of Health website" />
+<meta property="og:title" content="Extract title, URLs, unique identifiers and date of release of press releases
+from the Department of Health website — get_doh_links" />
+<meta property="og:description" content="Extract title, URLs, unique identifiers and date of release of press releases
+from the Department of Health website" />
 
 
 
@@ -111,16 +114,18 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Extract title of press releases from Department of Health website</h1>
+    <h1>Extract title, URLs, unique identifiers and date of release of press releases
+from the Department of Health website</h1>
     <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/02-get_doh.R'><code>R/02-get_doh.R</code></a></small>
-    <div class="hidden name"><code>get_pr_url.Rd</code></div>
+    <div class="hidden name"><code>get_doh_links.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Extract title of press releases from Department of Health website</p>
+    <p>Extract title, URLs, unique identifiers and date of release of press releases
+from the Department of Health website</p>
     </div>
 
-    <pre class="usage"><span class='fu'>get_pr_url</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"https://www.doh.gov.ph/press-releases"</span>, <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>25</span>)</pre>
+    <pre class="usage"><span class='fu'>get_doh_links</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"https://www.doh.gov.ph/press-releases"</span>, <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>:<span class='fl'>25</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -140,34 +145,33 @@ up to page 25. Values higher than 25 will error.</p></td>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A tibble of 2 columns: 1) press release title; 2) press release
-  unique identifier; and, 3) date of press release.</p>
+    <p>A tibble of 4 columns: 1) absolute URLs of press release; 2) press
+  release title; 3) press release unique identifier; and, 4) date of press
+  release.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='co'>## Get press release URLs for first page of press release panel. The base</span>
 <span class='co'>## argument has been specified using non-SSL version of base URL to prevent</span>
 <span class='co'>## erroring for those with proxy server connections (i.e., in Travis tests)</span>
-<span class='fu'>get_pr_url</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph/press-releases"</span>,
-           <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; <span class='warning'>Warning: 'get_pr_url' is now in the process of deprecation and will</span>
-#&gt; <span class='warning'>  be unavailable in the next version. Please use 'get_doh_links'</span>
-#&gt; <span class='warning'>  instead.</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 15 x 3</span><span>
-#&gt;    url                                                             id date      
-#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                                                        </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span> /press-release/DOH-to-deputize-med-grads-to-assist-in-nat%E…  </span><span style='text-decoration: underline;'>4</span><span>158 2020-05-19
-#&gt; </span><span style='color: #555555;'> 2</span><span> /press-release/DOH-Encourages-Virtual-Ceremony-to-Commemora…  </span><span style='text-decoration: underline;'>4</span><span>158 2020-05-18
-#&gt; </span><span style='color: #555555;'> 3</span><span> /press-release/Malasakit%3A-panlaban-natin-sa-COVID-19%3B-f…  </span><span style='text-decoration: underline;'>1</span><span>311 2020-05-16
-#&gt; </span><span style='color: #555555;'> 4</span><span> /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  </span><span style='text-decoration: underline;'>5</span><span>241 2020-05-14
-#&gt; </span><span style='color: #555555;'> 5</span><span> /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  </span><span style='text-decoration: underline;'>5</span><span>241 2020-05-14
-#&gt; </span><span style='color: #555555;'> 6</span><span> /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  </span><span style='text-decoration: underline;'>1</span><span>452 2020-05-13
-#&gt; </span><span style='color: #555555;'> 7</span><span> /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                </span><span style='text-decoration: underline;'>1</span><span>920 2020-05-13
-#&gt; </span><span style='color: #555555;'> 8</span><span> /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  </span><span style='text-decoration: underline;'>8</span><span>151 2020-05-13
-#&gt; </span><span style='color: #555555;'> 9</span><span> /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  </span><span style='text-decoration: underline;'>1</span><span>911 2020-05-13
-#&gt; </span><span style='color: #555555;'>10</span><span> /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  </span><span style='text-decoration: underline;'>1</span><span>421 2020-05-10
-#&gt; </span><span style='color: #555555;'>11</span><span> /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  </span><span style='text-decoration: underline;'>5</span><span>317 2020-05-09
-#&gt; </span><span style='color: #555555;'>12</span><span> /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  </span><span style='text-decoration: underline;'>2</span><span>977 2020-05-08
-#&gt; </span><span style='color: #555555;'>13</span><span> /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  </span><span style='text-decoration: underline;'>4</span><span>211 2020-05-07
-#&gt; </span><span style='color: #555555;'>14</span><span> /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  </span><span style='text-decoration: underline;'>2</span><span>018 2020-05-07
-#&gt; </span><span style='color: #555555;'>15</span><span> /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  </span><span style='text-decoration: underline;'>2</span><span>525 2020-05-07</div><div class='input'>
+<span class='fu'>get_doh_links</span>(<span class='kw'>base</span> <span class='kw'>=</span> <span class='st'>"http://www.doh.gov.ph/press-releases"</span>,
+              <span class='kw'>pages</span> <span class='kw'>=</span> <span class='fl'>1</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 15 x 6</span><span>
+#&gt;       id title                   date       source type   url                   
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                 
+#&gt; </span><span style='color: #555555;'> 1</span><span>  </span><span style='text-decoration: underline;'>4</span><span>158 </span><span style='color: #555555;'>"</span><span>DOH TO DEPUTIZE MED G… 2020-05-19 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 2</span><span>  </span><span style='text-decoration: underline;'>4</span><span>158 </span><span style='color: #555555;'>"</span><span>DOH ENCOURAGES VIRTUA… 2020-05-18 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 3</span><span>  </span><span style='text-decoration: underline;'>1</span><span>311 </span><span style='color: #555555;'>"</span><span>Malasakit: panlaban n… 2020-05-16 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 4</span><span>  </span><span style='text-decoration: underline;'>5</span><span>241 </span><span style='color: #555555;'>"</span><span>EXPERTS RALLY BEHIND … 2020-05-14 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 5</span><span>  </span><span style='text-decoration: underline;'>5</span><span>241 </span><span style='color: #555555;'>"</span><span>GOVERNMENT OFFERS FUL… 2020-05-14 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 6</span><span>  </span><span style='text-decoration: underline;'>1</span><span>452 </span><span style='color: #555555;'>"</span><span>NEW QUARANTINE SITE I… 2020-05-13 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 7</span><span>  </span><span style='text-decoration: underline;'>1</span><span>920 </span><span style='color: #555555;'>"</span><span>STATEMENT ON DATA INT… 2020-05-13 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 8</span><span>  </span><span style='text-decoration: underline;'>8</span><span>151 </span><span style='color: #555555;'>"</span><span>HONORING NURSE’S DAY:… 2020-05-13 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'> 9</span><span>  </span><span style='text-decoration: underline;'>1</span><span>911 </span><span style='color: #555555;'>"</span><span>SAN JUAN CITY THANKS … 2020-05-13 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'>10</span><span>  </span><span style='text-decoration: underline;'>1</span><span>421 </span><span style='color: #555555;'>"</span><span>ADB-Sponsored COVID-1… 2020-05-10 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'>11</span><span>  </span><span style='text-decoration: underline;'>5</span><span>317 </span><span style='color: #555555;'>"</span><span>ECQ Buys PH Time; Con… 2020-05-09 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'>12</span><span>  </span><span style='text-decoration: underline;'>2</span><span>977 </span><span style='color: #555555;'>"</span><span>BIGGEST MEGA SWABBING… 2020-05-08 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'>13</span><span>  </span><span style='text-decoration: underline;'>4</span><span>211 </span><span style='color: #555555;'>"</span><span>DUQUE THANKS NAVY FRO… 2020-05-07 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'>14</span><span>  </span><span style='text-decoration: underline;'>2</span><span>018 </span><span style='color: #555555;'>"</span><span>PH GOV’T RECEIVES 7 M… 2020-05-07 DOH    press… http://www.doh.gov.ph…
+#&gt; </span><span style='color: #555555;'>15</span><span>  </span><span style='text-decoration: underline;'>2</span><span>525 </span><span style='color: #555555;'>"</span><span>BEYOND\tNUMBERS:\tWHA… 2020-05-07 DOH    press… http://www.doh.gov.ph…</div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

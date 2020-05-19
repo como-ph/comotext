@@ -20,6 +20,9 @@ test_that("id is numeric and date is Date", {
   expect_is(get_doh_links(base = base1, pages = 1)$date, "Date")
 })
 
+xx <- dohLinks[3, ]
+xx$url <- stringr::str_replace(string = xx$url, pattern = "https", replacement = "http")
+
 test_that("output is a tibble", {
-  expect_is(get_doh_release(df = dohLinks[3, ]), "tbl")
+  expect_is(get_doh_release(df = xx), "tbl")
 })

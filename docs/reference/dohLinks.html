@@ -6,8 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Combine specific documents available in the comotext package into a single
-dataset — combine_docs • comotext</title>
+<title>Department of Health press releases URLs from 2017 to May 2020 — dohLinks • comotext</title>
 
 
 <!-- jquery -->
@@ -40,10 +39,8 @@ dataset — combine_docs • comotext</title>
 
 
 
-<meta property="og:title" content="Combine specific documents available in the comotext package into a single
-dataset — combine_docs" />
-<meta property="og:description" content="Combine specific documents available in the comotext package into a single
-dataset" />
+<meta property="og:title" content="Department of Health press releases URLs from 2017 to May 2020 — dohLinks" />
+<meta property="og:description" content="Department of Health press releases URLs from 2017 to May 2020" />
 
 
 
@@ -114,47 +111,47 @@ dataset" />
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Combine specific documents available in the comotext package into a single
-dataset</h1>
-    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/10-combine.R'><code>R/10-combine.R</code></a></small>
-    <div class="hidden name"><code>combine_docs.Rd</code></div>
+    <h1>Department of Health press releases URLs from 2017 to May 2020</h1>
+    <small class="dont-index">Source: <a href='https://github.com/como-ph/comotext/blob/master/R/data.R'><code>R/data.R</code></a></small>
+    <div class="hidden name"><code>dohLinks.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Combine specific documents available in the comotext package into a single
-dataset</p>
+    <p>Department of Health press releases URLs from 2017 to May 2020</p>
     </div>
 
-    <pre class="usage"><span class='fu'>combine_docs</span>(<span class='kw'>docs</span> <span class='kw'>=</span> <span class='fu'><a href='https://rdrr.io/r/base/c.html'>c</a></span>(<span class='st'>"resolution"</span>, <span class='st'>"press release"</span>))</pre>
+    <pre class="usage"><span class='no'>dohLinks</span></pre>
 
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
-    <table class="ref-arguments">
-    <colgroup><col class="name" /><col class="desc" /></colgroup>
-    <tr>
-      <th>docs</th>
-      <td><p>A vector of terms to search for in the document names</p></td>
-    </tr>
-    </table>
 
-    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A tibble of all document types called for.</p>
+    <p>A tibble with 360 rows and 3 columns:</p><dl'>
+  <dt><code>url</code></dt><dd><p>Relative URL of press releases</p></dd>
+  <dt><code>id</code></dt><dd><p>Unique identifier of press release</p></dd>
+  <dt><code>date</code></dt><dd><p>Date of issue of press release</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Produced by <code><a href='get_pr_url.html'>get_pr_url(pages = 1:25)</a></code>. Updated as of
+  19 May 2020.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>combine_docs</span>(<span class='kw'>docs</span> <span class='kw'>=</span> <span class='st'>"resolution"</span>)</div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 2,907 x 6</span><span>
-#&gt;    linenumber text                               source type       id date      
-#&gt;         </span><span style='color: #555555;font-style: italic;'>&lt;int&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                              </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>   </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>    
-#&gt; </span><span style='color: #555555;'> 1</span><span>          1 WHEREAS, on January 31, 2020, upo… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 2</span><span>          2 Inter-Agency Task Force (IATF) fo… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 3</span><span>          3 a travel ban covering China, Maca… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 4</span><span>          4 SAR. On February 11, 2020, travel… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 5</span><span>          5 that it was being used as a trans… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 6</span><span>          6 WHEREAS, on February 14, 2020, tr… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 7</span><span>          7 lifted. On February 18, 2020, the… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 8</span><span>          8 exemptions in favor of certain cl… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'> 9</span><span>          9 SAR, and Macau SAR;                IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'>10</span><span>         10 WHEREAS, on February 26, 2020, fo… IATF   resolu…     9 2020-03-03
-#&gt; </span><span style='color: #555555;'># … with 2,897 more rows</span><span></div><div class='input'>
+    <pre class="examples"><div class='input'><span class='no'>dohLinks</span></div><div class='output co'>#&gt; <span style='color: #555555;'># A tibble: 362 x 6</span><span>
+#&gt;       id title                   date       source type   url                   
+#&gt;    </span><span style='color: #555555;font-style: italic;'>&lt;dbl&gt;</span><span> </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                   </span><span style='color: #555555;font-style: italic;'>&lt;date&gt;</span><span>     </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>  </span><span style='color: #555555;font-style: italic;'>&lt;chr&gt;</span><span>                 
+#&gt; </span><span style='color: #555555;'> 1</span><span>  </span><span style='text-decoration: underline;'>4</span><span>158 DOH TO DEPUTIZE MED GR… 2020-05-19 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 2</span><span>  </span><span style='text-decoration: underline;'>4</span><span>158 DOH ENCOURAGES VIRTUAL… 2020-05-18 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 3</span><span>  </span><span style='text-decoration: underline;'>1</span><span>311 Malasakit: panlaban na… 2020-05-16 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 4</span><span>  </span><span style='text-decoration: underline;'>5</span><span>241 EXPERTS RALLY BEHIND D… 2020-05-14 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 5</span><span>  </span><span style='text-decoration: underline;'>5</span><span>241 GOVERNMENT OFFERS FULL… 2020-05-14 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 6</span><span>  </span><span style='text-decoration: underline;'>1</span><span>452 NEW QUARANTINE SITE IN… 2020-05-13 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 7</span><span>  </span><span style='text-decoration: underline;'>1</span><span>920 STATEMENT ON DATA INTE… 2020-05-13 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 8</span><span>  </span><span style='text-decoration: underline;'>8</span><span>151 HONORING NURSE’S DAY: … 2020-05-13 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'> 9</span><span>  </span><span style='text-decoration: underline;'>1</span><span>911 SAN JUAN CITY THANKS D… 2020-05-13 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'>10</span><span>  </span><span style='text-decoration: underline;'>1</span><span>421 ADB-Sponsored COVID-19… 2020-05-10 DOH    press… https://www.doh.gov.p…
+#&gt; </span><span style='color: #555555;'># … with 352 more rows</span><span></div><div class='input'>
 </div></span></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
