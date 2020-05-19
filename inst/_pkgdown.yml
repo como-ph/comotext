@@ -21,6 +21,10 @@ reference:
   contents:
   - comotext
 
+- title: Deprecated functions
+  contents:
+  - comotext-deprecated
+
 - title: Extract
   contents:
   - get_iatf_links
@@ -28,7 +32,7 @@ reference:
   - get_doh_links
   - get_press_release
   - get_doh_release
-  - get_dfa_release
+  - get_dfa_links
 
 - title: Combine
   contents:
@@ -63,8 +67,15 @@ reference:
   - iatfResolution32
   - iatfResolution33
   - iatfResolution34
+  - iatfResolution35
+  - iatfResolution36
+  - iatfResolution37
 
 - title: Datasets - DOH press releases
   contents:
   - dohLinks
   - dohRelease
+
+- title: Datasets - DFA press releases
+  contents:
+  - dfaLinks
