@@ -4,9 +4,9 @@ library(stringr)
 
 ## Resolutions table ###########################################################
 
-iatfResList <- get_iatf_links()
+iatfLinks <- get_iatf_links()
 
-usethis::use_data(iatfResList, overwrite = TRUE, compress = "xz")
+usethis::use_data(iatfLinks, overwrite = TRUE, compress = "xz")
 
 ## Resolution 9 ################################################################
 
