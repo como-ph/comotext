@@ -12,6 +12,8 @@
 #'   release date of press release and the absolute URL link to press release
 #'
 #' @examples
+#' httr::user_agent("httr")
+#' #httr::user_agent("Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_4) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15")
 #' get_dfa_links(type = "press release")
 #'
 #' @export
