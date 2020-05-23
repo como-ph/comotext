@@ -21,6 +21,7 @@ library(comotext)
 [![Lifecycle: experimental](https://img.shields.io/badge/lifecycle-experimental-orange.svg)](https://www.tidyverse.org/lifecycle/#experimental)
 [![Travis build status](https://travis-ci.org/como-ph/comotext.svg?branch=master)](https://travis-ci.org/como-ph/comotext)
 [![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/como-ph/comotext?branch=master&svg=true)](https://ci.appveyor.com/project/como-ph/comotext)
+[![R build status](https://github.com/como-ph/comotext/workflows/R-CMD-check/badge.svg)](https://github.com/como-ph/comotext/actions)
 [![Codecov test coverage](https://codecov.io/gh/como-ph/comotext/branch/master/graph/badge.svg)](https://codecov.io/gh/como-ph/comotext?branch=master)
 [![DOI](https://zenodo.org/badge/255823130.svg)](https://zenodo.org/badge/latestdoi/255823130)
 <!-- badges: end -->
@@ -40,59 +41,59 @@ remotes::install_github("como-ph/comotext")
 
 ### Datasets
 
-`comotext` currently has 24 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 24 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
+`comotext` currently has 28 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 28 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).
 
 A description of the available datasets can be found [here](https://como-ph.github.io/comotext/reference/index.html#section-datasets).
 
-A table of the ```r nrow(iatfResList)``` IATF resolutions and the URLs to download them can be generated using the function `get_iatf_links()` as follows:
+A table of the ```r nrow(iatfLinks)``` IATF resolutions and the URLs to download them can be generated using the function `get_iatf_links()` as follows:
 
 ```{r usage, echo = TRUE, eval = TRUE}
 get_iatf_links()
 ```
 
-`comotext` also holds 1 dataset of all [Department of Health](http://www.doh.gov.ph) press releases to date. A description of the `pressRelease` dataset can be found [here](https://como-ph.github.io/comotext/reference/pressRelease.html). This dataset has been generated using the `get_press_release()` function (see description below) included in `comotext`. Related to this is the dataset `prLinks` which holds the relative URL links for each of the press releases in the [Department of Health](http://www.doh.gov.ph) website to date. This dataset has been produced using the `get_pr_url()` function (see description below) included in `comotext`. A description of the `prLinks` dataset can be found [here](https://como-ph.github.io/comotext/reference/prLinks.html).
+`comotext` also holds 1 dataset of all [Department of Health](http://www.doh.gov.ph) press releases to date. A description of the `dohRelease` dataset can be found [here](https://como-ph.github.io/comotext/reference/dohRelease.html). This dataset has been generated using the `get_doh_release()` function (see description below) included in `comotext`. Related to this is the dataset `dohLinks` which holds the relative URL links for each of the press releases in the [Department of Health](http://www.doh.gov.ph) website to date. This dataset has been produced using the `get_doh_links()` function (see description below) included in `comotext`. A description of the `dohLinks` dataset can be found [here](https://como-ph.github.io/comotext/reference/dohLinks.html).
 
 ### Extracting text data from press releases
 
-Press releases issued by the [Department of Health](https://www.doh.gov.ph) are available publicly via their [website](https://www.doh.gov.ph/press-releases). The structure of the press releases page is that the section with the links to the press releases text is in a panel within the web page with the panel itself having pagination with each page containing links to 15 press releases with press releases ordered in reverse chronological order.
+Press releases issued by the [Department of Health](https://www.doh.gov.ph) are available publicly via their [website](https://www.doh.gov.ph/press-releases). The structure of the press releases page is that the section with the links to the press releases text is in a panel within the web page with the panel itself having pagination with each page containing links to 28 press releases with press releases ordered in reverse chronological order.
 
-The function `get_pr_url` extracts the relative URL links to each of the press releases on a current page within the press releases panel. If we want to get the relative URL links for the press releases on page 1 of the press releases panel, we use:
+The function `get_doh_links()` extracts the relative URL links to each of the press releases on a current page within the press releases panel. If we want to get the absolute URL links for the press releases on page 1 of the press releases panel, we use:
 
 ```{r usage1, echo = TRUE, eval = TRUE}
-get_pr_url(pages = 1)
+get_doh_links(pages = 1)
 ```
 
-The function `get_press_releases` creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by `get_pr_url`. If we want to get the text data of the press releases from page 1 of the press release panel, we use:
+The function `get_doh_release()` creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by `get_doh_links()`. If we want to get the text data of the press releases from page 1 of the press release panel, we use:
 
 ```{r usage2, echo = TRUE, eval = TRUE}
 ## Extract URLs from DoH press releases page 1
-prURL <- get_pr_url(pages = 1)
+prURL <- get_doh_links(pages = 1)
 
 ## Extract text from first press release
-get_press_release(df = prURL[1, ])
+get_doh_release(df = prURL[1, ])
 ```
 
 To get all the [DoH](https://www.doh.gov.ph) press releases available from their [website](https://www.doh.gov.ph/press-releases), use:
 
 ```{r usage3, echo = TRUE, eval = FALSE}
 ## Extract URLs
-pr <- get_pr_url(pages = 1:25)
+pr <- get_doh_links(pages = 1:25)
 
 ## Extract all press releases text
 pressRelease <- NULL
 
 for(i in 1:nrow(pr)) {
-  currentPR <- get_press_release(df = pr[i, ])
+  currentPR <- get_doh_release(df = pr[i, ])
 
   pressRelease <- rbind(pressRelease, currentPR)
 }
 ```
 
 ```{r usage4, echo = FALSE, eval = TRUE}
-pressRelease
+dohRelease
 ```
 
-This produces the same dataset as `pressRelease` included in `comotext`.
+This produces the same dataset as `dohRelease` included in `comotext`.
 
 ### Concatenating text datasets
 

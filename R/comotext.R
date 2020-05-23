@@ -19,10 +19,10 @@
 #'   str_split str_split_fixed str_remove_all str_extract str_to_upper
 #'   str_replace
 #' @importFrom tibble tibble
-#' @importFrom xml2 read_html
+#' @importFrom xml2 read_html url_absolute
 #' @importFrom rvest html_nodes html_text html_attr html_table
 #' @importFrom magrittr %>%
-#' @importFrom lubridate mdy
+#' @importFrom lubridate mdy dmy
 #' @importFrom httr user_agent
 #'
 #
@@ -31,5 +31,24 @@
 
 
 ## quiets concerns of R CMD check re: iatfResList
-if(getRversion() >= "2.15.1")  utils::globalVariables("iatfResList")
+##if(getRversion() >= "2.15.1")  utils::globalVariables("iatfResolutionLinks")
 
+################################################################################
+#
+#'
+#' Deprecated functions in comotext
+#'
+#' These functions still work but will be removed in the next version.
+#'
+#' \itemize{
+#'   \item \code{\link{get_pr_url}}: This function is deprecated and will be
+#'   removed in the next version of comotext.
+#'   \item \code{\link{get_press_release}}: This function is deprecated and
+#'   will be removed in the next version of comotext.
+#' }
+#'
+#' @name comotext-deprecated
+#'
+#
+################################################################################
+NULL

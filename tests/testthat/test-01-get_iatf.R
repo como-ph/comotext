@@ -12,11 +12,11 @@ test_that("date is date", {
   expect_is(get_iatf_links(base = base)$date, "Date")
 })
 
-test_that("output has 4 columns", {
-  expect_equal(ncol(get_iatf_links(base = base)), 4)
+test_that("output has 6 columns", {
+  expect_equal(ncol(get_iatf_links(base = base)), 6)
 })
 
 test_that("output has expected column names", {
-  expect_equal(names(get_iatf_links(base = base)), c("id", "title", "date", "link"))
+  expect_equal(names(get_iatf_links(base = base)), c("id", "title", "date", "source", "type", "url"))
 })
 

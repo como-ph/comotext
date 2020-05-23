@@ -233,7 +233,7 @@
 #' @examples
 #' iatfResolution17
 #'
-#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 17.pdf}
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF\%20Resolution\%20No.\%2017.pdf}
 #'
 #'
 #
@@ -287,7 +287,7 @@
 #' @examples
 #' iatfResolution19
 #'
-#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF Resolution No. 19.pdf}
+#' @source \url{https://www.doh.gov.ph/sites/default/files/health-update/IATF\%20Resolution\%20No.\%2019.pdf}
 #'
 #'
 #
@@ -676,9 +676,90 @@
 ################################################################################
 #
 #'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 35
+#'
+#' @format A tibble with 140 rows and 6 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
+#' }
+#'
+#' @examples
+#' iatfResolution35
+#'
+#' @source \url{https://doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-35.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution35"
+
+
+################################################################################
+#
+#'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 36
+#'
+#' @format A tibble with 90 rows and 6 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
+#' }
+#'
+#' @examples
+#' iatfResolution36
+#'
+#' @source \url{https://doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-36.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution36"
+
+
+################################################################################
+#
+#'
+#' COVID-19 Inter-Agency Task Force for the Management of Emerging Infectious
+#' Diseases Resolution Number 37
+#'
+#' @format A tibble with 49 rows and 6 columns:
+#' \describe{
+#'   \item{\code{linenumber}}{Linenumber}
+#'   \item{\code{text}}{Character string of text about 70 characters}
+#'   \item{\code{source}}{Issuer of resolution}
+#'   \item{\code{type}}{Type of document}
+#'   \item{\code{id}}{Text document identifier}
+#'   \item{\code{date}}{Date in <YYYY-MM-DD> format when resolution was made}
+#' }
+#'
+#' @examples
+#' iatfResolution37
+#'
+#' @source \url{https://doh.gov.ph/sites/default/files/health-update/IATF-Resolution-No.-37.pdf}
+#'
+#'
+#
+################################################################################
+"iatfResolution37"
+
+
+################################################################################
+#
+#'
 #' Department of Health press releases from 2017 to May 2020
 #'
-#' @format A tibble with 13243 rows and 6 columns:
+#' @format A tibble with 13325 rows and 6 columns:
 #' \describe{
 #'   \item{\code{linenumber}}{Linenumber}
 #'   \item{\code{text}}{Character string of text about 70 characters}
@@ -689,15 +770,15 @@
 #' }
 #'
 #' @examples
-#' pressRelease
+#' dohRelease
 #'
 #' @source \url{https://www.doh.gov.ph/press-releases}. Updated as of
-#'   16 May 2020.
+#'   19 May 2020.
 #'
 #'
 #
 ################################################################################
-"pressRelease"
+"dohRelease"
 
 
 ################################################################################
@@ -713,21 +794,21 @@
 #' }
 #'
 #' @examples
-#' prLinks
+#' dohLinks
 #'
 #' @source Produced by \code{get_pr_url(pages = 1:25)}. Updated as of
-#'   16 May 2020.
+#'   19 May 2020.
 #'
 #'
 #
 ################################################################################
-"prLinks"
+"dohLinks"
 
 
 ################################################################################
 #
 #'
-#' IATF resolutions URL links
+#' IATF resolutions URLs
 #'
 #' @format A tibble with 25 rows and 4 columns:
 #' \describe{
@@ -738,12 +819,38 @@
 #' }
 #'
 #' @examples
-#' iatfResList
+#' iatfLinks
 #'
 #' @source \url{https://www.doh.gov.ph/COVID-19/IATF-Resolutions}. Updated
-#'   as of 16 May 2020.
+#'   as of 19 May 2020.
 #'
 #'
 #
 ################################################################################
-"iatfResList"
+"iatfLinks"
+
+
+################################################################################
+#
+#'
+#' Philippines Department of Foreign Affairs (DFA) press releases URLs
+#'
+#' @format A tibble with 2352 rows and 3 columns
+#' \describe{
+#'   \item{\code{id}}{Unique identifier}
+#'   \item{\code{title}}{Title of press release}
+#'   \item{\code{date}}{Date of issue of press release}
+#'   \item{\code{source}}{Source of press release}
+#'   \item{\code{type}}{Type of text data - press release}
+#'   \item{\code{url}}{Absolute URLs of press releases}
+#' }
+#'
+#' @examples
+#' dfaLinks
+#'
+#' @source \url{https://www.dfa.gov.ph/dfa-news/dfa-releasesupdate}. Updated
+#'   as of 19 May 2020
+#'
+#
+################################################################################
+"dfaLinks"

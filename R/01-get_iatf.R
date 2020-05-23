@@ -37,11 +37,16 @@ get_iatf_links <- function(base = "https://www.doh.gov.ph/COVID-19/IATF-Resoluti
   id <- stringr::str_extract(string = id, pattern = "[0-9]+")
 
   ## Add links id to links
-  yy <- data.frame(id, link = yy, stringsAsFactors = FALSE)
+  yy <- data.frame(id,
+                   source = "IATF",
+                   type = "resolution",
+                   link = yy,
+                   stringsAsFactors = FALSE)
 
   ## Merge links with page table
   linkTable <- merge(xx[[1]], yy, by.x = "Resolution No.", by.y = "id")
-  names(linkTable) <- c("id", "title", "date", "link")
+
+  names(linkTable) <- c("id", "title", "date", "source", "type", "url")
 
   ## Convert to tibble
   linkTable <- tibble::tibble(linkTable)

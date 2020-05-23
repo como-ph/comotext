@@ -10,7 +10,28 @@
     <loc>https://como-ph.github.io/comotext/reference/combine_iatf.html</loc>
   </url>
   <url>
+    <loc>https://como-ph.github.io/comotext/reference/comotext-deprecated.html</loc>
+  </url>
+  <url>
     <loc>https://como-ph.github.io/comotext/reference/comotext.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/dfaLinks.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/dohLinks.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/dohRelease.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/get_dfa_links.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/get_doh_links.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/get_doh_release.html</loc>
   </url>
   <url>
     <loc>https://como-ph.github.io/comotext/reference/get_iatf_links.html</loc>
@@ -22,7 +43,7 @@
     <loc>https://como-ph.github.io/comotext/reference/get_press_release.html</loc>
   </url>
   <url>
-    <loc>https://como-ph.github.io/comotext/reference/iatfResList.html</loc>
+    <loc>https://como-ph.github.io/comotext/reference/iatfLinks.html</loc>
   </url>
   <url>
     <loc>https://como-ph.github.io/comotext/reference/iatfResolution09.html</loc>
@@ -100,9 +121,12 @@
     <loc>https://como-ph.github.io/comotext/reference/iatfResolution34.html</loc>
   </url>
   <url>
-    <loc>https://como-ph.github.io/comotext/reference/prLinks.html</loc>
+    <loc>https://como-ph.github.io/comotext/reference/iatfResolution35.html</loc>
   </url>
   <url>
-    <loc>https://como-ph.github.io/comotext/reference/pressRelease.html</loc>
+    <loc>https://como-ph.github.io/comotext/reference/iatfResolution36.html</loc>
+  </url>
+  <url>
+    <loc>https://como-ph.github.io/comotext/reference/iatfResolution37.html</loc>
   </url>
 </urlset>

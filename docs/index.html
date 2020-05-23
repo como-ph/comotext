@@ -96,97 +96,97 @@
 <div id="datasets" class="section level3">
 <h3 class="hasAnchor">
 <a href="#datasets" class="anchor"></a>Datasets</h3>
-<p><code>comotext</code> currently has 24 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 24 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).</p>
+<p><code>comotext</code> currently has 28 datasets of COVID-19-related resolutions and policies in the Philippines. These datasets are 28 resolutions made by the Inter-Agency Task Force for the Management of Emerging Infectious Diseases (IATF).</p>
 <p>A description of the available datasets can be found <a href="https://como-ph.github.io/comotext/reference/index.html#section-datasets">here</a>.</p>
-<p>A table of the <code>25</code> IATF resolutions and the URLs to download them can be generated using the function <code><a href="reference/get_iatf_links.html">get_iatf_links()</a></code> as follows:</p>
+<p>A table of the <code>29</code> IATF resolutions and the URLs to download them can be generated using the function <code><a href="reference/get_iatf_links.html">get_iatf_links()</a></code> as follows:</p>
 <div class="sourceCode" id="cb2"><pre class="r"><span class="fu"><a href="reference/get_iatf_links.html">get_iatf_links</a></span>()
-<span class="co">#&gt; # A tibble: 25 x 4</span>
-<span class="co">#&gt;       id title                          date       link                         </span>
-<span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                          &lt;date&gt;     &lt;chr&gt;                        </span>
-<span class="co">#&gt;  1     9 Recommendations for the Manag… 2020-03-03 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  2    10 Recommendations for the Manag… 2020-03-09 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  3    11 Recommendations for the Manag… 2020-03-12 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  4    12 Recommendations for the Manag… 2020-03-13 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  5    13 Recommendations for the Manag… 2020-03-17 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  6    14 Resolutions Relative to the M… 2020-03-20 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  7    15 Resolutions Relative to the M… 2020-03-25 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  8    16 Additional Guidelines for the… 2020-03-30 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt;  9    17 Recommendations Relative to t… 2020-03-30 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt; 10    18 Recommendations Relative to t… 2020-04-01 https://doh.gov.ph/sites/def…</span>
-<span class="co">#&gt; # … with 15 more rows</span></pre></div>
-<p><code>comotext</code> also holds 1 dataset of all <a href="http://www.doh.gov.ph">Department of Health</a> press releases to date. A description of the <code>pressRelease</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/pressRelease.html">here</a>. This dataset has been generated using the <code><a href="reference/get_press_release.html">get_press_release()</a></code> function (see description below) included in <code>comotext</code>. Related to this is the dataset <code>prLinks</code> which holds the relative URL links for each of the press releases in the <a href="http://www.doh.gov.ph">Department of Health</a> website to date. This dataset has been produced using the <code><a href="reference/get_pr_url.html">get_pr_url()</a></code> function (see description below) included in <code>comotext</code>. A description of the <code>prLinks</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/prLinks.html">here</a>.</p>
+<span class="co">#&gt; # A tibble: 29 x 6</span>
+<span class="co">#&gt;       id title                   date       source type   url                   </span>
+<span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                   &lt;date&gt;     &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;                 </span>
+<span class="co">#&gt;  1     9 Recommendations for th… 2020-03-03 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  2    10 Recommendations for th… 2020-03-09 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  3    11 Recommendations for th… 2020-03-12 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  4    12 Recommendations for th… 2020-03-13 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  5    13 Recommendations for th… 2020-03-17 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  6    14 Resolutions Relative t… 2020-03-20 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  7    15 Resolutions Relative t… 2020-03-25 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  8    16 Additional Guidelines … 2020-03-30 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt;  9    17 Recommendations Relati… 2020-03-30 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt; 10    18 Recommendations Relati… 2020-04-01 IATF   resol… https://doh.gov.ph/si…</span>
+<span class="co">#&gt; # … with 19 more rows</span></pre></div>
+<p><code>comotext</code> also holds 1 dataset of all <a href="http://www.doh.gov.ph">Department of Health</a> press releases to date. A description of the <code>dohRelease</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/dohRelease.html">here</a>. This dataset has been generated using the <code><a href="reference/get_doh_release.html">get_doh_release()</a></code> function (see description below) included in <code>comotext</code>. Related to this is the dataset <code>dohLinks</code> which holds the relative URL links for each of the press releases in the <a href="http://www.doh.gov.ph">Department of Health</a> website to date. This dataset has been produced using the <code><a href="reference/get_doh_links.html">get_doh_links()</a></code> function (see description below) included in <code>comotext</code>. A description of the <code>dohLinks</code> dataset can be found <a href="https://como-ph.github.io/comotext/reference/dohLinks.html">here</a>.</p>
 </div>
 <div id="extracting-text-data-from-press-releases" class="section level3">
 <h3 class="hasAnchor">
 <a href="#extracting-text-data-from-press-releases" class="anchor"></a>Extracting text data from press releases</h3>
-<p>Press releases issued by the <a href="https://www.doh.gov.ph">Department of Health</a> are available publicly via their <a href="https://www.doh.gov.ph/press-releases">website</a>. The structure of the press releases page is that the section with the links to the press releases text is in a panel within the web page with the panel itself having pagination with each page containing links to 15 press releases with press releases ordered in reverse chronological order.</p>
-<p>The function <code>get_pr_url</code> extracts the relative URL links to each of the press releases on a current page within the press releases panel. If we want to get the relative URL links for the press releases on page 1 of the press releases panel, we use:</p>
-<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="reference/get_pr_url.html">get_pr_url</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>)
-<span class="co">#&gt; # A tibble: 15 x 3</span>
-<span class="co">#&gt;    url                                                             id date      </span>
-<span class="co">#&gt;    &lt;chr&gt;                                                        &lt;dbl&gt; &lt;date&gt;    </span>
-<span class="co">#&gt;  1 /press-release/Malasakit%3A-panlaban-natin-sa-COVID-19%3B-f…  1311 2020-05-16</span>
-<span class="co">#&gt;  2 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14</span>
-<span class="co">#&gt;  3 /doh-press-release/EXPERTS-RALLY-BEHIND-DOH-DATA-INTEGRITY-…  5241 2020-05-14</span>
-<span class="co">#&gt;  4 /doh-press-release/NEW-QUARANTINE-SITE-IN-ALABANG-INAUGURAT…  1452 2020-05-13</span>
-<span class="co">#&gt;  5 /doh-press-release/STATEMENT-ON-DATA-INTEGRITY                1920 2020-05-13</span>
-<span class="co">#&gt;  6 /doh-press-release/HONORING-NURSE%E2%80%99S-DAY%3A-DOH-CALL…  8151 2020-05-13</span>
-<span class="co">#&gt;  7 /doh-press-release/SAN-JUAN-CITY-THANKS-DOH-AS-COVID-19-CAS…  1911 2020-05-13</span>
-<span class="co">#&gt;  8 /press-release/ADB-Sponsored-COVID-19-Lab-in-Pampanga-Launc…  1421 2020-05-10</span>
-<span class="co">#&gt;  9 /press-release/ECQ-Buys-PH-Time-Continued-Practice-of-Healt…  5317 2020-05-09</span>
-<span class="co">#&gt; 10 /press-release/biggest-mega-swabbing-center-in-moa-arena-to…  2977 2020-05-08</span>
-<span class="co">#&gt; 11 /doh-press-release/Press%20Release/DUQUE-THANKS-NAVY-FRONTL…  4211 2020-05-07</span>
-<span class="co">#&gt; 12 /doh-press-release/PH-GOV%E2%80%99T-RECEIVES-7-METRIC-TONS-…  2018 2020-05-07</span>
-<span class="co">#&gt; 13 /doh-press-release/BEYOND-NUMBERS%3A-WHAT-THE-FLATTENING-CU…  2525 2020-05-07</span>
-<span class="co">#&gt; 14 /doh-press-release/2ND-MEGA-SWABBING-CENTER-SET-TO-OPERATE%…  1441 2020-05-06</span>
-<span class="co">#&gt; 15 /doh-press-release/NEW-MEGA-SWABBING-CENTER-TO-RAMP-UP-COVI…  1452 2020-05-06</span></pre></div>
-<p>The function <code>get_press_releases</code> creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by <code>get_pr_url</code>. If we want to get the text data of the press releases from page 1 of the press release panel, we use:</p>
+<p>Press releases issued by the <a href="https://www.doh.gov.ph">Department of Health</a> are available publicly via their <a href="https://www.doh.gov.ph/press-releases">website</a>. The structure of the press releases page is that the section with the links to the press releases text is in a panel within the web page with the panel itself having pagination with each page containing links to 28 press releases with press releases ordered in reverse chronological order.</p>
+<p>The function <code><a href="reference/get_doh_links.html">get_doh_links()</a></code> extracts the relative URL links to each of the press releases on a current page within the press releases panel. If we want to get the absolute URL links for the press releases on page 1 of the press releases panel, we use:</p>
+<div class="sourceCode" id="cb3"><pre class="r"><span class="fu"><a href="reference/get_doh_links.html">get_doh_links</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>)
+<span class="co">#&gt; # A tibble: 15 x 6</span>
+<span class="co">#&gt;       id title                   date       source type   url                   </span>
+<span class="co">#&gt;    &lt;dbl&gt; &lt;chr&gt;                   &lt;date&gt;     &lt;chr&gt;  &lt;chr&gt;  &lt;chr&gt;                 </span>
+<span class="co">#&gt;  1  4158 "DOH TO DEPUTIZE MED G… 2020-05-19 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  2  4158 "DOH ENCOURAGES VIRTUA… 2020-05-18 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  3  1311 "Malasakit: panlaban n… 2020-05-16 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  4  5241 "EXPERTS RALLY BEHIND … 2020-05-14 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  5  5241 "GOVERNMENT OFFERS FUL… 2020-05-14 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  6  1452 "NEW QUARANTINE SITE I… 2020-05-13 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  7  1920 "STATEMENT ON DATA INT… 2020-05-13 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  8  8151 "HONORING NURSE’S DAY:… 2020-05-13 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt;  9  1911 "SAN JUAN CITY THANKS … 2020-05-13 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt; 10  1421 "ADB-Sponsored COVID-1… 2020-05-10 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt; 11  5317 "ECQ Buys PH Time; Con… 2020-05-09 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt; 12  2977 "BIGGEST MEGA SWABBING… 2020-05-08 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt; 13  4211 "DUQUE THANKS NAVY FRO… 2020-05-07 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt; 14  2018 "PH GOV’T RECEIVES 7 M… 2020-05-07 DOH    press… https://www.doh.gov.p…</span>
+<span class="co">#&gt; 15  2525 "BEYOND\tNUMBERS:\tWHA… 2020-05-07 DOH    press… https://www.doh.gov.p…</span></pre></div>
+<p>The function <code><a href="reference/get_doh_release.html">get_doh_release()</a></code> creates a dataset of text of press releases given a URL of a specific press release text and the date of release. This information is provided for by <code><a href="reference/get_doh_links.html">get_doh_links()</a></code>. If we want to get the text data of the press releases from page 1 of the press release panel, we use:</p>
 <div class="sourceCode" id="cb4"><pre class="r"><span class="co">## Extract URLs from DoH press releases page 1</span>
-<span class="no">prURL</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_pr_url.html">get_pr_url</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>)
+<span class="no">prURL</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_doh_links.html">get_doh_links</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>)
 
 <span class="co">## Extract text from first press release</span>
-<span class="fu"><a href="reference/get_press_release.html">get_press_release</a></span>(<span class="kw">df</span> <span class="kw">=</span> <span class="no">prURL</span>[<span class="fl">1</span>, ])
-<span class="co">#&gt; # A tibble: 64 x 6</span>
+<span class="fu"><a href="reference/get_doh_release.html">get_doh_release</a></span>(<span class="kw">df</span> <span class="kw">=</span> <span class="no">prURL</span>[<span class="fl">1</span>, ])
+<span class="co">#&gt; # A tibble: 49 x 6</span>
 <span class="co">#&gt;    linenumber text                              source type        id date      </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                             &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt; &lt;date&gt;    </span>
-<span class="co">#&gt;  1          1 Malasakit: panlaban natin sa COV… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  2          2 Press Release / 16 May 2020The e… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  3          3 Philippines is a huge breath of … DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  4          4 livelihoods have been displaced,… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  5          5 that day-to-day behavior has to … DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  6          6 16 media forum, medical anthropo… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  7          7 professor, Dr. Michael Tan, appe… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  8          8 practice healthy behaviors while… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt;  9          9 UP Chancellor also called on all… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt; 10         10 highlighting the importance of s… DOH    press r…  1311 2020-05-16</span>
-<span class="co">#&gt; # … with 54 more rows</span></pre></div>
+<span class="co">#&gt;  1          1 DOH TO DEPUTIZE MED GRADS TO ASS… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  2          2 Press Release/18 May 2020 Consis… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  3          3 11469 or the “Bayanihan to Heal … DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  4          4 of 1959,” the Department of Heal… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  5          5 2020-0169 last Saturday, which a… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  6          6 practice of medicine as deputize… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  7          7 of registration from the Profess… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  8          8 in the President the power “to e… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt;  9          9 complement or supplement the cur… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt; 10         10 R.A. 2382 stipulates “Medical gr… DOH    press r…  4158 2020-05-19</span>
+<span class="co">#&gt; # … with 39 more rows</span></pre></div>
 <p>To get all the <a href="https://www.doh.gov.ph">DoH</a> press releases available from their <a href="https://www.doh.gov.ph/press-releases">website</a>, use:</p>
 <div class="sourceCode" id="cb5"><pre class="r"><span class="co">## Extract URLs</span>
-<span class="no">pr</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_pr_url.html">get_pr_url</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>:<span class="fl">25</span>)
+<span class="no">pr</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_doh_links.html">get_doh_links</a></span>(<span class="kw">pages</span> <span class="kw">=</span> <span class="fl">1</span>:<span class="fl">25</span>)
 
 <span class="co">## Extract all press releases text</span>
 <span class="no">pressRelease</span> <span class="kw">&lt;-</span> <span class="kw">NULL</span>
 
 <span class="kw">for</span>(<span class="no">i</span> <span class="kw">in</span> <span class="fl">1</span>:<span class="fu"><a href="https://rdrr.io/r/base/nrow.html">nrow</a></span>(<span class="no">pr</span>)) {
-  <span class="no">currentPR</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_press_release.html">get_press_release</a></span>(<span class="kw">df</span> <span class="kw">=</span> <span class="no">pr</span>[<span class="no">i</span>, ])
+  <span class="no">currentPR</span> <span class="kw">&lt;-</span> <span class="fu"><a href="reference/get_doh_release.html">get_doh_release</a></span>(<span class="kw">df</span> <span class="kw">=</span> <span class="no">pr</span>[<span class="no">i</span>, ])
 
   <span class="no">pressRelease</span> <span class="kw">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html">rbind</a></span>(<span class="no">pressRelease</span>, <span class="no">currentPR</span>)
 }</pre></div>
-<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co">#&gt; # A tibble: 13,243 x 6</span></a>
+<div class="sourceCode" id="cb6"><pre class="sourceCode R"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="co">#&gt; # A tibble: 13,325 x 6</span></a>
 <a class="sourceLine" id="cb6-2" data-line-number="2"><span class="co">#&gt;    linenumber text                              source type        id date      </span></a>
 <a class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                             &lt;chr&gt;  &lt;chr&gt;    &lt;dbl&gt; &lt;date&gt;    </span></a>
-<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;  1          1 Malasakit: panlaban natin sa COV… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;  2          2 Press Release / 16 May 2020The e… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  3          3 Philippines is a huge breath of … DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  4          4 livelihoods have been displaced,… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  5          5 that day-to-day behavior has to … DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  6          6 16 media forum, medical anthropo… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  7          7 professor, Dr. Michael Tan, appe… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  8          8 practice healthy behaviors while… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  9          9 UP Chancellor also called on all… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt; 10         10 highlighting the importance of s… DOH    press r…  1311 2020-05-16</span></a>
-<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; # … with 13,233 more rows</span></a></code></pre></div>
-<p>This produces the same dataset as <code>pressRelease</code> included in <code>comotext</code>.</p>
+<a class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;  1          1 DOH TO DEPUTIZE MED GRADS TO ASS… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt;  2          2 Press Release/18 May 2020 Consis… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt;  3          3 11469 or the “Bayanihan to Heal … DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt;  4          4 of 1959,” the Department of Heal… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt;  5          5 2020-0169 last Saturday, which a… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-9" data-line-number="9"><span class="co">#&gt;  6          6 practice of medicine as deputize… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-10" data-line-number="10"><span class="co">#&gt;  7          7 of registration from the Profess… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-11" data-line-number="11"><span class="co">#&gt;  8          8 in the President the power “to e… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-12" data-line-number="12"><span class="co">#&gt;  9          9 complement or supplement the cur… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-13" data-line-number="13"><span class="co">#&gt; 10         10 R.A. 2382 stipulates “Medical gr… DOH    press r…  4158 2020-05-19</span></a>
+<a class="sourceLine" id="cb6-14" data-line-number="14"><span class="co">#&gt; # … with 13,315 more rows</span></a></code></pre></div>
+<p>This produces the same dataset as <code>dohRelease</code> included in <code>comotext</code>.</p>
 </div>
 <div id="concatenating-text-datasets" class="section level3">
 <h3 class="hasAnchor">
@@ -197,7 +197,7 @@
 <a href="#concatenating-datasets-based-on-a-specific-search-term" class="anchor"></a>Concatenating datasets based on a specific search term</h4>
 <p>The <code>combine_docs</code> function allows the user to specify search terms to use in identifying datasets provided by the <code>comotext</code> package. The <code>docs</code> argument allows the specification of a vector of search terms to use to identify the names of datasets to concatenate. If the name/s of the datasets contain these search terms, the datasets with these name/s will be returned.</p>
 <div class="sourceCode" id="cb7"><pre class="r"><span class="fu"><a href="reference/combine_docs.html">combine_docs</a></span>(<span class="kw">docs</span> <span class="kw">=</span> <span class="st">"resolution"</span>)
-<span class="co">#&gt; # A tibble: 2,907 x 6</span>
+<span class="co">#&gt; # A tibble: 3,186 x 6</span>
 <span class="co">#&gt;    linenumber text                               source type       id date      </span>
 <span class="co">#&gt;         &lt;int&gt; &lt;chr&gt;                              &lt;chr&gt;  &lt;chr&gt;   &lt;dbl&gt; &lt;date&gt;    </span>
 <span class="co">#&gt;  1          1 WHEREAS, on January 31, 2020, upo… IATF   resolu…     9 2020-03-03</span>
@@ -210,7 +210,7 @@
 <span class="co">#&gt;  8          8 exemptions in favor of certain cl… IATF   resolu…     9 2020-03-03</span>
 <span class="co">#&gt;  9          9 SAR, and Macau SAR;                IATF   resolu…     9 2020-03-03</span>
 <span class="co">#&gt; 10         10 WHEREAS, on February 26, 2020, fo… IATF   resolu…     9 2020-03-03</span>
-<span class="co">#&gt; # … with 2,897 more rows</span></pre></div>
+<span class="co">#&gt; # … with 3,176 more rows</span></pre></div>
 <p>The <code>combine_iatf</code> function is a specialised wrapper of the <code>combine_docs</code> function that specifically returns datasets containing IATF resolutions. An additional argument <code>res</code> allows users to specify which IATF resolutions to return. To get IATF resolution 10, 11, and 12, the following call to <code>combine_iatf</code> is made as follows:</p>
 <div class="sourceCode" id="cb8"><pre class="r"><span class="fu"><a href="reference/combine_iatf.html">combine_iatf</a></span>(<span class="kw">docs</span> <span class="kw">=</span> <span class="st">"resolution"</span>, <span class="kw">res</span> <span class="kw">=</span> <span class="fl">10</span>:<span class="fl">12</span>)
 <span class="co">#&gt; # A tibble: 324 x 6</span>
@@ -281,6 +281,7 @@
 <li><a href="https://www.tidyverse.org/lifecycle/#experimental"><img src="https://img.shields.io/badge/lifecycle-experimental-orange.svg" alt="Lifecycle: experimental"></a></li>
 <li><a href="https://travis-ci.org/como-ph/comotext"><img src="https://travis-ci.org/como-ph/comotext.svg?branch=master" alt="Travis build status"></a></li>
 <li><a href="https://ci.appveyor.com/project/como-ph/comotext"><img src="https://ci.appveyor.com/api/projects/status/github/como-ph/comotext?branch=master&amp;svg=true" alt="AppVeyor build status"></a></li>
+<li><a href="https://github.com/como-ph/comotext/actions"><img src="https://github.com/como-ph/comotext/workflows/R-CMD-check/badge.svg" alt="R build status"></a></li>
 <li><a href="https://codecov.io/gh/como-ph/comotext?branch=master"><img src="https://codecov.io/gh/como-ph/comotext/branch/master/graph/badge.svg" alt="Codecov test coverage"></a></li>
 <li><a href="https://zenodo.org/badge/latestdoi/255823130"><img src="https://zenodo.org/badge/255823130.svg" alt="DOI"></a></li>
 </ul>
